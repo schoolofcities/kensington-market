@@ -70,6 +70,22 @@
 			// torontoStyle.forEach((e) => {
 			// 	map.addLayer(e);
 			// });
+
+			map.addSource("satellite", {
+				'type': 'raster',
+				'tiles': ['https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'],
+				'tileSize': 256
+			})
+			map.addLayer({
+				id: 'satellite-bottom',
+				type: 'raster',
+				source: 'satellite',
+				minzoom: 0,
+				maxzoom: 22,
+				paint: {
+					'raster-opacity': 0.08
+				}
+			})
 	
 	
 			map.addSource("marketBoundary", {
@@ -274,9 +290,24 @@
 					"text-halo-width": 1,
 				}
 			})
+
+			
+
+
+			map.addLayer({
+				id: 'satellite-top',
+				type: 'raster',
+				source: 'satellite',
+				minzoom: 0,
+				maxzoom: 22,
+				paint: {
+					'raster-opacity': 0.03
+				}
+			})
 	
 	
 		})
+
 	
 
 		// popup on click
