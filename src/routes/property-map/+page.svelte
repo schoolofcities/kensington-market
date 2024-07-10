@@ -48,7 +48,7 @@
 			maxZoom: 19,
 			bearing: -15.8,
 			// scrollZoom: false,
-			attributionControl: false
+			// attributionControl: false
 		});
 	
 		
@@ -74,7 +74,8 @@
 	
 			map.addSource("marketBoundary", {
 				type: "geojson",
-				data: marketBoundary
+				data: marketBoundary,
+				attribution: "<a href='https://www.openstreetmap.org/#map=17/43.65467/-79.40213' target='_blank'>OpenStreetMap</a>, <a href='https://open.toronto.ca/' target='_blank'>City of Toronto</a> | <a href='https://jamaps.github.io/' target='_blank'>Jeff Allen</a>, <a href='https://schoolofcities.utoronto.ca/' target='_blank'>School of Cities</a> | <a href='https://github.com/schoolofcities/kensington-market' target='_blank'>GitHub</a>"
 			});
 	
 			map.addLayer({
