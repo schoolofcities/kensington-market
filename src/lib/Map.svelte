@@ -44,6 +44,7 @@
             zoom: 16,
             bearing: -16,
             projection: "globe",
+            maxPitch: 85,
             scrollZoom: true,
             attributionControl: true,
             maxBounds: [
@@ -53,6 +54,13 @@
         });
 
         map.addControl(scale, "bottom-left");
+        map.addControl(
+            new maplibregl.NavigationControl({
+                showCompass: true,
+                visualizePitch: false,
+            }),
+            "top-right"
+        );
 
         map.on("load", () => {
             map.getCanvas().style.cursor = "crosshair";

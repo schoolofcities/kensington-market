@@ -1,5 +1,6 @@
 import PropertyBoundaries from "../data/km-property-boundaries.geo.json";
-let MASSING_URL = "./3DMassingToronto.pmtiles";
+import KmBuildings from "../data/km-buildings.geo.json";
+let MASSING_URL = "./3DMassingContext.pmtiles";
 
 // SOURCES
 export const sources = {
@@ -13,6 +14,12 @@ export const sources = {
         type: "geojson",
         data: PropertyBoundaries,
     },
+
+    kmBuildings: {
+        type: "geojson",
+        data: KmBuildings,
+    },
+
 };
 
 // LAYERS
@@ -23,19 +30,37 @@ export const layers = {
         type: "line",
         source: "propertyBoundaries",
         paint: {
-            "line-color": "black",
-            "line-width": 0.5,
-            "line-dasharray": [3, 2],
+            "line-color": "grey",
+            "line-width": 0.1,
+            // "line-dasharray": [3, 2],
         },
     },
 
-        massing: {
+    massing: {
         id: "massing",
         type: "fill-extrusion",
         source: "Massing",
-        "source-layer": "3DMassingToronto",
+        "source-layer": "otherbuildings",
         paint: {
-            "fill-extrusion-color": "lightgray",
+            "fill-extrusion-color": "white",
+            "fill-extrusion-opacity": 0.5,
+            "fill-extrusion-height": ["get", "height"],
+        },
+    },
+
+    kmBuildings: {
+        id: "km-buildings",
+        type: "fill-extrusion",
+        source: "kmBuildings",
+        paint: {
+            "fill-extrusion-color": [
+                "match",
+                ["get", "Class_name"],
+                "Neighbourhoods", "#1f77b4",
+                "MixedUse", "#ff7f0e",
+                "Institutional", "#2ca02c",
+            /* other */ "#000000"
+            ],
             "fill-extrusion-opacity": 0.7,
             "fill-extrusion-height": ["get", "height"],
         },
