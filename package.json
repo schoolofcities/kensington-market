@@ -23,6 +23,7 @@
     },
     "dependencies": {
         "maplibre": "^0.0.1-security",
-        "maplibre-gl": "^5.5.0"
+        "maplibre-gl": "^5.5.0",
+        "pmtiles": "^4.3.0"
     }
 }

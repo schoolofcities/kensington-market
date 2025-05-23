@@ -2,7 +2,7 @@
     import { onMount, onDestroy } from "svelte";
     import maplibregl from "maplibre-gl";
     import "../assets/maplibre-gl.css";
-    import "../assets/styles.css";
+    // import "../assets/styles.css";
 
     import * as pmtiles from "pmtiles";
     import BaseLayer from "../assets/kmclt.json";
