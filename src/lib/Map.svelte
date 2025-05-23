@@ -6,10 +6,10 @@
 
     import * as pmtiles from "pmtiles";
     import BaseLayer from "../assets/kmclt.json";
+    import { sources, layers } from "$lib/mapLayers.js";
 
     // BASE MAP TILES
     let PMTILES_URL = "./toronto.pmtiles";
-
     let map;
 
     let mapContainer;
@@ -46,20 +46,12 @@
             projection: "globe",
             scrollZoom: true,
             attributionControl: true,
-            // maxBounds: [
-            //     [-80.0, 43.5],
-            //     [-78.5, 44.0],
-            // ],
+            maxBounds: [
+                [-79.412961, 43.644747],
+                [-79.392961, 43.664747],
+            ],
         });
 
-        //MAP INTERACTIONS
-        // map.scrollZoom.disable();
-        // map.boxZoom.disable();
-        // map.dragRotate.disable();
-        // map.dragPan.disable();
-        // map.keyboard.disable();
-        // map.doubleClickZoom.disable();
-        // map.touchZoomRotate.disable();
         map.addControl(scale, "bottom-left");
 
         map.on("load", () => {
@@ -75,24 +67,27 @@
             protoLayers.forEach((e) => {
                 map.addLayer(e);
             });
-        });
 
-        //CONSOLE LOG MAP POSITION
-        map.on("move", () => {
-            const center = map.getCenter();
-            const zoom = map.getZoom();
-            const bearing = map.getBearing();
-            const pitch = map.getPitch();
+            //ADD DATA SOURCES AND LAYERS
+            for (const [key, source] of Object.entries(sources)) {
+                console.log(`Adding source: ${key}`, source);
+                map.addSource(key, source);
+            }
 
-            console.log("Map position:", {
-                center: {
-                    lng: center.lng.toFixed(6),
-                    lat: center.lat.toFixed(6),
-                },
-                zoom: zoom.toFixed(2),
-                bearing: bearing.toFixed(2),
-                pitch: pitch.toFixed(2),
-            });
+            for (const layer of Object.values(layers)) {
+                console.log(`Adding layer: ${layer.id}`, layer);
+                map.addLayer(layer);
+            }
+
+            // MOVE LABELS TO TOP
+            // const allLayers = map.getStyle().layers;
+            // const symbolLayers = allLayers
+            //     .filter((l) => l.type === "symbol")
+            //     .map((l) => l.id);
+
+            // symbolLayers.forEach((id) => {
+            //     map.moveLayer(id);
+            // });
         });
     });
 

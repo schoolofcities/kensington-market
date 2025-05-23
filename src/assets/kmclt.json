@@ -3065,7 +3065,8 @@
         "paint": {
             "text-color": "#b3b3b3",
             "text-halo-color": "#ffffff",
-            "text-halo-width": 2
+            "text-halo-width": 2,
+
         }
     },
     {
@@ -3187,7 +3188,7 @@
             "text-transform": "uppercase"
         },
         "paint": {
-            "text-color": "#b8b8b8"
+            "text-color": "#b8b8b8",
         }
     }
 ]
