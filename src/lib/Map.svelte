@@ -7,6 +7,7 @@
     import * as pmtiles from "pmtiles";
     import BaseLayer from "../assets/kmclt.json";
     import { sources, layers } from "$lib/mapLayers.js";
+    import ThreeDToggle from "$lib/ThreeDToggle.svelte";
 
     // BASE MAP TILES
     let PMTILES_URL = "./toronto.pmtiles";
@@ -59,7 +60,7 @@
                 showCompass: true,
                 visualizePitch: false,
             }),
-            "top-right"
+            "top-right",
         );
 
         map.on("load", () => {
@@ -105,6 +106,7 @@
 </script>
 
 <div bind:this={mapContainer} class="map-container"></div>
+<ThreeDToggle {map} />
 
 <style>
     .map-container {

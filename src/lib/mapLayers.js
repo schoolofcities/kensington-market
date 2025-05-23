@@ -43,10 +43,20 @@ export const layers = {
         "source-layer": "otherbuildings",
         paint: {
             "fill-extrusion-color": "white",
-            "fill-extrusion-opacity": 0.5,
-            "fill-extrusion-height": ["get", "height"],
+            "fill-extrusion-opacity": 0.2,
+            "fill-extrusion-height": 0,
         },
     },
+
+    //         kmBuildingsLine: {
+    //     id: "km-buildings",
+    //     type: "line",
+    //     source: "kmBuildings",
+    //     paint: {
+    //         "line-color": "black",
+    //         "line-width": 1,
+    //     },
+    // },
 
     kmBuildings: {
         id: "km-buildings",
@@ -61,8 +71,10 @@ export const layers = {
                 "Institutional", "#2ca02c",
             /* other */ "#000000"
             ],
-            "fill-extrusion-opacity": 0.7,
-            "fill-extrusion-height": ["get", "height"],
+            "fill-extrusion-opacity": 0.8,
+            "fill-extrusion-height": 0,
         },
     },
+
+
 };
