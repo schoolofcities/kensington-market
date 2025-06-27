@@ -1,23 +1,35 @@
-import PropertyBoundaries from "../data/km-property-boundaries.geo.json";
-import KmBuildings from "../data/km-buildings.geo.json";
-let MASSING_URL = "./3DMassingContext.pmtiles";
+// import PropertyBoundaries from "../data/km-property-boundaries.geo.json";
+// import KmBuildings from "../data/km-buildings.geo.json";
+import buildingInfo from "../data/kensington_data_june_2025.geo.json";
+import boundary from "../data/km-boundary.geo.json";
+// let MASSING_URL = "/kmclt/3DMassingContext.pmtiles";
 
 // SOURCES
 export const sources = {
 
-    Massing: {
-        type: 'vector',
-        url: `pmtiles://${MASSING_URL}`
+    // Massing: {
+    //     type: 'vector',
+    //     url: `pmtiles://${MASSING_URL}`
+    // },
+
+    // propertyBoundaries: {
+    //     type: "geojson",
+    //     data: PropertyBoundaries,
+    // },
+
+    // kmBuildings: {
+    //     type: "geojson",
+    //     data: KmBuildings,
+    // },
+
+    boundary: {
+        type: "geojson",
+        data: boundary,
     },
 
-    propertyBoundaries: {
+    buildingInfo: {
         type: "geojson",
-        data: PropertyBoundaries,
-    },
-
-    kmBuildings: {
-        type: "geojson",
-        data: KmBuildings,
+        data: buildingInfo,
     },
 
 };
@@ -25,56 +37,95 @@ export const sources = {
 // LAYERS
 export const layers = {
 
-    propertyBoundaries: {
-        id: "property-boundaries",
-        type: "line",
-        source: "propertyBoundaries",
-        paint: {
-            "line-color": "grey",
-            "line-width": 0.1,
-            // "line-dasharray": [3, 2],
-        },
-    },
-
-    massing: {
-        id: "massing",
-        type: "fill-extrusion",
-        source: "Massing",
-        "source-layer": "otherbuildings",
-        paint: {
-            "fill-extrusion-color": "white",
-            "fill-extrusion-opacity": 0.2,
-            "fill-extrusion-height": 0,
-        },
-    },
-
-    //         kmBuildingsLine: {
-    //     id: "km-buildings",
+    // propertyBoundaries: {
+    //     id: "property-boundaries",
     //     type: "line",
-    //     source: "kmBuildings",
+    //     source: "propertyBoundaries",
     //     paint: {
-    //         "line-color": "black",
-    //         "line-width": 1,
+    //         "line-color": "grey",
+    //         "line-width": 0,
+    //         // "line-dasharray": [3, 2],
     //     },
     // },
 
-    kmBuildings: {
-        id: "km-buildings",
-        type: "fill-extrusion",
-        source: "kmBuildings",
+    //     massing: {
+    //     id: "massing",
+    //     type: "fill",
+    //     source: "Massing",
+    //     "source-layer": "otherbuildings",
+    //     paint: {
+    //         "fill-color": "#f7f7f7",
+    //         "fill-opacity": 1,
+    //         "fill-outline-color": "lightgrey"
+    //     },
+    // }, 
+
+    //     kmBuildings: {
+    //     id: "km-buildings",
+    //     type: "fill",
+    //     source: "kmBuildings",
+    //     paint: {
+    //         "fill-color": "#f7f7f7",
+    //         "fill-opacity": 1,
+    //         "fill-outline-color": "lightgrey"
+    //     },
+    // }, 
+
+    boundary: {
+        id: "km-boundary",
+        type: "line",
+        source: "boundary",
         paint: {
-            "fill-extrusion-color": [
-                "match",
-                ["get", "Class_name"],
-                "Neighbourhoods", "#1f77b4",
-                "MixedUse", "#ff7f0e",
-                "Institutional", "#2ca02c",
-            /* other */ "#000000"
-            ],
-            "fill-extrusion-opacity": 0.8,
-            "fill-extrusion-height": 0,
+            "line-color": "black",
+            "line-width": 2,
+            "line-opacity": 1,
         },
     },
+
+
+    buildingInfoLayer: {
+        id: "building-info",
+        type: "circle",
+        source: "buildingInfo",
+        paint: {
+            "circle-radius": 5,
+            "circle-color": [
+                "case",
+                ["==", ["get", "ownership"], "Corporate"], "#e74c3c",
+                ["==", ["get", "ownership"], "Individual"], "#3498db",
+                ["==", ["get", "ownership"], "Nonprofit"], "#2ecc71",
+                ["==", ["get", "ownership"], "Public"], "#f39c12",
+                "#fff" // Other/undefined - grey
+            ],
+            "circle-stroke-color": "#000",
+            "circle-stroke-width": 1,
+            "circle-opacity": 1
+        }
+    },
+
+
+    // massing: {
+    //     id: "massing",
+    //     type: "fill-extrusion",
+    //     source: "Massing",
+    //     "source-layer": "otherbuildings",
+    //     paint: {
+    //         "fill-extrusion-color": "white",
+    //         "fill-extrusion-opacity": 0.4,
+    //         "fill-extrusion-height": 0,
+    //     },
+    // },
+
+    // kmBuildings: {
+    //     id: "km-buildings",
+    //     type: "fill-extrusion",
+    //     source: "kmBuildings",
+    //     paint: {
+    //         "fill-extrusion-color": "white",
+    //         "fill-extrusion-opacity": 1,
+    //         "fill-extrusion-height": 0,
+    //     },
+    // },
 
 
 };

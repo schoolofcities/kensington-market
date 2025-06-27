@@ -1,13 +1,14 @@
 <script>
     import { onMount, onDestroy } from "svelte";
     import maplibregl from "maplibre-gl";
-    import "../assets/maplibre-gl.css";
-    // import "../assets/styles.css";
+    import "maplibre-gl/dist/maplibre-gl.css";
+
 
     import * as pmtiles from "pmtiles";
-    import BaseLayer from "../assets/kmclt.json";
+    import BaseLayer from "../data/toronto.json";
     import { sources, layers } from "$lib/mapLayers.js";
-    import ThreeDToggle from "$lib/ThreeDToggle.svelte";
+
+    import Legend from "$lib/Legend.svelte";
 
     // BASE MAP TILES
     let PMTILES_URL = "./toronto.pmtiles";
@@ -43,9 +44,9 @@
             },
             center: [-79.402961, 43.654747],
             zoom: 16,
-            bearing: -16,
+            bearing: -15.5,
             projection: "globe",
-            maxPitch: 85,
+            maxPitch: 0,
             scrollZoom: true,
             attributionControl: true,
             maxBounds: [
@@ -88,25 +89,63 @@
                 map.addLayer(layer);
             }
 
-            // MOVE LABELS TO TOP
-            // const allLayers = map.getStyle().layers;
-            // const symbolLayers = allLayers
-            //     .filter((l) => l.type === "symbol")
-            //     .map((l) => l.id);
+            const popup = new maplibregl.Popup({
+                closeButton: false,
+                closeOnClick: false,
+                className: "building-popup",
+            });
 
-            // symbolLayers.forEach((id) => {
-            //     map.moveLayer(id);
-            // });
+            map.on("mouseenter", "building-info", (e) => {
+
+                const coordinates = e.features[0].geometry.coordinates.slice();
+                const properties = e.features[0].properties;
+
+                const address = properties.primary_ad || properties.address || "No address";
+                const ownership = properties.ownership || "Unknown";
+                const buildingType = properties.fcode_des || properties.building_type || "Unknown";
+
+                const popupContent = `
+                    <div class="popup-content">
+                        <h4>${address}</h4>
+                        <div class="popup-row">
+                            <strong>Ownership:</strong> ${ownership}
+                        </div>
+                        <div class="popup-row">
+                            <strong>Building Type:</strong> ${buildingType}
+                        </div>
+                    </div>
+                `;
+
+                popup.setLngLat(coordinates).setHTML(popupContent).addTo(map);
+            });
+
+            map.on("mouseleave", "building-info", () => {
+                map.getCanvas().style.cursor = "crosshair";
+                popup.remove();
+            });
         });
     });
 
     onDestroy(() => {
         if (map) map.remove();
     });
+
+    const ownershipLegend = [
+        { label: "Corporate", color: "#e74c3c", type: "circle", strokeColor: "#000", size: 11 },
+        { label: "Individual", color: "#3498db", type: "circle", strokeColor: "#000", size: 11 },
+        { label: "Nonprofit", color: "#2ecc71", type: "circle", strokeColor: "#000", size: 11 },
+        { label: "Public", color: "#f39c12", type: "circle", strokeColor: "#000", size: 11 },
+        { label: "No Data", color: "#fff", type: "circle", strokeColor: "#000", size: 11 },
+    ];
 </script>
 
 <div bind:this={mapContainer} class="map-container"></div>
-<ThreeDToggle {map} />
+
+<!-- Legend -->
+<Legend
+    legendItems={ownershipLegend}
+    position="top-left"
+/>
 
 <style>
     .map-container {
@@ -117,5 +156,45 @@
         bottom: 0;
         width: 100vw;
         height: 100vh;
+    }
+
+    /* Popup styling */
+    :global(.building-popup .maplibregl-popup-content) {
+        padding: 0;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        min-width: 200px;
+    }
+
+    :global(.building-popup .maplibregl-popup-tip) {
+        border-top-color: #ffffff;
+    }
+
+    :global(.popup-content) {
+        padding: 12px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+            "Helvetica Neue", Arial, sans-serif;
+    }
+
+    :global(.popup-content h4) {
+        margin: 0 0 0px 0;
+        font-size: 14px;
+        font-weight: 600;
+        color: #2c3e50;
+        border-bottom: 1px solid #ecf0f1;
+        padding-bottom: 6px;
+    }
+
+    :global(.popup-row) {
+        margin: 0px 0;
+        font-size: 12px;
+        line-height: 1.4;
+        color: #34495e;
+    }
+
+    :global(.popup-row strong) {
+        color: #2c3e50;
+        font-weight: 600;
     }
 </style>

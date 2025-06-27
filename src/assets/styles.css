@@ -53,18 +53,6 @@
 .revenue-histogram {
     max-width: 500px;
 }
-
-.banner {
-    position: relative;
-    height: 100dvh;
-    top: 0px;
-    background-image: url("toronto-1978.jpg");
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    color: white;
-}
-
 .gradient-overlay {
     position: absolute;
     top: 0;
