@@ -1,8 +1,7 @@
 <script>
     import Map from "$lib/Map.svelte";
-    // import BaseMap from "$lib/BaseMap.svelte";
+    import Dashboard from "$lib/Dashboard.svelte";
 </script>
 
 <Map />
-<!-- <BaseMap /> -->
-
+<Dashboard />

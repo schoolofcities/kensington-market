@@ -1,27 +1,30 @@
 <script>
+    // Packages
     import { onMount, onDestroy } from "svelte";
     import maplibregl from "maplibre-gl";
     import "maplibre-gl/dist/maplibre-gl.css";
 
+    import Papa from "papaparse";
 
+    // Basemap
     import * as pmtiles from "pmtiles";
     import BaseLayer from "../data/toronto.json";
     import { sources, layers } from "$lib/mapLayers.js";
 
-    import Legend from "$lib/Legend.svelte";
+    // import MapPoints from "$lib/MapPoints.svelte";
 
-    // BASE MAP TILES
+    // Base map tiles
     let PMTILES_URL = "./toronto.pmtiles";
     let map;
-
     let mapContainer;
+
     let protoLayers = BaseLayer;
     let scale = new maplibregl.ScaleControl({
         maxWidth: 100,
         unit: "metric",
     });
 
-    onMount(() => {
+    onMount(async () => {
         let protocol = new pmtiles.Protocol();
         maplibregl.addProtocol("pmtiles", protocol.tile);
 
@@ -64,6 +67,72 @@
             "top-right",
         );
 
+        function csvToGeoJSON(data) {
+            return {
+                type: "FeatureCollection",
+                features: data.map((row) => ({
+                    type: "Feature",
+                    geometry: {
+                        type: "Point",
+                        coordinates: [
+                            parseFloat(row.long) || parseFloat(row.longitude),
+                            parseFloat(row.lat) || parseFloat(row.latitude),
+                        ],
+                    },
+                    properties: row,
+                })),
+            };
+        }
+
+        async function addCsvPointsLayer(map) {
+            const csvUrl = "/kmclt/2025_complete.csv";
+            const response = await fetch(csvUrl);
+            const csvText = await response.text();
+            const parsed = Papa.parse(csvText, { header: true });
+            const geojson = csvToGeoJSON(parsed.data);
+
+            map.addSource("csv-points", {
+                type: "geojson",
+                data: geojson,
+            });
+
+            map.addLayer({
+                id: "csv-points-layer",
+                type: "circle",
+                source: "csv-points",
+                paint: {
+                    "circle-radius": 3,
+                    "circle-color": [
+                        "match",
+                        ["get", "category_original"],
+                        "RETAIL",
+                        "#e74c3c",
+                        "FOODSTUFFS",
+                        "#f1c40f",
+                        "SERVICES",
+                        "#3498db",
+                        "SOCIAL/COMMUNITY",
+                        "#2ecc71",
+                        "ARTS & PERFORMANCE",
+                        "#9b59b6",
+                        "RESTAURANT AND BARS",
+                        "#e67e22",
+                        "MEDICAL",
+                        "#1abc9c",
+                        "OFFICES",
+                        "#34495e",
+                        "LODGING",
+                        "#7f8c8d",
+                        "RESIDENTIAL",
+                        "#95a5a6",
+                        /* other */ "#bdc3c7",
+                    ],
+                    "circle-stroke-width": 1,
+                    "circle-stroke-color": "#fff",
+                },
+            });
+        }
+
         map.on("load", () => {
             map.getCanvas().style.cursor = "crosshair";
 
@@ -71,91 +140,66 @@
             map.addSource("protomaps", {
                 type: "vector",
                 url: "pmtiles://" + PMTILES_URL,
-                // attribution: attributionString,
                 attributionControl: false,
             });
             protoLayers.forEach((e) => {
                 map.addLayer(e);
             });
 
-            //ADD DATA SOURCES AND LAYERS
-            for (const [key, source] of Object.entries(sources)) {
-                console.log(`Adding source: ${key}`, source);
-                map.addSource(key, source);
-            }
+            addCsvPointsLayer(map);
 
-            for (const layer of Object.values(layers)) {
-                console.log(`Adding layer: ${layer.id}`, layer);
-                map.addLayer(layer);
-            }
-
-            const popup = new maplibregl.Popup({
-                closeButton: false,
-                closeOnClick: false,
-                className: "building-popup",
+            // Add hover popups for csv-points-layer
+            let popup;
+            map.on("mousemove", "csv-points-layer", (e) => {
+                // map.getCanvas().style.cursor = "pointer";
+                const feature = e.features[0];
+                const props = feature.properties;
+                    function toTitleCaseWithAnd(str) {
+                        return (str || "")
+                            .toLowerCase()
+                            .replace(/\b\w/g, c => c.toUpperCase())
+                            .replace(/\bAnd\b/g, "and");
+                    }
+                    const html = `
+                        <div class="popup-content">
+                            <h4>${props.name || ""}</h4>
+                            <div class="popup-row"><strong>Address:</strong> ${props.address || ""}</div>
+                            <div class="popup-row"><strong>Category:</strong> ${toTitleCaseWithAnd(props.category_original)}</div>
+                            <div class="popup-row"><strong>Subcategory:</strong> ${toTitleCaseWithAnd(props.subcategory_original)}</div>
+                        </div>
+                    `;
+                if (popup) popup.remove();
+                popup = new maplibregl.Popup({
+                    closeButton: false,
+                    closeOnClick: false,
+                    className: "building-popup",
+                })
+                    .setLngLat(feature.geometry.coordinates)
+                    .setHTML(html)
+                    .addTo(map);
             });
 
-            map.on("mouseenter", "building-info", (e) => {
-
-                const coordinates = e.features[0].geometry.coordinates.slice();
-                const properties = e.features[0].properties;
-
-                const address = properties.primary_ad || properties.address || "No address";
-                const ownership = properties.ownership || "Unknown";
-                const buildingType = properties.fcode_des || properties.building_type || "Unknown";
-
-                const popupContent = `
-                    <div class="popup-content">
-                        <h4>${address}</h4>
-                        <div class="popup-row">
-                            <strong>Ownership:</strong> ${ownership}
-                        </div>
-                        <div class="popup-row">
-                            <strong>Building Type:</strong> ${buildingType}
-                        </div>
-                    </div>
-                `;
-
-                popup.setLngLat(coordinates).setHTML(popupContent).addTo(map);
-            });
-
-            map.on("mouseleave", "building-info", () => {
-                map.getCanvas().style.cursor = "crosshair";
-                popup.remove();
+            map.on("mouseleave", "csv-points-layer", () => {
+                // map.getCanvas().style.cursor = "";
+                if (popup) popup.remove();
+                popup = null;
             });
         });
     });
-
-    onDestroy(() => {
-        if (map) map.remove();
-    });
-
-    const ownershipLegend = [
-        { label: "Corporate", color: "#e74c3c", type: "circle", strokeColor: "#000", size: 11 },
-        { label: "Individual", color: "#3498db", type: "circle", strokeColor: "#000", size: 11 },
-        { label: "Nonprofit", color: "#2ecc71", type: "circle", strokeColor: "#000", size: 11 },
-        { label: "Public", color: "#f39c12", type: "circle", strokeColor: "#000", size: 11 },
-        { label: "No Data", color: "#fff", type: "circle", strokeColor: "#000", size: 11 },
-    ];
 </script>
 
 <div bind:this={mapContainer} class="map-container"></div>
-
-<!-- Legend -->
-<Legend
-    legendItems={ownershipLegend}
-    position="top-left"
-/>
 
 <style>
     .map-container {
         position: fixed;
         top: 0;
-        left: 0;
+        /* left: 0; */
         right: 0;
         bottom: 0;
-        width: 100vw;
+        width: 75vw;
         height: 100vh;
+        z-index: -9999;
     }
 
     /* Popup styling */

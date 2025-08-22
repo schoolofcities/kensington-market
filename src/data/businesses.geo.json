@@ -1,0 +1,382 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "241 Augusta Ave",
+        "history": [
+          {
+            "year": 2007,
+            "name": "Zimmerman's Fairland",
+            "type": "Grocer",
+            "subtype": "Supermarket"
+          },
+          {
+            "year": 2016,
+            "name": "Vacant",
+            "type": "Vacant"
+          },
+          {
+            "year": 2020,
+            "name": "One Plant",
+            "type": "Cannabis store"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40194649779659,
+          43.65475320992914
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "207 Augusta Ave",
+        "history": [
+          {
+            "year": 1937,
+            "name": "Roszler's Fruits",
+            "type": "Grocer",
+            "subtype": "Produce"
+          },
+          {
+            "year": 2011,
+            "name": "Aspetta",
+            "type": "Restaurant"
+          },
+          {
+            "year": 2016,
+            "name": "Cosmic Treats",
+            "type": "Restaurant"
+          },
+          {
+            "year": 2020,
+            "name": "Knockout Chicken",
+            "type": "Restaurant"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40164712654655,
+          43.654087199065415
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "234 Augusta Ave",
+        "history": [
+          {
+            "year": 2000,
+            "name": "J&J Fruit Market",
+            "type": "Grocer",
+            "subtype": "Produce"
+          },
+          {
+            "year": 2009,
+            "name": "Vacant",
+            "type": "Vacant"
+          },
+          {
+            "year": 2011,
+            "name": "Tasty Corner",
+            "type": "Restaurant"
+          },
+          {
+            "year": 2015,
+            "name": "Dolce Gelato",
+            "type": "Take-out restaurant"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40244394693205,
+          43.65527955117601
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "326 Spadina Ave",
+        "history": [
+          {
+            "year": 2007,
+            "name": "Tri Pacific Ltd.",
+            "type": "Grocer",
+            "subtype": "Produce"
+          },
+          {
+            "year": 2019,
+            "name": "Tech Zone",
+            "type": "Retail",
+            "subtype": "Electronics store"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.39867286021165,
+          43.653835202058644
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "80 Kensington Ave",
+        "history": [
+          {
+            "year": 1930,
+            "name": "Castle Fruit",
+            "type": "Grocer",
+            "subtype": "Produce"
+          },
+          {
+            "year": 2019,
+            "name": "Vacant",
+            "type": "Vacant"
+          },
+          {
+            "year": 2020,
+            "name": "The Kensary",
+            "type": "Cannabis store"
+          },
+          {
+            "year": 2025,
+            "name": "Love, Calista",
+            "type": "Retail",
+            "subtype": "Jewelry store"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40080541566435,
+          43.65467697832706
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "255 Augusta Ave",
+        "history": [
+          {
+            "year": 1980,
+            "name": "Oxford Fruit",
+            "type": "Grocer",
+            "subtype": "Produce"
+          },
+          {
+            "year": 2024,
+            "name": "Kensington Kitchen",
+            "type": "Take-out restaurant"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40217688311371,
+          43.65518178046803
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "36 St Andrew St",
+        "history": [
+          {
+            "year": 1930,
+            "name": "Kensington Fruit Market",
+            "type": "Grocer",
+            "subtype": "Produce"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40034091440124,
+          43.65413205280082
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "65 Nassau St",
+        "history": [
+          {
+            "year": 1930,
+            "name": "Augusta Fruit Market",
+            "type": "Grocer",
+            "subtype": "Produce"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40193441831107,
+          43.655213112439405
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "301 College St",
+        "history": [
+          {
+            "year": 2002,
+            "name": "Zen Buddhist Temple",
+            "type": "Place of worship"
+          },
+          {
+            "year": 2011,
+            "name": "Vacant",
+            "type": "Vacant"
+          },
+          {
+            "year": 2016,
+            "name": "CityMarket Value Mart",
+            "type": "Grocer",
+            "subtype": "Supermarket"
+          },
+          {
+            "year": 2020,
+            "name": "T&T Supermarket",
+            "type": "Grocer",
+            "subtype": "Supermarket"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40159462847697,
+          43.65748623506049
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "14 St Andrew St",
+        "history": [
+          {
+            "year": 2007,
+            "name": "Loc 'N Twist",
+            "type": "Service",
+            "subtype": "Hair salon"
+          },
+          {
+            "year": 2014,
+            "name": "MOJO",
+            "type": "Restaurant"
+          },
+          {
+            "year": 2015,
+            "name": "Vital Life",
+            "type": "Restaurant"
+          },
+          {
+            "year": 2020,
+            "name": "Trees in the Six",
+            "type": "Cannabis store"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.39959450171074,
+          43.65436788312968
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "171 Baldwin St",
+        "history": [
+          {
+            "year": 1970,
+            "name": "Caribbean Corner",
+            "type": "Grocer",
+            "subtype": "Raw foods & dry goods"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40029155735228,
+          43.65480207307579
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "176 Baldwin St",
+        "history": [
+          {
+            "year": 1959,
+            "name": "European Quality Meats and Sausages",
+            "type": "Grocer",
+            "subtype": "Raw foods & dry goods"
+          },
+          {
+            "year": 2014,
+            "name": "Sanagan's Meat Locker",
+            "type": "Grocer",
+            "subtype": "Raw foods & dry goods"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40078554222556,
+          43.65484413518451
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "182 Baldwin St",
+        "history": [
+          {
+            "year": 1993,
+            "name": "Cheese Magic",
+            "type": "Grocer",
+            "subtype": "Raw foods & dry goods"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.4010207437928,
+          43.654808876658976
+        ],
+        "type": "Point"
+      }
+    }
+  ]
+}
