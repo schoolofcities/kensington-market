@@ -3,15 +3,14 @@
     import Timeline from "$lib/Timeline.svelte";
     import Dashboard from "$lib/DashboardTimeline.svelte";
 
-    let sliderYear = 2025.5;
+        let sliderYear = 2025.5;
+
 </script>
 
-<div class="container">
-    <MapTimeline {sliderYear} />
-    <Timeline bind:sliderYear />
-</div>
 
-<!-- <Dashboard /> -->
+<MapTimeline {sliderYear} />
+<Timeline bind:sliderYear />
+
 
 <style>
 </style>

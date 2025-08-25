@@ -4,11 +4,13 @@
     import "maplibre-gl/dist/maplibre-gl.css";
     import "../assets/styles.css";
     import { typeColors, getColor } from "./typeColors.js";
+    import Businesses from "../data/businesses.geo.json";
+    import Boundary from "../data/km-boundary.geo.json";
 
     let map;
     let mapContainer;
 
-    let geojson;
+    let geojson = Businesses;
     export let sliderYear = 2025;
 
     let scale = new maplibregl.ScaleControl({
@@ -74,29 +76,22 @@
         map.on("load", async () => {
             map.getCanvas().style.cursor = "crosshair";
 
-                        const buildingsResponse = await fetch(
-                "/kmclt/src/data/buildings.geo.json",
-            );
-            const buildingsGeojson = await buildingsResponse.json();
-
-            map.addSource("buildings", {
+            map.addSource("boundary", {
                 type: "geojson",
-                data: buildingsGeojson,
+                data: Boundary,
             });
             map.addLayer({
-                id: "buildings-extrusion",
-                type: "fill-extrusion",
-                source: "buildings",
+                id: "boundary-line",
+                type: "line",
+                source: "boundary",
                 paint: {
-                    "fill-extrusion-color": "#ccc",
-                    "fill-extrusion-height": ["get", "height"],
-                    "fill-extrusion-base": 0,
-                    "fill-extrusion-opacity": 0,
+                    "line-color": "#666",
+                    "line-width": 1,
+                    "line-dasharray": [2, 0], // 2px dash, 4px gap (adjust as needed)
                 },
             });
 
-            const response = await fetch("/kmclt/src/data/businesses.geo.json");
-            geojson = await response.json();
+            geojson = Businesses;
             map.addSource("businesses-points", {
                 type: "geojson",
                 data: geojson,
@@ -128,9 +123,9 @@
                 type: "circle",
                 source: "businesses-points",
                 paint: {
-                    "circle-radius": 6,
+                    "circle-radius": 5,
                     "circle-color": colorMatch,
-                    "circle-stroke-width": 1,
+                    "circle-stroke-width": 0.5,
                     "circle-stroke-color": "#000",
                 },
             });
@@ -157,7 +152,7 @@
                     timelineHtml += `<div style='display:flex;flex-direction:row;align-items:center;justify-content:center;width:180px;'>`;
                     timelineHtml += `<span style='font-size:12px;width:50px;text-align:right;'>${h.year}</span>`;
                     timelineHtml += `<span style='width:30px;display:flex;justify-content:center;align-items:center;'>`;
-                    timelineHtml += `<svg width='14' height='14'><circle cx='7' cy='7' r='6' fill='${typeColors[h.type] || "#888"}' stroke='#333' stroke-width='1'/></svg>`;
+                    timelineHtml += `<svg width='14' height='14'><circle cx='7' cy='7' r='6' fill='${typeColors[h.type] || "#888"}' stroke='#333' stroke-width='0.5'/></svg>`;
                     timelineHtml += `</span>`;
                     timelineHtml += `<span style='font-size:12px;width:100px;text-align:left;display:flex;flex-direction:column;'>${h.name}<span style='font-size:10px;color:#888;'>${h.type}${h.subtype ? " – " + h.subtype : ""}</span></span>`;
                     timelineHtml += `</div>`;
@@ -197,10 +192,10 @@
 
 <style>
     .map-container {
-        height: 70vh;
-        height: 70dvh;
-        width: 80vw;
-        width: 80dvw;
+        height: calc(100vh - 260px);
+        height: calc(100dvh - 260px);
+        width: 100vw;
+        width: 100dvw;
         position: fixed;
         right: 0;
         border: 1px solid #ccc;
