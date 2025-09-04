@@ -220,6 +220,11 @@
     export let sliderYear = 2025.5;
     let sliderThumbPosition = 0;
 
+    // Watch for external changes to sliderYear (from dropdown)
+    $: if (sliderYear !== undefined) {
+        updateThumbPosition();
+    }
+
     function handleSliderChange() {
         console.log("Slider year:", sliderYear);
         updateThumbPosition();

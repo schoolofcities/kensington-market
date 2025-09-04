@@ -17,6 +17,33 @@
     export let sliderYear = 2025;
     export let hoveredAddress = null; // Bind to parent's hover state
 
+    // Generate available years from the data
+    const years = Array.from({ length: 2025 - 2007 + 1 }, (_, i) => 2007 + i);
+    let selectedYear = Math.floor(sliderYear); // For dropdown selection
+    let isDropdownOpen = false;
+
+    // Watch for changes in sliderYear to update dropdown
+    $: selectedYear = Math.floor(sliderYear);
+
+    // Handle dropdown year selection
+    function handleYearSelect(year) {
+        selectedYear = year;
+        sliderYear = year + 0.5; // Set to middle of year for consistency
+        isDropdownOpen = false;
+    }
+
+    // Toggle dropdown
+    function toggleDropdown() {
+        isDropdownOpen = !isDropdownOpen;
+    }
+
+    // Close dropdown when clicking outside
+    function handleClickOutside(event) {
+        if (!event.target.closest('.year-dropdown-container')) {
+            isDropdownOpen = false;
+        }
+    }
+
     let scale = new maplibregl.ScaleControl({
         maxWidth: 100,
         unit: "metric",
@@ -138,7 +165,7 @@
             timelineHtml += `<span style='width:30px;display:flex;justify-content:center;align-items:center;'>`;
             timelineHtml += `<svg width='14' height='14'><circle cx='7' cy='7' r='6' fill='${typeColors[h.type] || "#888"}' stroke='#333' stroke-width='0.5'/></svg>`;
             timelineHtml += `</span>`;
-            timelineHtml += `<span style='font-size:12px;width:100px;text-align:left;display:flex;flex-direction:column;'>${h.name}<span style='font-size:10px;color:#888;'>${h.type}${h.subtype ? " — " + h.subtype : ""}</span></span>`;
+            timelineHtml += `<span style='font-size:12px;width:100px;text-align:left;display:flex;flex-direction:column;'>${h.name}<span style='font-size:10px;color:#888;'>${h.type}${h.subtype ? " – " + h.subtype : ""}</span></span>`;
             timelineHtml += `</div>`;
             if (i < sortedHistory.length - 1) {
                 timelineHtml += `<div style='height:16px;display:flex;flex-direction:row;align-items:center;justify-content:center;width:180px;'>`;
@@ -343,6 +370,9 @@
                 hoveredAddress = null;
             });
         });
+
+        // Add global click listener to close dropdown
+        document.addEventListener('click', handleClickOutside);
     });
 
     onDestroy(() => {
@@ -356,13 +386,34 @@
         if (map) {
             map.remove();
         }
+        // Remove global click listener
+        document.removeEventListener('click', handleClickOutside);
     });
 </script>
 
 <div bind:this={mapContainer} class="map-container">
-    <!-- Year label positioned in top left -->
-    <div class="year-label">
-        <span style="font-weight: bold;">Year:</span> {Math.floor(sliderYear)}
+    <!-- Year dropdown positioned in top left -->
+    <div class="year-dropdown-container">
+        <div class="year-dropdown" class:open={isDropdownOpen}>
+            <button class="year-dropdown-button" on:click={toggleDropdown}>
+                <span style="font-weight: bold;">Year:</span> {selectedYear}
+                <span class="dropdown-arrow" class:rotated={isDropdownOpen}>▼</span>
+            </button>
+            
+            {#if isDropdownOpen}
+                <div class="year-dropdown-menu">
+                    {#each years.slice().reverse() as year}
+                        <button 
+                            class="year-option" 
+                            class:selected={year === selectedYear}
+                            on:click={() => handleYearSelect(year)}
+                        >
+                            {year}
+                        </button>
+                    {/each}
+                </div>
+            {/if}
+        </div>
     </div>
 </div>
 
@@ -375,15 +426,101 @@
         border-left: 1px solid #000;
     }
     
-    .year-label {
+    .year-dropdown-container {
         position: absolute;
         top: 10px;
         left: 10px;
         z-index: 1000;
+        pointer-events: auto;
+    }
+
+    .year-dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .year-dropdown-button {
         background: white;
+        border: 1px solid #ccc;
         padding: 4px 8px;
         font-size: 14px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        min-width: 80px;
+        justify-content: space-between;
+        transition: all 0.2s ease;
+    }
+
+    .year-dropdown-button:hover {
+        background: #f5f5f5;
+        border-color: #999;
+    }
+
+    .dropdown-arrow {
+        font-size: 10px;
+        transition: transform 0.2s ease;
+        color: #666;
+    }
+
+    .dropdown-arrow.rotated {
+        transform: rotate(180deg);
+    }
+
+    .year-dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
         border: 1px solid #ccc;
-        pointer-events: none; /* Allows map interactions through the label */
+        border-top: none;
+        max-height: 200px;
+        overflow-y: auto;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        z-index: 1001;
+    }
+
+    .year-option {
+        width: 100%;
+        padding: 6px 8px;
+        border: none;
+        background: white;
+        text-align: left;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background-color 0.15s ease;
+    }
+
+    .year-option:hover {
+        background: #f0f0f0;
+    }
+
+    .year-option.selected {
+        background: #e3f2fd;
+        font-weight: bold;
+    }
+
+    .year-option.selected:hover {
+        background: #bbdefb;
+    }
+
+    /* Custom scrollbar for dropdown menu */
+    .year-dropdown-menu::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .year-dropdown-menu::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    .year-dropdown-menu::-webkit-scrollbar-thumb {
+        background: #c1c1c1;
+        border-radius: 3px;
+    }
+
+    .year-dropdown-menu::-webkit-scrollbar-thumb:hover {
+        background: #a8a8a8;
     }
 </style>

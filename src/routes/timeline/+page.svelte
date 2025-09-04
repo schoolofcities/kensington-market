@@ -47,6 +47,10 @@
             <ul>
                 <li><b>Click and drag</b> to move</li>
                 <li><b>Scroll</b> to zoom</li>
+                <li>
+                    <b>Use the year dropdown</b> on the map to jump to any specific
+                    year
+                </li>
             </ul>
             <p>On the timeline:</p>
             <ul>
@@ -84,7 +88,7 @@
         </div>
     </div>
     <div class="map-container">
-        <MapTimeline {sliderYear} bind:hoveredAddress />
+        <MapTimeline bind:sliderYear bind:hoveredAddress />
     </div>
 </div>
 
