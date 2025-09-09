@@ -1,7 +1,4 @@
 <script>
-
-    //add current year in top left of map
-
     import { onMount, onDestroy } from "svelte";
     import maplibregl from "maplibre-gl";
     import "maplibre-gl/dist/maplibre-gl.css";
@@ -331,9 +328,9 @@
                     "circle-stroke-width": [
                         "case",
                         ["boolean", ["feature-state", "highlighted"], false],
-                        3, // Bold stroke for highlighted
+                        1, // Bold stroke for highlighted
                         ["boolean", ["feature-state", "hover"], false],
-                        2, // Medium stroke for hovered
+                        1, // Medium stroke for hovered
                         0.5 // Default stroke
                     ],
                     "circle-stroke-color": "#000",
@@ -436,7 +433,6 @@
         width: 100%;
         position: relative;
         right: 0;
-        border-left: 1px solid #000;
     }
     
     .year-dropdown-container {

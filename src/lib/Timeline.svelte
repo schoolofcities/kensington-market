@@ -6,7 +6,7 @@
     import { typeColors, getColor } from "./typeColors.js";
     import Businesses from "../data/businesses.geo.json";
 
-    export let hoveredAddress = null; // Bind to parent's hover state
+    export let hoveredAddress = null;
 
     // Hover popup state
     let hoveredCircle = null;
@@ -15,16 +15,16 @@
     let hoverTimeout = null;
 
     // Define consistent widths
-    const ADDRESS_COLUMN_WIDTH = 100;
+    const ADDRESS_COLUMN_WIDTH = 115;
     const ADDRESS_BORDER_WIDTH = 1;
     const TOTAL_ADDRESS_WIDTH = ADDRESS_COLUMN_WIDTH + ADDRESS_BORDER_WIDTH;
-    const SCROLLBAR_WIDTH = 16; // Account for scrollbar
+    const SCROLLBAR_WIDTH = 16;
 
     function buildSegments(history, containerWidth = 800) {
         history = [...history].sort((a, b) => a.year - b.year);
 
         const totalYears = years.length;
-        const timelineWidth = containerWidth - TOTAL_ADDRESS_WIDTH - SCROLLBAR_WIDTH; // Subtract scrollbar width
+        const timelineWidth = containerWidth - TOTAL_ADDRESS_WIDTH - SCROLLBAR_WIDTH;
         const pixelsPerYear = timelineWidth / totalYears;
 
         let segments = [];
@@ -228,7 +228,9 @@
     let timelineWidth = 0;
     let useAbbreviatedYears = false;
 
-    const containerHeight = 400;
+    // Dynamic container height - responsive to screen size
+    let containerHeight = 400;
+    let isMobile = false;
 
     function updateContainerWidth() {
         if (timelineContainer) {
@@ -239,6 +241,24 @@
             useAbbreviatedYears = pixelsPerYear < 32;
 
             updateThumbPosition();
+        }
+    }
+
+    function updateResponsiveHeight() {
+        // Check if we're in mobile view
+        isMobile = window.innerWidth <= 839;
+        
+        if (isMobile) {
+            // In mobile, calculate available height more carefully
+            // Account for header, dashboard body, and some padding
+            const viewportHeight = window.innerHeight;
+            const headerHeight = 100; // Approximate header height in mobile
+            const dashboardBodyHeight = 150; // Approximate dashboard body height in mobile
+            const padding = 20; // Some padding
+            
+            containerHeight = Math.max(200, Math.min(300, viewportHeight - headerHeight - dashboardBodyHeight - padding));
+        } else {
+            containerHeight = 400; // Desktop height
         }
     }
 
@@ -280,6 +300,7 @@
         }));
 
         preCalculateYearlyCounts();
+        updateResponsiveHeight();
 
         setTimeout(() => {
             updateContainerWidth();
@@ -288,6 +309,7 @@
     });
 
     function handleResize() {
+        updateResponsiveHeight();
         updateContainerWidth();
     }
 
@@ -344,6 +366,7 @@
 
 <div
     class="timeline-container"
+    class:mobile={isMobile}
     bind:this={timelineContainer}
     style="height: {containerHeight}px;"
 >
@@ -560,10 +583,16 @@
         position: relative;
         bottom: 0;
         right: 0;
-        /* width: 100%; */
         overflow: hidden;
         background: #fff;
         border-top: 1px solid #000;
+        flex-shrink: 0; /* Prevent shrinking */
+    }
+
+    /* Mobile-specific styling */
+    .timeline-container.mobile {
+        min-height: 200px; /* Minimum height for mobile */
+        max-height: 300px; /* Maximum height for mobile */
     }
 
     .vertical-indicator-line {
@@ -586,6 +615,7 @@
         z-index: 600;
         background-color: #f5f5f5;
         border-bottom: 1px solid #000;
+        flex-shrink: 0; /* Prevent header from shrinking */
     }
 
     .timeline-header-address {
@@ -604,20 +634,20 @@
     }
 
     .timeline-list {
-        /* width: 100%; */
         position: relative;
         overflow-y: auto;
         height: calc(100% - 40px);
-        /* border-bottom: 1px solid #ccc; */
         /* Add padding to account for scrollbar visually */
         padding-right: 32px;
         margin-right: -32px;
+        flex: 1; /* Allow to take remaining space */
     }
     
     .timeline-row {
         display: flex;
         align-items: center;
         height: 17px;
+        flex-shrink: 0; /* Prevent rows from shrinking */
     }
     
     .timeline-address {
@@ -769,4 +799,98 @@
         top: 4px;
     }
 
-    </style>
+    /* Mobile responsive adjustments */
+    @media (max-width: 839px) {
+        .legend-container {
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 6px 10px;
+            padding: 6px 15px;
+        }
+
+        .legend-item {
+            font-size: 11px;
+        }
+
+        .timeline-header-address {
+            font-size: 11px;
+            padding: 0px 6px;
+        }
+
+        .timeline-address {
+            font-size: 11px;
+            padding: 0px 6px;
+        }
+
+        .year-label {
+            font-size: 11px;
+        }
+
+        .year-label.abbreviated {
+            font-size: 9px;
+        }
+
+        .timeline-row {
+            height: 16px;
+        }
+
+        .timeline-circle {
+            width: 7px;
+            height: 7px;
+        }
+
+        .timeline-circle.hovered {
+            width: 10px;
+            height: 10px;
+        }
+
+        .hover-popup {
+            font-size: 10px;
+            padding: 4px 6px;
+        }
+    }
+
+    /* Extra small screens */
+    @media (max-width: 480px) {
+        .legend-container {
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 4px 8px;
+            padding: 4px 12px;
+        }
+
+        .legend-item {
+            font-size: 10px;
+        }
+
+        .timeline-header-address {
+            font-size: 10px;
+            padding: 0px 4px;
+        }
+
+        .timeline-address {
+            font-size: 10px;
+            padding: 0px 4px;
+        }
+
+        .year-label {
+            font-size: 10px;
+        }
+
+        .year-label.abbreviated {
+            font-size: 8px;
+        }
+
+        .timeline-row {
+            height: 15px;
+        }
+
+        .timeline-circle {
+            width: 6px;
+            height: 6px;
+        }
+
+        .timeline-circle.hovered {
+            width: 9px;
+            height: 9px;
+        }
+    }
+</style>

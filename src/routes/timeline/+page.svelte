@@ -24,12 +24,8 @@
                     </div>
                 </a>
                 <div style="display: flex; flex-direction: column;">
-                    <h1 style="margin:5px; font-size:2em;">
-                        Kensington Market
-                    </h1>
-                    <h2
-                        style="margin:5px; font-size:1.1em; font-weight:normal; color:#555;"
-                    >
+                    <h1 class="main-title">Kensington Market</h1>
+                    <h2 class="subtitle">
                         Mapping the loss of fresh and raw food vendors
                     </h2>
                 </div>
@@ -112,8 +108,21 @@
         flex-direction: column;
         width: 40vw;
         min-width: 420px;
+        max-width: 620px;
         height: 100vh;
         position: relative;
+    }
+
+    .main-title {
+        margin: 5px;
+        font-size: 2em;
+    }
+
+    .subtitle {
+        margin: 5px;
+        font-size: 1.1em;
+        font-weight: normal;
+        color: #555;
     }
 
     #text {
@@ -137,7 +146,140 @@
         height: 100vh;
         height: 100dvh;
         overflow: hidden;
-        width: 60vw;
+        flex: 1;
         margin: 0;
+        border-left: 1px solid #000;
+    }
+
+    /* Mobile styles for screens under 840px */
+    @media (max-width: 839px) {
+        .side-by-side {
+            flex-direction: column;
+            height: 100vh;
+            height: 100dvh;
+            overflow: hidden;
+        }
+
+        .dashboard-container {
+            width: 100vw;
+            min-width: unset;
+            max-width: unset;
+            height: auto;
+            max-height: 50vh;
+            flex-shrink: 0;
+            order: 1;
+        }
+
+        .dashboard-header {
+            position: static;
+            padding: 10px 0;
+        }
+
+        .dashboard-header div {
+            gap: 12px !important;
+        }
+
+        .dashboard-header img {
+            height: 60px !important;
+            margin-top: 5px !important;
+        }
+
+        .main-title {
+            font-size: 1.5em !important;
+            margin: 2px !important;
+        }
+
+        .subtitle {
+            font-size: 1em !important;
+            margin: 2px !important;
+        }
+
+        #text {
+            padding: 0 15px;
+        }
+
+        .dashboard-body {
+            padding-bottom: 10px;
+            font-size: 0.85em;
+            min-height: unset;
+            max-height: 25vh;
+            overflow-y: auto;
+        }
+
+        .dashboard-body h3 {
+            margin: 10px 0 5px 0;
+            font-size: 1.1em;
+        }
+
+        .dashboard-body p {
+            margin: 8px 0;
+        }
+
+        .dashboard-body ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+
+        .dashboard-body li {
+            margin: 3px 0;
+        }
+
+        .timeline-container {
+            margin-top: 0;
+            border-top: 1px solid #000;
+        }
+
+        .map-container {
+            width: 100vw;
+            height: 50vh;
+            height: 50dvh;
+            order: 2;
+            flex: 1;
+            min-height: 300px;
+            border-left: none;
+            border-top: 1px solid #000;
+        }
+
+        .dashboard-container,
+        .map-container {
+            flex-shrink: 0;
+        }
+    }
+
+    /* Extra small screens (phones in portrait) */
+    @media (max-width: 480px) {
+        .dashboard-header div {
+            gap: 8px !important;
+        }
+
+        .dashboard-header img {
+            height: 50px !important;
+        }
+
+        .main-title {
+            font-size: 1.3em !important;
+        }
+
+        .subtitle {
+            font-size: 0.9em !important;
+        }
+
+        #text {
+            padding: 0 12px;
+        }
+
+        .dashboard-body {
+            font-size: 0.8em;
+            max-height: 20vh;
+        }
+
+        .dashboard-body h3 {
+            font-size: 1em;
+        }
+
+        .map-container {
+            height: 55vh;
+            height: 55dvh;
+        }
     }
 </style>
