@@ -111,18 +111,37 @@
         };
     }
 
-    // Address hover handlers
+    // Improved address hover handlers with immediate clearing
     function handleAddressHover(address) {
+        console.log('Timeline address hover:', address);
+        // Clear any pending timeouts first
+        if (hoverTimeout) {
+            clearTimeout(hoverTimeout);
+            hoverTimeout = null;
+        }
+        // Set immediately for timeline hover
         hoveredAddress = address;
     }
 
     function handleAddressLeave() {
+        console.log('Timeline address leave');
+        // Clear any pending timeouts first
+        if (hoverTimeout) {
+            clearTimeout(hoverTimeout);
+            hoverTimeout = null;
+        }
+        // Clear immediately for timeline hover
         hoveredAddress = null;
     }
 
-    // Circle hover handlers
+    // Improved circle hover handlers
     function handleCircleHover(event, segment, address) {
-        clearTimeout(hoverTimeout);
+        console.log('Timeline circle hover:', address);
+        // Clear any pending timeouts first
+        if (hoverTimeout) {
+            clearTimeout(hoverTimeout);
+            hoverTimeout = null;
+        }
 
         const rect = timelineContainer.getBoundingClientRect();
         const circleRect = event.target.getBoundingClientRect();
@@ -165,23 +184,40 @@
 
         popupVisible = true;
 
-        // Also set hovered address for map highlighting
+        // Set hovered address immediately for map highlighting
         hoveredAddress = address;
     }
 
     function handleCircleLeave() {
+        console.log('Timeline circle leave');
+        // Use shorter timeout and ensure cleanup
+        if (hoverTimeout) {
+            clearTimeout(hoverTimeout);
+        }
         hoverTimeout = setTimeout(() => {
             popupVisible = false;
             hoveredCircle = null;
             hoveredAddress = null;
-        }, 100);
+        }, 50); // Reduced from 100ms to 50ms
     }
 
     function handlePopupEnter() {
-        clearTimeout(hoverTimeout);
+        console.log('Timeline popup enter');
+        // Cancel any pending clear operations
+        if (hoverTimeout) {
+            clearTimeout(hoverTimeout);
+            hoverTimeout = null;
+        }
     }
 
     function handlePopupLeave() {
+        console.log('Timeline popup leave');
+        // Clear any pending timeouts
+        if (hoverTimeout) {
+            clearTimeout(hoverTimeout);
+            hoverTimeout = null;
+        }
+        // Clear immediately when leaving popup
         popupVisible = false;
         hoveredCircle = null;
         hoveredAddress = null;
@@ -226,7 +262,6 @@
     }
 
     function handleSliderChange() {
-        console.log("Slider year:", sliderYear);
         updateThumbPosition();
     }
 
@@ -255,6 +290,23 @@
     function handleResize() {
         updateContainerWidth();
     }
+
+    // Cleanup function to ensure no stuck timeouts
+    function cleanup() {
+        if (hoverTimeout) {
+            clearTimeout(hoverTimeout);
+            hoverTimeout = null;
+        }
+        hoveredAddress = null;
+        popupVisible = false;
+        hoveredCircle = null;
+    }
+
+    // Add cleanup on component destroy
+    import { onDestroy } from "svelte";
+    onDestroy(() => {
+        cleanup();
+    });
 </script>
 
 <!-- Legend Section -->

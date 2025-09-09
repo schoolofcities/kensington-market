@@ -54,58 +54,68 @@
     let mapHoveredFeatureId = null; // Track map hover state
     let hoverTimeout = null; // Debounce hover operations
 
-    // Watch for hover changes from timeline with optimization
-    $: if (map && hoveredAddress !== currentlyHighlighted) {
-        if (hoveredAddress) {
-            highlightMapPoint(hoveredAddress);
-        } else {
+    // Fixed reactive statement - always clear first, then set new highlight
+    $: if (map) {
+        if (hoveredAddress !== currentlyHighlighted) {
+            // Always clear first, then set new highlight
             clearMapHighlight();
+            if (hoveredAddress) {
+                highlightMapPoint(hoveredAddress);
+            }
         }
     }
 
     function highlightMapPoint(address) {
-        // Clear any pending hover timeout
-        if (hoverTimeout) {
-            clearTimeout(hoverTimeout);
+        // Don't debounce timeline hover - only debounce internal map hover
+        // Check if this is from timeline (hoveredAddress matches) or from map hover
+        if (hoveredAddress === address) {
+            // This is from timeline hover - perform immediately
+            performHighlight(address);
+        } else {
+            // This is likely from map hover, so debounce
+            if (hoverTimeout) {
+                clearTimeout(hoverTimeout);
+            }
+            hoverTimeout = setTimeout(() => performHighlight(address), 50);
+        }
+    }
+
+    function performHighlight(address) {
+        console.log('Setting highlight for:', address);
+        if (!map || currentlyHighlighted === address) return;
+        
+        // Clear previous highlight first
+        clearMapHighlight();
+        
+        // Find the feature with matching address
+        const feature = geojson.features.find(f => f.properties.address === address);
+        if (!feature) return;
+
+        currentlyHighlighted = address;
+
+        // Use feature-state based highlighting for better performance
+        const matchingFeatures = map.querySourceFeatures('businesses-points', {
+            filter: ['==', ['get', 'address'], address]
+        });
+
+        if (matchingFeatures.length > 0) {
+            const featureId = matchingFeatures[0].id;
+            if (featureId !== undefined) {
+                map.setFeatureState(
+                    { source: 'businesses-points', id: featureId },
+                    { highlighted: true }
+                );
+            }
         }
 
-        // Debounce the highlight operation
-        hoverTimeout = setTimeout(() => {
-            if (!map || currentlyHighlighted === address) return;
-            
-            // Clear previous highlight first
-            clearMapHighlight();
-            
-            // Find the feature with matching address
-            const feature = geojson.features.find(f => f.properties.address === address);
-            if (!feature) return;
-
-            currentlyHighlighted = address;
-
-            // Use feature-state based highlighting for better performance
-            const matchingFeatures = map.querySourceFeatures('businesses-points', {
-                filter: ['==', ['get', 'address'], address]
-            });
-
-            if (matchingFeatures.length > 0) {
-                const featureId = matchingFeatures[0].id;
-                if (featureId !== undefined) {
-                    map.setFeatureState(
-                        { source: 'businesses-points', id: featureId },
-                        { highlighted: true }
-                    );
-                }
-            }
-
-            // Show popup for the hovered address
-            showPopupForAddress(address);
-        }, 50); // Small debounce delay
+        // Show popup for the hovered address
+        showPopupForAddress(address);
     }
 
     function clearMapHighlight() {
         if (!map) return;
         
-        // Clear any pending hover timeout
+        // Clear any pending operations first
         if (hoverTimeout) {
             clearTimeout(hoverTimeout);
             hoverTimeout = null;
@@ -117,17 +127,17 @@
                 filter: ['==', ['get', 'address'], currentlyHighlighted]
             });
 
-            if (matchingFeatures.length > 0) {
-                const featureId = matchingFeatures[0].id;
-                if (featureId !== undefined) {
+            matchingFeatures.forEach(feature => {
+                if (feature.id !== undefined) {
                     map.setFeatureState(
-                        { source: 'businesses-points', id: featureId },
+                        { source: 'businesses-points', id: feature.id },
                         { highlighted: false }
                     );
                 }
-            }
+            });
         }
         
+        // Reset tracking variables
         currentlyHighlighted = null;
 
         // Clear popup
@@ -189,6 +199,7 @@
             .addTo(map);
     }
 
+    // Fixed data update with highlight persistence
     $: if (map && geojson && sliderYear) {
         const filtered = {
             ...geojson,
@@ -213,18 +224,20 @@
                 };
             }),
         };
+        
+        // Store current highlight before data update
+        const wasHighlighted = currentlyHighlighted;
+        
         map.getSource("businesses-points").setData(filtered);
         
-        // Maintain highlight after data update if there's a hovered address
-        if (currentlyHighlighted && hoveredAddress === currentlyHighlighted) {
-            // Re-highlight after a brief delay to ensure the data is updated
-            setTimeout(() => {
-                if (currentlyHighlighted) {
-                    const tempHighlighted = currentlyHighlighted;
-                    currentlyHighlighted = null; // Reset to force re-highlight
-                    highlightMapPoint(tempHighlighted);
-                }
-            }, 100);
+        // Restore highlight after data update
+        if (wasHighlighted && hoveredAddress === wasHighlighted) {
+            // Use requestAnimationFrame to ensure data is updated
+            requestAnimationFrame(() => {
+                const tempHighlighted = wasHighlighted;
+                currentlyHighlighted = null; // Reset to force re-highlight
+                performHighlight(tempHighlighted);
+            });
         }
     }
 

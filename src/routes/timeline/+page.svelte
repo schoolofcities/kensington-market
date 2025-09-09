@@ -5,7 +5,7 @@
     import kmcltImage from "../../assets/kmclt.png";
 
     let sliderYear = 2025.5;
-    let hoveredAddress = null; // Shared hover state
+    let hoveredAddress = null;
 </script>
 
 <div class="side-by-side">
@@ -124,6 +124,7 @@
     .dashboard-body {
         overflow-y: auto;
         font-size: 0.9em;
+        min-height: 150px;
     }
 
     .timeline-container {
