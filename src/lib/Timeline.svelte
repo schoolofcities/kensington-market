@@ -20,7 +20,7 @@
     const TOTAL_ADDRESS_WIDTH = ADDRESS_COLUMN_WIDTH + ADDRESS_BORDER_WIDTH;
     const SCROLLBAR_WIDTH = 16;
 
-    function buildSegments(history, containerWidth = 800) {
+    function buildSegments(history, containerWidth = 600) {
         history = [...history].sort((a, b) => a.year - b.year);
 
         const totalYears = years.length;
@@ -58,13 +58,13 @@
         return segments;
     }
 
-    let yearlyTypeCounts = {};
+    export let yearlyTypeCounts = {};
 
     function preCalculateYearlyCounts() {
-        yearlyTypeCounts = {};
+        const newCounts = {};
 
         years.forEach((year) => {
-            yearlyTypeCounts[year] = {};
+            newCounts[year] = {};
         });
 
         businesses.forEach((business) => {
@@ -87,29 +87,22 @@
                 }
 
                 if (activeType) {
-                    if (!yearlyTypeCounts[year][activeType]) {
-                        yearlyTypeCounts[year][activeType] = 0;
+                    if (!newCounts[year][activeType]) {
+                        newCounts[year][activeType] = 0;
                     }
-                    yearlyTypeCounts[year][activeType]++;
+                    newCounts[year][activeType]++;
                 }
             });
         });
+        
+        // Assign the new object to trigger reactivity
+        yearlyTypeCounts = newCounts;
     }
 
     $: currentCounts = yearlyTypeCounts[Math.floor(sliderYear)] || {};
     $: baselineCounts = yearlyTypeCounts[2007] || {};
 
-    function getChangeInfo(type, currentCount, baselineCount) {
-        const current = currentCount || 0;
-        const baseline = baselineCount || 0;
-        const change = current - baseline;
 
-        return {
-            current,
-            change,
-            hasChange: Math.floor(sliderYear) > 2007 && change !== 0,
-        };
-    }
 
     // Improved address hover handlers with immediate clearing
     function handleAddressHover(address) {
@@ -224,7 +217,7 @@
     }
 
     let timelineContainer;
-    let containerWidth = 800;
+    let containerWidth = 0;
     let timelineWidth = 0;
     let useAbbreviatedYears = false;
 
@@ -248,17 +241,20 @@
         // Check if we're in mobile view
         isMobile = window.innerWidth <= 839;
         
+        // Calculate height based on number of businesses to show all without scrolling
+        const rowHeight = 15; // Reduced height per business row
+        const headerHeight = 40; // Timeline header height
+        const numBusinesses = businesses.length;
+        const calculatedHeight = headerHeight + (numBusinesses * rowHeight) + 15; // Reduced padding
+        
         if (isMobile) {
-            // In mobile, calculate available height more carefully
-            // Account for header, dashboard body, and some padding
+            // In mobile, still limit the height but be more generous
             const viewportHeight = window.innerHeight;
-            const headerHeight = 100; // Approximate header height in mobile
-            const dashboardBodyHeight = 150; // Approximate dashboard body height in mobile
-            const padding = 20; // Some padding
-            
-            containerHeight = Math.max(200, Math.min(300, viewportHeight - headerHeight - dashboardBodyHeight - padding));
+            const maxMobileHeight = Math.max(350, viewportHeight * 0.5);
+            containerHeight = Math.min(calculatedHeight, maxMobileHeight);
         } else {
-            containerHeight = 400; // Desktop height
+            // Desktop: use calculated height to show all content, with lower limits
+            containerHeight = Math.max(350, Math.min(calculatedHeight, 600));
         }
     }
 
@@ -297,7 +293,31 @@
         businesses = Businesses.features.map((f) => ({
             address: f.properties.address,
             history: f.properties.history,
-        }));
+        })).sort((a, b) => {
+            // Parse address into number and street name
+            const parseAddress = (addr) => {
+                const parts = addr.match(/^(\d+)\s+(.+)$/);
+                return parts ? { 
+                    number: parseInt(parts[1], 10), 
+                    street: parts[2] 
+                } : { 
+                    number: 0, 
+                    street: addr 
+                };
+            };
+            
+            const addressA = parseAddress(a.address);
+            const addressB = parseAddress(b.address);
+            
+            // First sort by street name alphabetically
+            const streetCompare = addressA.street.localeCompare(addressB.street);
+            if (streetCompare !== 0) {
+                return streetCompare;
+            }
+            
+            // Then sort by address number numerically
+            return addressA.number - addressB.number;
+        });
 
         preCalculateYearlyCounts();
         updateResponsiveHeight();
@@ -331,38 +351,7 @@
     });
 </script>
 
-<!-- Legend Section -->
-<div class="legend-section" style="bottom: {containerHeight}px;">
-    <div class="legend-container">
-        {#each Object.entries(typeColors) as [type, color]}
-            {@const changeInfo = getChangeInfo(
-                type,
-                currentCounts[type],
-                baselineCounts[type],
-            )}
-            <div class="legend-item">
-                <div
-                    class="legend-color"
-                    style="background-color: {color};"
-                ></div>
-                <span class="legend-text">
-                    {type}: {changeInfo.current}
-                    {#if changeInfo.hasChange}
-                        <span
-                            class="change-indicator"
-                            class:positive={changeInfo.change > 0}
-                            class:negative={changeInfo.change < 0}
-                        >
-                            ({changeInfo.change > 0
-                                ? "+"
-                                : ""}{changeInfo.change})
-                        </span>
-                    {/if}
-                </span>
-            </div>
-        {/each}
-    </div>
-</div>
+
 
 <div
     class="timeline-container"
@@ -480,52 +469,7 @@
 <svelte:window on:resize={handleResize} />
 
 <style>
-    /* Legend Section Styles */
-    .legend-section {
-        position: static;
-        width: 100%;
-        min-height: 40px;
-        background: #f5f5f5;
-        border-top: 1px solid #666;
-        z-index: 1002;
-    }
 
-    .legend-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-        gap: 8px 12px;
-        padding: 8px 18px;
-        width: 100%;
-        align-items: center;
-    }
-
-    .legend-item {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        font-size: 12px;
-        color: #333;
-    }
-
-    .legend-color {
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        border: 0.5px solid #000;
-    }
-
-    .change-indicator {
-        font-weight: bold;
-        margin-left: 2px;
-    }
-
-    .change-indicator.positive {
-        color: #22c55e;
-    }
-
-    .change-indicator.negative {
-        color: #ef4444;
-    }
 
     /* Hover Popup Styles */
     .hover-popup {
@@ -587,6 +531,10 @@
         background: #fff;
         border-top: 1px solid #000;
         flex-shrink: 0; /* Prevent shrinking */
+        width: 100%;
+        height: 100%;
+        min-height: 400px;
+        box-sizing: border-box;
     }
 
     /* Mobile-specific styling */
@@ -635,8 +583,8 @@
 
     .timeline-list {
         position: relative;
-        overflow-y: auto;
-        height: calc(100% - 40px);
+        overflow-y: auto; /* Restore scrolling when content overflows */
+        height: calc(100% - 40px); /* Fixed height relative to container */
         /* Add padding to account for scrollbar visually */
         padding-right: 32px;
         margin-right: -32px;
@@ -801,15 +749,7 @@
 
     /* Mobile responsive adjustments */
     @media (max-width: 839px) {
-        .legend-container {
-            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-            gap: 6px 10px;
-            padding: 6px 15px;
-        }
 
-        .legend-item {
-            font-size: 11px;
-        }
 
         .timeline-header-address {
             font-size: 11px;
@@ -851,15 +791,7 @@
 
     /* Extra small screens */
     @media (max-width: 480px) {
-        .legend-container {
-            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-            gap: 4px 8px;
-            padding: 4px 12px;
-        }
 
-        .legend-item {
-            font-size: 10px;
-        }
 
         .timeline-header-address {
             font-size: 10px;

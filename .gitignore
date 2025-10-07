@@ -10,6 +10,7 @@ node_modules
 src/tools/
 src/other-data/
 src/scripts
+/scripts
 
 # OS
 .DS_Store

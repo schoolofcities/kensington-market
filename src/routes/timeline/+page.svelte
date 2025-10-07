@@ -1,4 +1,11 @@
 <script>
+    // TO DO
+    // Finalize mobile version
+    // Pick a font
+    // Use a static basemap instead of Carto
+    // Write better info text
+    // make legend and updating numbers very clear, in sentence context
+
     import MapTimeline from "$lib/MapTimeline.svelte";
     import Timeline from "$lib/Timeline.svelte";
     import Dashboard from "$lib/DashboardTimeline.svelte";

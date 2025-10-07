@@ -13,6 +13,7 @@
     let geojson = Businesses;
     export let sliderYear = 2025;
     export let hoveredAddress = null; // Bind to parent's hover state
+    export let enabledTypes = {}; // Filter state from legend
 
     // Generate available years from the data
     const years = Array.from({ length: 2025 - 2007 + 1 }, (_, i) => 2007 + i);
@@ -36,7 +37,7 @@
 
     // Close dropdown when clicking outside
     function handleClickOutside(event) {
-        if (!event.target.closest('.year-dropdown-container')) {
+        if (!event.target.closest(".year-dropdown-container")) {
             isDropdownOpen = false;
         }
     }
@@ -78,29 +79,31 @@
     }
 
     function performHighlight(address) {
-        console.log('Setting highlight for:', address);
+        console.log("Setting highlight for:", address);
         if (!map || currentlyHighlighted === address) return;
-        
+
         // Clear previous highlight first
         clearMapHighlight();
-        
+
         // Find the feature with matching address
-        const feature = geojson.features.find(f => f.properties.address === address);
+        const feature = geojson.features.find(
+            (f) => f.properties.address === address,
+        );
         if (!feature) return;
 
         currentlyHighlighted = address;
 
         // Use feature-state based highlighting for better performance
-        const matchingFeatures = map.querySourceFeatures('businesses-points', {
-            filter: ['==', ['get', 'address'], address]
+        const matchingFeatures = map.querySourceFeatures("businesses-points", {
+            filter: ["==", ["get", "address"], address],
         });
 
         if (matchingFeatures.length > 0) {
             const featureId = matchingFeatures[0].id;
             if (featureId !== undefined) {
                 map.setFeatureState(
-                    { source: 'businesses-points', id: featureId },
-                    { highlighted: true }
+                    { source: "businesses-points", id: featureId },
+                    { highlighted: true },
                 );
             }
         }
@@ -111,29 +114,32 @@
 
     function clearMapHighlight() {
         if (!map) return;
-        
+
         // Clear any pending operations first
         if (hoverTimeout) {
             clearTimeout(hoverTimeout);
             hoverTimeout = null;
         }
-        
+
         // Clear feature state for previously highlighted feature
         if (currentlyHighlighted) {
-            const matchingFeatures = map.querySourceFeatures('businesses-points', {
-                filter: ['==', ['get', 'address'], currentlyHighlighted]
-            });
+            const matchingFeatures = map.querySourceFeatures(
+                "businesses-points",
+                {
+                    filter: ["==", ["get", "address"], currentlyHighlighted],
+                },
+            );
 
-            matchingFeatures.forEach(feature => {
+            matchingFeatures.forEach((feature) => {
                 if (feature.id !== undefined) {
                     map.setFeatureState(
-                        { source: 'businesses-points', id: feature.id },
-                        { highlighted: false }
+                        { source: "businesses-points", id: feature.id },
+                        { highlighted: false },
                     );
                 }
             });
         }
-        
+
         // Reset tracking variables
         currentlyHighlighted = null;
 
@@ -151,7 +157,9 @@
             activePopup = null;
         }
 
-        const feature = geojson.features.find(f => f.properties.address === address);
+        const feature = geojson.features.find(
+            (f) => f.properties.address === address,
+        );
         if (!feature) return;
 
         const { history } = feature.properties;
@@ -189,7 +197,7 @@
         activePopup = new maplibregl.Popup({
             closeButton: false,
             closeOnClick: false, // Don't close on click to allow timeline hover
-            closeOnMove: false,   // Don't close when map moves
+            closeOnMove: false, // Don't close when map moves
         })
             .setLngLat(feature.geometry.coordinates)
             .setHTML(timelineHtml)
@@ -221,12 +229,12 @@
                 };
             }),
         };
-        
+
         // Store current highlight before data update
         const wasHighlighted = currentlyHighlighted;
-        
+
         map.getSource("businesses-points").setData(filtered);
-        
+
         // Restore highlight after data update
         if (wasHighlighted && hoveredAddress === wasHighlighted) {
             // Use requestAnimationFrame to ensure data is updated
@@ -238,23 +246,63 @@
         }
     }
 
+    // Update layer opacity based on enabled types filter
+    $: if (map && map.getLayer && map.getLayer("businesses-points-layer") && enabledTypes && Object.keys(enabledTypes).length > 0) {
+        // Create opacity expression based on enabled types
+        const opacityExpression = [
+            "case"
+        ];
+        
+        // Add conditions for each type
+        Object.entries(enabledTypes).forEach(([type, isEnabled]) => {
+            opacityExpression.push(
+                ["==", ["get", "mostRecentType"], type],
+                isEnabled ? 1 : 0.1 // Show at 10% opacity if disabled, full opacity if enabled
+            );
+        });
+        
+        // Default opacity for unknown types
+        opacityExpression.push(0.8);
+        
+        // Apply opacity to both fill and stroke
+        map.setPaintProperty("businesses-points-layer", "circle-opacity", opacityExpression);
+        map.setPaintProperty("businesses-points-layer", "circle-stroke-opacity", opacityExpression);
+    }
+
     onMount(async () => {
         map = new maplibregl.Map({
             container: mapContainer,
             style: "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json",
             center: [-79.402961, 43.654747],
-            zoom: 16,
             bearing: -15.5,
             projection: "globe",
             maxPitch: 0,
             scrollZoom: true,
             attributionControl: true,
             maxBounds: [
-                [-79.412961, 43.644747],
-                [-79.392961, 43.664747],
+                [-79.40868603317146, 43.651118426591346],
+                [-79.39711887690949, 43.65862486157258],
             ],
             dragRotate: false,
             touchRotate: false,
+        });
+
+        // Define the Kensington Market bounds
+        const kmBounds = [
+            [-79.408, 43.651], // Southwest corner
+            [-79.398, 43.658], // Northeast corner
+        ];
+
+        // Fit to bounds on map load
+        map.on("load", () => {
+            // Force map to recalculate container size before fitting bounds
+            map.resize();
+            
+            map.fitBounds(kmBounds, {
+                padding: { top: 50, bottom: 50, left: 50, right: 50 },
+                bearing: -15.5, // Maintain the bearing
+                duration: 0, // Immediate fit without animation
+            });
         });
 
         map.addControl(scale, "bottom-left");
@@ -288,7 +336,7 @@
             map.addSource("businesses-points", {
                 type: "geojson",
                 data: geojson,
-                generateId: true // Important: enables feature.id for feature state
+                generateId: true, // Important: enables feature.id for feature state
             });
 
             // Add mostRecentType property to each feature
@@ -322,7 +370,7 @@
                         8, // Larger radius for highlighted
                         ["boolean", ["feature-state", "hover"], false],
                         7, // Medium radius for hovered
-                        5  // Default radius
+                        5, // Default radius
                     ],
                     "circle-color": colorMatch,
                     "circle-stroke-width": [
@@ -331,7 +379,7 @@
                         1, // Bold stroke for highlighted
                         ["boolean", ["feature-state", "hover"], false],
                         1, // Medium stroke for hovered
-                        0.5 // Default stroke
+                        0.5, // Default stroke
                     ],
                     "circle-stroke-color": "#000",
                 },
@@ -342,47 +390,53 @@
                 map.getCanvas().style.cursor = "pointer";
                 const feature = e.features[0];
                 const address = feature.properties.address;
-                
+
                 // Clear previous map hover state
                 if (mapHoveredFeatureId !== null) {
                     map.setFeatureState(
-                        { source: 'businesses-points', id: mapHoveredFeatureId },
-                        { hover: false }
+                        {
+                            source: "businesses-points",
+                            id: mapHoveredFeatureId,
+                        },
+                        { hover: false },
                     );
                 }
-                
+
                 // Set new hover state only if feature has an id
                 if (feature.id !== undefined) {
                     mapHoveredFeatureId = feature.id;
                     map.setFeatureState(
-                        { source: 'businesses-points', id: feature.id },
-                        { hover: true }
+                        { source: "businesses-points", id: feature.id },
+                        { hover: true },
                     );
                 }
-                
+
                 // Set hovered address to trigger timeline highlight
                 hoveredAddress = address;
             });
 
             map.on("mouseleave", "businesses-points-layer", () => {
                 map.getCanvas().style.cursor = "crosshair"; // Reset to crosshair, not default
-                
+
                 // Clear map hover state
                 if (mapHoveredFeatureId !== null) {
                     map.setFeatureState(
-                        { source: 'businesses-points', id: mapHoveredFeatureId },
-                        { hover: false }
+                        {
+                            source: "businesses-points",
+                            id: mapHoveredFeatureId,
+                        },
+                        { hover: false },
                     );
                     mapHoveredFeatureId = null;
                 }
-                
+
                 // Clear hovered address
                 hoveredAddress = null;
             });
         });
 
         // Add global click listener to close dropdown
-        document.addEventListener('click', handleClickOutside);
+        document.addEventListener("click", handleClickOutside);
     });
 
     onDestroy(() => {
@@ -397,7 +451,7 @@
             map.remove();
         }
         // Remove global click listener
-        document.removeEventListener('click', handleClickOutside);
+        document.removeEventListener("click", handleClickOutside);
     });
 </script>
 
@@ -406,15 +460,18 @@
     <div class="year-dropdown-container">
         <div class="year-dropdown" class:open={isDropdownOpen}>
             <button class="year-dropdown-button" on:click={toggleDropdown}>
-                <span style="font-weight: bold;">Year:</span> {selectedYear}
-                <span class="dropdown-arrow" class:rotated={isDropdownOpen}>▼</span>
+                <span style="font-weight: bold;">Year:</span>
+                {selectedYear}
+                <span class="dropdown-arrow" class:rotated={isDropdownOpen}
+                    >▼</span
+                >
             </button>
-            
+
             {#if isDropdownOpen}
                 <div class="year-dropdown-menu">
                     {#each years.slice().reverse() as year}
-                        <button 
-                            class="year-option" 
+                        <button
+                            class="year-option"
                             class:selected={year === selectedYear}
                             on:click={() => handleYearSelect(year)}
                         >
@@ -433,8 +490,10 @@
         width: 100%;
         position: relative;
         right: 0;
+        min-height: 350px;
+        box-sizing: border-box;
     }
-    
+
     .year-dropdown-container {
         position: absolute;
         top: 10px;
@@ -487,7 +546,7 @@
         border-top: none;
         max-height: 200px;
         overflow-y: auto;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
         z-index: 1001;
     }
 

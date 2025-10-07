@@ -9,7 +9,8 @@
           {
             "year": 2007,
             "name": "Na Na",
-            "type": "Vintage clothing"
+            "type": "Retail",
+            "subtype": "Vintage clothing"
           },
           {
             "year": 2011,
@@ -29,7 +30,8 @@
           {
             "year": 2020,
             "name": "Crazy Loko Vintage",
-            "type": "Vintage clothing"
+            "type": "Retail",
+            "subtype": "Vintage clothing"
           }
         ]
       },
@@ -69,7 +71,8 @@
           {
             "year": 2007,
             "name": "Flashback",
-            "type": "Vintage clothing"
+            "type": "Retail",
+            "subtype": "Vintage clothing"
           },
           {
             "year": 2019,
@@ -105,12 +108,14 @@
           {
             "year": 2019,
             "name": "VIVID",
-            "type": "Take-out restaurant"
+            "type": "Restaurant",
+            "subtype": "Take-out restaurant"
           },
           {
             "year": 2025,
             "name": "Vintage",
-            "type": "Vintage clothing"
+            "type": "Retail",
+            "subtype": "Vintage clothing"
           }
         ]
       },
@@ -130,7 +135,8 @@
           {
             "year": 2007,
             "name": "Sub Rosa Vintage",
-            "type": "Vintage clothing"
+            "type": "Retail",
+            "subtype": "Vintage clothing"
           },
           {
             "year": 2020,
@@ -140,7 +146,8 @@
           {
             "year": 2023,
             "name": "Miriam and Micah Vintage",
-            "type": "Vintage clothing"
+            "type": "Retail",
+            "subtype": "Vintage clothing"
           }
         ]
       },
@@ -244,12 +251,14 @@
           {
             "year": 2019,
             "name": "Search & Rescued",
-            "type": "Vintage clothing"
+            "type": "Retail",
+            "subtype": "Vintage clothing"
           },
           {
             "year": 2020,
             "name": "6x8 Market",
-            "type": "Vintage clothing"
+            "type": "Retail",
+            "subtype": "Vintage clothing"
           }
         ]
       },
@@ -394,7 +403,8 @@
           {
             "year": 2007,
             "name": "Sam's Vintage Army Surplus",
-            "type": "Vintage clothing"
+            "type": "Retail",
+            "subtype": "Vintage clothing"
           },
           {
             "year": 2009,
@@ -404,7 +414,8 @@
           {
             "year": 2011,
             "name": "Funky Junky",
-            "type": "Vintage clothing"
+            "type": "Retail",
+            "subtype": "Vintage clothing"
           },
           {
             "year": 2014,
@@ -518,7 +529,8 @@
           {
             "year": 2015,
             "name": "Dolce Gelato",
-            "type": "Take-out restaurant"
+            "type": "Restaurant",
+            "subtype": "Take-out restaurant"
           }
         ]
       },
@@ -594,7 +606,8 @@
           {
             "year": 2024,
             "name": "Kensington Kitchen",
-            "type": "Take-out restaurant"
+            "type": "Restaurant",
+            "subtype": "Take-out restaurant"
           }
         ]
       },
@@ -694,7 +707,8 @@
           {
             "year": 2019,
             "name": "Flamingo Vintage",
-            "type": "Vintage clothing"
+            "type": "Retail",
+            "subtype": "Vintage clothing"
           }
         ]
       },
@@ -756,7 +770,7 @@
     {
       "type": "Feature",
       "properties": {
-        "address": "200 Baldwin St",
+        "address": "200A Baldwin St",
         "history": [
           {
             "year": 1976,
@@ -781,7 +795,7 @@
     {
       "type": "Feature",
       "properties": {
-        "address": "200 Baldwin St",
+        "address": "200B Baldwin St",
         "history": [
           {
             "year": 1976,
@@ -796,7 +810,8 @@
           {
             "year": 2019,
             "name": "Daan Go Cake Lab",
-            "type": "Take-out restaurant"
+            "type": "Restaurant",
+            "subtype": "Take-out restaurant"
           }
         ]
       },
@@ -816,7 +831,8 @@
           {
             "year": 2002,
             "name": "Zen Buddhist Temple",
-            "type": "Place of worship"
+            "type": "Service",
+            "subtype": "Place of worship"
           },
           {
             "year": 2011,

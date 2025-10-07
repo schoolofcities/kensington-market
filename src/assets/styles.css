@@ -1,4 +1,10 @@
 @font-face {
+    font-family: FavoritVariable;
+    src: url("./fonts/favorit/ABCFavoritVariable-Trial.ttf");
+    font-display: swap;
+}
+
+@font-face {
     font-family: TradeGothicBold;
     src: url("trade-gothic/Trade Gothic LT Bold.ttf");
 }
@@ -60,6 +66,7 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'FavoritVariable', -apple-system, Roboto, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 /* .maplibregl-canvas {
