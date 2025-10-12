@@ -173,24 +173,29 @@
         sortedHistory = [...sortedHistory].sort((a, b) => b.year - a.year);
 
         // Build timeline HTML
-        let timelineHtml = `<div style='font-weight:bold;margin-bottom:4px;text-align:center;'>${address}</div><div style='display:flex;flex-direction:column;align-items:center;'>`;
+        let timelineHtml = `<div style='font-weight:bold;margin-bottom:4px;text-align:center;'>${address}</div>`;
+        timelineHtml += `<div style='display:flex;flex-direction:column;align-items:center;position:relative;'>`;
+        
+        // Add continuous vertical line behind all circles (only if there are multiple entries)
+        if (sortedHistory.length > 1) {
+            timelineHtml += `<div style='position:absolute;left:64px;top:30px;bottom:25px;width:2px;background:repeating-linear-gradient(to bottom, #ddd 0px, #ddd 2px, transparent 2px, transparent 4px);z-index:0;'></div>`;
+        }
+        
         sortedHistory.forEach((h, i) => {
-            timelineHtml += `<div style='display:flex;flex-direction:row;align-items:center;justify-content:center;width:180px;'>`;
+            // Calculate years for this business entry
+            const startYear = h.year;
+            const endYear = (i > 0) ? sortedHistory[i - 1].year : 2025;
+            const yearsActive = Math.max(1, endYear - startYear);
+            const isMostRecent = i === 0;
+            const yearsText = isMostRecent ? `${yearsActive}+ year${yearsActive !== 1 ? 's' : ''}` : `${yearsActive} year${yearsActive !== 1 ? 's' : ''}`;
+            
+            timelineHtml += `<div style='display:flex;flex-direction:row;align-items:center;justify-content:center;width:180px;position:relative;z-index:1;'>`;
             timelineHtml += `<span style='font-size:12px;width:50px;text-align:right;'>${h.year}</span>`;
             timelineHtml += `<span style='width:30px;display:flex;justify-content:center;align-items:center;'>`;
             timelineHtml += `<svg width='14' height='14'><circle cx='7' cy='7' r='6' fill='${typeColors[h.type] || "#888"}' stroke='#333' stroke-width='0.5'/></svg>`;
             timelineHtml += `</span>`;
-            timelineHtml += `<span style='font-size:12px;width:100px;text-align:left;display:flex;flex-direction:column;'>${h.name}<span style='font-size:10px;color:#888;'>${h.type}${h.subtype ? " – " + h.subtype : ""}</span></span>`;
+            timelineHtml += `<span style='font-size:12px;width:100px;text-align:left;display:flex;flex-direction:column;'>${h.name}<span style='font-size:10px;color:#999;'>${yearsText}</span></span>`;
             timelineHtml += `</div>`;
-            if (i < sortedHistory.length - 1) {
-                timelineHtml += `<div style='height:16px;display:flex;flex-direction:row;align-items:center;justify-content:center;width:180px;'>`;
-                timelineHtml += `<span style='width:50px;'></span>`;
-                timelineHtml += `<span style='width:30px;display:flex;justify-content:center;align-items:center;'>`;
-                timelineHtml += `<svg width='2' height='16'><line x1='1' y1='0' x2='1' y2='16' stroke='#888' stroke-width='2' stroke-dasharray='2,2'/></svg>`;
-                timelineHtml += `</span>`;
-                timelineHtml += `<span style='width:100px;'></span>`;
-                timelineHtml += `</div>`;
-            }
         });
         timelineHtml += `</div>`;
 

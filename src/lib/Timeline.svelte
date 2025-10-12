@@ -15,7 +15,7 @@
     let hoverTimeout = null;
 
     // Define consistent widths
-    const ADDRESS_COLUMN_WIDTH = 115;
+    const ADDRESS_COLUMN_WIDTH = 105;
     const ADDRESS_BORDER_WIDTH = 1;
     const TOTAL_ADDRESS_WIDTH = ADDRESS_COLUMN_WIDTH + ADDRESS_BORDER_WIDTH;
     const SCROLLBAR_WIDTH = 16;
@@ -239,23 +239,22 @@
 
     function updateResponsiveHeight() {
         // Check if we're in mobile view
-        isMobile = window.innerWidth <= 839;
-        
-        // Calculate height based on number of businesses to show all without scrolling
-        const rowHeight = 15; // Reduced height per business row
-        const headerHeight = 40; // Timeline header height
-        const numBusinesses = businesses.length;
-        const calculatedHeight = headerHeight + (numBusinesses * rowHeight) + 15; // Reduced padding
+        isMobile = window.innerWidth <= 900;
         
         if (isMobile) {
-            // In mobile, still limit the height but be more generous
-            const viewportHeight = window.innerHeight;
-            const maxMobileHeight = Math.max(350, viewportHeight * 0.5);
-            containerHeight = Math.min(calculatedHeight, maxMobileHeight);
-        } else {
-            // Desktop: use calculated height to show all content, with lower limits
-            containerHeight = Math.max(350, Math.min(calculatedHeight, 600));
+            // Mobile: set fixed height
+            containerHeight = 350; // ADJUST THIS VALUE for mobile height
+            return;
         }
+        
+        // Desktop: Calculate height based on number of businesses
+        const rowHeight = 15;
+        const headerHeight = 40;
+        const numBusinesses = businesses.length;
+        const calculatedHeight = headerHeight + (numBusinesses * rowHeight) + 15;
+        
+        // Desktop: use calculated height with min/max limits
+        containerHeight = Math.max(400, Math.min(calculatedHeight, 600));
     }
 
     function formatYear(year, index) {
@@ -525,22 +524,17 @@
 
     .timeline-container {
         position: relative;
-        bottom: 0;
-        right: 0;
         overflow: hidden;
         background: #fff;
         border-top: 1px solid #000;
-        flex-shrink: 0; /* Prevent shrinking */
         width: 100%;
-        height: 100%;
-        min-height: 400px;
         box-sizing: border-box;
     }
 
     /* Mobile-specific styling */
     .timeline-container.mobile {
-        min-height: 200px; /* Minimum height for mobile */
-        max-height: 300px; /* Maximum height for mobile */
+        height: 100%;
+        min-height: 0;
     }
 
     .vertical-indicator-line {
@@ -748,8 +742,11 @@
     }
 
     /* Mobile responsive adjustments */
-    @media (max-width: 839px) {
+    @media (max-width: 900px) {
 
+        .vertical-indicator-line {
+            transform: translateX(-4px);
+        }
 
         .timeline-header-address {
             font-size: 11px;
@@ -791,6 +788,10 @@
 
     /* Extra small screens */
     @media (max-width: 480px) {
+
+                .vertical-indicator-line {
+            transform: translateX(-8px);
+        }
 
 
         .timeline-header-address {

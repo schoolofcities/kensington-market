@@ -81,6 +81,7 @@
         min-height: 40px;
         background: #f5f5f5;
         z-index: 1002;
+        overflow: hidden;
     }
 
     .legend-container {
@@ -90,6 +91,7 @@
         padding: 8px 18px;
         width: 100%;
         align-items: center;
+        box-sizing: border-box;
     }
 
     .legend-item {
@@ -99,14 +101,13 @@
         font-size: 12px;
         color: #333;
         cursor: pointer;
-        padding: 2px 4px;
-        border-radius: 3px;
-        transition: background-color 0.2s ease;
+        padding: 4px 6px;
+        border-radius: 4px;
+        border: 1px solid #ddd;
     }
     
     .legend-item:hover {
         background-color: rgba(0, 0, 0, 0.08);
-        transform: scale(1.02);
     }
     
     .legend-item.disabled {

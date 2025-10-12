@@ -26,6 +26,7 @@
             <img src={kmcltImage} alt="Kensington Market" class="logo" />
         </a>
         <h1>Mapping change in Kensington Market</h1>
+        <p><a href="">Farzaneh Hemmasi</a>, <a href="">Emily Hertzman</a>, <a href="" >Scott McCallum</a> | Month 2025</p>
 
         <div class="blog-text">
             <p>
@@ -132,7 +133,7 @@
     .timeline-map-container {
         display: flex;
         gap: 0;
-        min-height: 350px;
+        height: auto; /* Allow container to grow with content */
     }
 
     .timeline-section {
@@ -147,25 +148,22 @@
         border-top: 1px solid #000;
     }
 
-    @media (max-width: 768px) {
-        .timeline-map-wrapper {
-
-        }
-
+    @media (max-width: 900px) {
         .timeline-map-container {
             flex-direction: column;
-            height: auto;
+            min-height: 0; /* Remove min-height constraint */
         }
 
         .timeline-section {
             order: 2;
             border-right: none;
             border-top: 1px solid #000;
+            height: 350px; /* Fixed height for mobile */
         }
 
         .map-section {
             order: 1;
-            height: 400px;
+            height: 350px; /* Fixed height for mobile */
         }
     }
 </style>
