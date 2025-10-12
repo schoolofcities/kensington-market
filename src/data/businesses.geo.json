@@ -66,6 +66,44 @@
     {
       "type": "Feature",
       "properties": {
+        "address": "55 Kensington Ave",
+        "history": [
+          {
+            "year": 1930,
+            "name": "International Food Market",
+            "type": "Produce",
+            "subtype": "Produce"
+          },
+          {
+            "year": 2016,
+            "name": "Vacant",
+            "type": "Vacant"
+          },
+          {
+            "year": 2022,
+            "name": "Tacos 477",
+            "type": "Restaurant",
+            "subtype": "Take-out restaurant"
+          },
+          {
+            "year": 2024,
+            "name": "lost gen vintage",
+            "type": "Retail",
+            "subtype": "Vintage clothing"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40023697867628,
+          43.6539896144187
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "address": "25 Kensington Ave",
         "history": [
           {
