@@ -36,17 +36,16 @@
                     ),
                 },
             });
-            map.addLayer({
-                id: "points-nocategory-layer",
-                type: "circle",
-                source: "points-nocategory",
-                paint: {
-                    "circle-radius": 3,
-                    "circle-color": "rgba(255, 0, 0, 1)",
-                    "circle-stroke-width": 2,
-                    "circle-stroke-color": "rgba(255, 255, 255, 1)",
-                },
-            });
+                            map.addLayer({
+                                    id: "points-nocategory-layer",
+                                    type: "circle",
+                                    source: "points-nocategory",
+                                    paint: {
+                                            "circle-radius": 3,
+                                            "circle-color": "rgba(255, 0, 0, 1)",
+                                            "circle-stroke-width": 0,
+                                    },
+                            });
         } else {
             map.getSource("points-nocategory").setData({
                 type: "FeatureCollection",
@@ -98,8 +97,8 @@
                         "#95a5a6",
                         /* default */ "#FF0000",
                     ],
-                    "circle-stroke-width": 2,
-                    "circle-stroke-color": "#fff",
+                        "circle-stroke-width": 0,
+                        "circle-color": "url(#mapDotGradient)",
                 },
             });
         } else {
@@ -111,6 +110,12 @@
             });
         }
     }
+    <defs>
+      <radialGradient id="mapDotGradient" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color={color} stop-opacity="1" />
+        <stop offset="100%" stop-color="#fff" stop-opacity="0" />
+      </radialGradient>
+    </defs>
 
     function csvToGeoJSON2025(csvText) {
         const lines = csvText.trim().split("\n");

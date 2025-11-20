@@ -175,20 +175,22 @@
         // Build timeline HTML
         let timelineHtml = `<div style='font-weight:bold;margin-bottom:4px;text-align:center;'>${address}</div>`;
         timelineHtml += `<div style='display:flex;flex-direction:column;align-items:center;position:relative;'>`;
-        
+
         // Add continuous vertical line behind all circles (only if there are multiple entries)
         if (sortedHistory.length > 1) {
             timelineHtml += `<div style='position:absolute;left:64px;top:30px;bottom:25px;width:2px;background:repeating-linear-gradient(to bottom, #ddd 0px, #ddd 2px, transparent 2px, transparent 4px);z-index:0;'></div>`;
         }
-        
+
         sortedHistory.forEach((h, i) => {
             // Calculate years for this business entry
             const startYear = h.year;
-            const endYear = (i > 0) ? sortedHistory[i - 1].year : 2025;
+            const endYear = i > 0 ? sortedHistory[i - 1].year : 2025;
             const yearsActive = Math.max(1, endYear - startYear);
             const isMostRecent = i === 0;
-            const yearsText = isMostRecent ? `${yearsActive}+ year${yearsActive !== 1 ? 's' : ''}` : `${yearsActive} year${yearsActive !== 1 ? 's' : ''}`;
-            
+            const yearsText = isMostRecent
+                ? `${yearsActive}+ year${yearsActive !== 1 ? "s" : ""}`
+                : `${yearsActive} year${yearsActive !== 1 ? "s" : ""}`;
+
             timelineHtml += `<div style='display:flex;flex-direction:row;align-items:center;justify-content:center;width:180px;position:relative;z-index:1;'>`;
             timelineHtml += `<span style='font-size:12px;width:50px;text-align:right;'>${h.year}</span>`;
             timelineHtml += `<span style='width:30px;display:flex;justify-content:center;align-items:center;'>`;
@@ -252,34 +254,47 @@
     }
 
     // Update layer opacity based on enabled types filter
-    $: if (map && map.getLayer && map.getLayer("businesses-points-layer") && enabledTypes && Object.keys(enabledTypes).length > 0) {
+    $: if (
+        map &&
+        map.getLayer &&
+        map.getLayer("businesses-points-layer") &&
+        enabledTypes &&
+        Object.keys(enabledTypes).length > 0
+    ) {
         // Create opacity expression based on enabled types
-        const opacityExpression = [
-            "case"
-        ];
-        
+        const opacityExpression = ["case"];
+
         // Add conditions for each type
         Object.entries(enabledTypes).forEach(([type, isEnabled]) => {
             opacityExpression.push(
                 ["==", ["get", "mostRecentType"], type],
-                isEnabled ? 1 : 0.1 // Show at 10% opacity if disabled, full opacity if enabled
+                isEnabled ? 1 : 0.1, // Show at 10% opacity if disabled, full opacity if enabled
             );
         });
-        
+
         // Default opacity for unknown types
         opacityExpression.push(0.8);
-        
+
         // Apply opacity to both fill and stroke
-        map.setPaintProperty("businesses-points-layer", "circle-opacity", opacityExpression);
-        map.setPaintProperty("businesses-points-layer", "circle-stroke-opacity", opacityExpression);
+        map.setPaintProperty(
+            "businesses-points-layer",
+            "circle-opacity",
+            opacityExpression,
+        );
+        map.setPaintProperty(
+            "businesses-points-layer",
+            "circle-stroke-opacity",
+            opacityExpression,
+        );
     }
 
     onMount(async () => {
         map = new maplibregl.Map({
             container: mapContainer,
             style: "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json",
-            center: [-79.402961, 43.654747],
+            center: [-79.40090659443388, 43.65414351296272],
             bearing: -15.5,
+            zoom: 16.199136046497543,
             projection: "globe",
             maxPitch: 0,
             scrollZoom: true,
@@ -292,6 +307,23 @@
             touchRotate: false,
         });
 
+        // Log initial map position
+        map.on("load", () => {
+            map.setZoom(16.199136046497543);
+            console.log("Map loaded:", {
+                center: map.getCenter(),
+                bearing: map.getBearing()
+            });
+        });
+
+        // Log map position on move
+        map.on("moveend", () => {
+            console.log("Map moved:", {
+                center: map.getCenter(),
+                bearing: map.getBearing()
+            });
+        });
+
         // Define the Kensington Market bounds
         const kmBounds = [
             [-79.408, 43.651], // Southwest corner
@@ -300,14 +332,8 @@
 
         // Fit to bounds on map load
         map.on("load", () => {
-            // Force map to recalculate container size before fitting bounds
+            // Optionally resize map if needed
             map.resize();
-            
-            map.fitBounds(kmBounds, {
-                padding: { top: 50, bottom: 50, left: 50, right: 50 },
-                bearing: -15.5, // Maintain the bearing
-                duration: 0, // Immediate fit without animation
-            });
         });
 
         map.addControl(scale, "bottom-left");
@@ -332,7 +358,7 @@
                 source: "boundary",
                 paint: {
                     "line-color": "#666",
-                    "line-width": 1,
+                    "line-width": 0,
                     "line-dasharray": [2, 0],
                 },
             });

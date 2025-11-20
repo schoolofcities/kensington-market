@@ -68,14 +68,18 @@ onMount(async () => {
                                     r="8" 
                                     fill={getColor(biz.history.find(h => h.year === year).type)}>
                                     <title>{biz.history.find(h => h.year === year).name} ({biz.history.find(h => h.year === year).type}) {year}</title>
-                                </circle>
-                            {:else}
-                                <circle cx={(i/(years.length-1))*100+"%"} cy="16" r="6" fill="#eee">
-                                    <title>{year}</title>
-                                </circle>
-                            {/if}
-                        {/each}
-                    </svg>
+                                <defs>
+                                    <radialGradient id="dotGradient" cx="50%" cy="50%" r="50%">
+                                        <stop offset="0%" stop-color={d.color} stop-opacity="1" />
+                                        <stop offset="100%" stop-color="#fff" stop-opacity="0" />
+                                    </radialGradient>
+                                </defs>
+                                <circle
+                                    cx={d.x}
+                                    cy={d.y}
+                                    r={d.radius}
+                                    fill="url(#dotGradient)"
+                                />
                 </div>
             </div>
         {/each}
