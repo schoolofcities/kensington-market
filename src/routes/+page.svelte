@@ -94,19 +94,20 @@
 
     <!-- Timeline and Map with shared legend header -->
     <div class="timeline-map-wrapper">
-        <!-- Legend as header -->
-        <TimelineLegend {sliderYear} {yearlyTypeCounts} bind:enabledTypes />
-
-        <!-- Timeline and Map side-by-side -->
         <div class="timeline-map-container">
-            <div class="timeline-section">
-                <Timeline
-                    bind:sliderYear
-                    bind:hoveredAddress
-                    bind:yearlyTypeCounts
-                />
+            <div class="timeline-column">
+                <div class="timeline-block">
+                    <TimelineLegend {sliderYear} {yearlyTypeCounts} bind:enabledTypes />
+                    <div class="timeline-content">
+                        <Timeline
+                            bind:sliderYear
+                            bind:hoveredAddress
+                            bind:yearlyTypeCounts
+                        />
+                    </div>
+                </div>
             </div>
-            <div class="map-section">
+            <div class="map-column">
                 <MapTimeline
                     bind:sliderYear
                     bind:hoveredAddress
@@ -167,42 +168,122 @@
         margin: 2rem auto;
         max-width: 1200px;
         border: 1px solid #000;
+        position: relative;
+    }
+    .legend-overlay {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 100;
+        padding: 16px 32px 20px 32px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 16px;
+        width: 100%;
+        min-width: 0;
+        max-width: none;
+        background: none !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        align-items: center;
+        box-sizing: border-box;
     }
 
     .timeline-map-container {
         display: flex;
         gap: 0;
-        height: auto; /* Allow container to grow with content */
+        height: auto;
     }
-
-    .timeline-section {
+    .timeline-column {
         flex: 1;
         min-width: 0;
+        display: flex;
+        flex-direction: column;
         border-right: 1px solid #000;
+        height: 600px;
+        min-height: 0;
     }
-
-    .map-section {
+    .timeline-block {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        min-height: 0;
+    }
+    .timeline-content {
+        flex: 1 1 0%;
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .map-column {
         flex: 1;
         min-width: 0;
         border-top: 1px solid #000;
+        position: relative;
+        display: flex;
+        flex-direction: column;
     }
 
     @media (max-width: 900px) {
         .timeline-map-container {
             flex-direction: column;
-            min-height: 0; /* Remove min-height constraint */
+            min-height: 0;
         }
-
-        .timeline-section {
+        .timeline-column {
             order: 2;
             border-right: none;
             border-top: 1px solid #000;
-            height: 350px; /* Fixed height for mobile */
+            height: 240px;
         }
-
-        .map-section {
+        .timeline-block {
+            height: 100%;
+            min-height: 0;
+        }
+        .timeline-content {
+            flex: 1 1 0%;
+            min-height: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .map-column {
             order: 1;
-            height: 350px; /* Fixed height for mobile */
+            height: 600px;
+        }
+    }
+    .map-column {
+        flex: 1;
+        min-width: 0;
+        border-top: 1px solid #000;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media (max-width: 900px) {
+        .timeline-map-container {
+            flex-direction: column;
+            min-height: 0;
+        }
+        .timeline-column {
+            order: 2;
+            border-right: none;
+            border-top: 1px solid #000;
+            height: 240px;
+        }
+        .timeline-block {
+            height: 100%;
+            min-height: 0;
+        }
+        .timeline-content {
+            flex: 1 1 0%;
+            min-height: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .map-column {
+            order: 1;
+            height: 600px;
         }
     }
 </style>
