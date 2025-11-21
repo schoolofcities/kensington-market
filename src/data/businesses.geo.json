@@ -51,7 +51,8 @@
           {
             "year": 2007,
             "name": "Essence of Life",
-            "type": "Dry goods"
+            "type": "Grocer",
+            "subtype": "Dry goods"
           }
         ]
       },
@@ -71,7 +72,7 @@
           {
             "year": 1930,
             "name": "International Food Market",
-            "type": "Produce",
+            "type": "Grocer",
             "subtype": "Produce"
           },
           {
@@ -205,7 +206,8 @@
           {
             "year": 2007,
             "name": "Tutti Frutti",
-            "type": "Dry goods"
+            "type": "Grocer",
+            "subtype": "Dry goods"
           }
         ]
       },
@@ -225,7 +227,7 @@
           {
             "year": 1928,
             "name": "Sanci's",
-            "type": "Produce",
+            "type": "Grocer",
             "subtype": "Produce"
           },
           {
@@ -316,12 +318,14 @@
           {
             "year": 1976,
             "name": "Unmarked market",
-            "type": "Dry goods"
+            "type": "Grocer",
+            "subtype": "Dry goods"
           },
           {
             "year": 2015,
             "name": "Salamanca Bulk Food",
-            "type": "Dry goods"
+            "type": "Grocer",
+            "subtype": "Dry goods"
           },
           {
             "year": 2025,
@@ -379,7 +383,8 @@
           {
             "year": 2007,
             "name": "Lusitania Grocery",
-            "type": "Supermarket"
+            "type": "Grocer",
+            "subtype": "Supermarket"
           },
           {
             "year": 2011,
@@ -484,7 +489,7 @@
           {
             "year": 1937,
             "name": "Roszler's Fruits",
-            "type": "Produce",
+            "type": "Grocer",
             "subtype": "Produce"
           },
           {
@@ -526,7 +531,8 @@
           {
             "year": 2011,
             "name": "4 Life Natural Foods",
-            "type": "Dry goods"
+            "type": "Grocer",
+            "subtype": "Dry goods"
           },
           {
             "year": 2025,
@@ -551,7 +557,7 @@
           {
             "year": 2000,
             "name": "J&J Fruit Market",
-            "type": "Produce",
+            "type": "Grocer",
             "subtype": "Produce"
           },
           {
@@ -588,7 +594,8 @@
           {
             "year": 2007,
             "name": "Zimmerman's Fairland",
-            "type": "Supermarket"
+            "type": "Grocer",
+            "subtype": "Supermarket"
           },
           {
             "year": 2016,
@@ -618,7 +625,8 @@
           {
             "year": 2007,
             "name": "Perola Supermarket",
-            "type": "Dry goods"
+            "type": "Grocer",
+            "subtype": "Dry goods"
           }
         ]
       },
@@ -638,7 +646,7 @@
           {
             "year": 1980,
             "name": "Oxford Fruit",
-            "type": "Produce",
+            "type": "Grocer",
             "subtype": "Produce"
           },
           {
@@ -665,7 +673,8 @@
           {
             "year": 1970,
             "name": "Caribbean Corner",
-            "type": "Dry goods"
+            "type": "Grocer",
+            "subtype": "Dry goods"
           }
         ]
       },
@@ -813,7 +822,8 @@
           {
             "year": 1976,
             "name": "Unmarked market",
-            "type": "Dry goods"
+            "type": "Grocer",
+            "subtype": "Dry goods"
           },
           {
             "year": 2014,
@@ -838,7 +848,8 @@
           {
             "year": 1976,
             "name": "Reg Dry Foods",
-            "type": "Dry goods"
+            "type": "Grocer",
+            "subtype": "Dry goods"
           },
           {
             "year": 2018,
@@ -880,12 +891,14 @@
           {
             "year": 2016,
             "name": "CityMarket Value Mart",
-            "type": "Supermarket"
+            "type": "Grocer",
+            "subtype": "Supermarket"
           },
           {
             "year": 2020,
             "name": "T&T Supermarket",
-            "type": "Supermarket"
+            "type": "Grocer",
+            "subtype": "Supermarket"
           }
         ]
       },
@@ -957,7 +970,7 @@
           {
             "year": 1930,
             "name": "Castle Fruit",
-            "type": "Produce",
+            "type": "Grocer",
             "subtype": "Produce"
           },
           {
@@ -994,7 +1007,7 @@
           {
             "year": 1930,
             "name": "Augusta Fruit Market",
-            "type": "Produce",
+            "type": "Grocer",
             "subtype": "Produce"
           }
         ]
@@ -1015,7 +1028,7 @@
           {
             "year": 2007,
             "name": "Tri Pacific Ltd.",
-            "type": "Produce",
+            "type": "Grocer",
             "subtype": "Produce"
           },
           {
@@ -1078,7 +1091,7 @@
           {
             "year": 1930,
             "name": "Kensington Fruit Market",
-            "type": "Produce",
+            "type": "Grocer",
             "subtype": "Produce"
           }
         ]

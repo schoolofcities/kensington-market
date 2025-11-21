@@ -93,11 +93,25 @@
     </div>
 
     <!-- Timeline and Map with shared legend header -->
+    <h2 class="section-title">
+        Kensington Market: Mapping the disappearance of grocers and rise of cannabis stores since 2007
+    </h2>
+    <p class="section-description">
+        The map and timeline below visualize the historical transitions of
+        grocers and raw food vendors in Kensington Market. The visualization
+        highlights how many locations originally operated as grocers and later
+        transitioned into other types of businesses, illustrating patterns of
+        commercial change and succession in the neighbourhood over time. Additionally, we tracked the rise of cannabis stores as an emerging retail subcategory of interest.
+    </p>
     <div class="timeline-map-wrapper">
         <div class="timeline-map-container">
             <div class="timeline-column">
                 <div class="timeline-block">
-                    <TimelineLegend {sliderYear} {yearlyTypeCounts} bind:enabledTypes />
+                    <TimelineLegend
+                        {sliderYear}
+                        {yearlyTypeCounts}
+                        bind:enabledTypes
+                    />
                     <div class="timeline-content">
                         <Timeline
                             bind:sliderYear
@@ -116,9 +130,26 @@
             </div>
         </div>
     </div>
+
 </main>
 
 <style>
+    .section-description {
+        max-width: 600px;
+        margin: 0 auto 2rem auto;
+        font-size: 1rem;
+        color: #444;
+        text-align: left;
+    }
+    .section-title {
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin: 2rem auto 1rem auto;
+        color: #222;
+        letter-spacing: 0.01em;
+        max-width: 600px;
+        text-align: left;
+    }
     :global(body) {
         margin: 0;
         font-family:
