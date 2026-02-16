@@ -86,7 +86,7 @@
 
     .legend-container {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
         gap: 8px 12px;
         padding: 8px 18px;
         width: 100%;

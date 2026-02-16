@@ -1,0 +1,1108 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "44 Kensington Ave",
+        "history": [
+          {
+            "year": 2007,
+            "name": "Na Na",
+            "type": "Retail",
+            "subtype": "Vintage clothing"
+          },
+          {
+            "year": 2011,
+            "name": "Nepal Handicrafts",
+            "type": "Retail"
+          },
+          {
+            "year": 2016,
+            "name": "Canna Clinic",
+            "type": "Cannabis store"
+          },
+          {
+            "year": 2018,
+            "name": "Vacant",
+            "type": "Vacant"
+          },
+          {
+            "year": 2020,
+            "name": "Crazy Loko Vintage",
+            "type": "Retail",
+            "subtype": "Vintage clothing"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40053009598962,
+          43.65386801318357
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "48 Kensington Ave",
+        "history": [
+          {
+            "year": 2007,
+            "name": "Essence of Life",
+            "type": "Grocer",
+            "subtype": "Dry goods"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40056705791977,
+          43.65400443416802
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "55 Kensington Ave",
+        "history": [
+          {
+            "year": 1930,
+            "name": "International Food Market",
+            "type": "Grocer",
+            "subtype": "Produce"
+          },
+          {
+            "year": 2016,
+            "name": "Vacant",
+            "type": "Vacant"
+          },
+          {
+            "year": 2022,
+            "name": "Tacos 477",
+            "type": "Restaurant",
+            "subtype": "Take-out restaurant"
+          },
+          {
+            "year": 2024,
+            "name": "lost gen vintage",
+            "type": "Retail",
+            "subtype": "Vintage clothing"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40023697867628,
+          43.6539896144187
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "25 Kensington Ave",
+        "history": [
+          {
+            "year": 2007,
+            "name": "Flashback",
+            "type": "Retail",
+            "subtype": "Vintage clothing"
+          },
+          {
+            "year": 2019,
+            "name": "Vacant",
+            "type": "Vacant"
+          },
+          {
+            "year": 2020,
+            "name": "Hot Buds",
+            "type": "Cannabis store"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.39994511976265,
+          43.653246611336506
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "578 Dundas St W",
+        "history": [
+          {
+            "year": 2007,
+            "name": "Kensington Poultry",
+            "type": "Raw foods",
+            "subtype": "Meat"
+          },
+          {
+            "year": 2019,
+            "name": "VIVID",
+            "type": "Restaurant",
+            "subtype": "Take-out restaurant"
+          },
+          {
+            "year": 2025,
+            "name": "Vintage",
+            "type": "Retail",
+            "subtype": "Vintage clothing"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40044639846614,
+          43.652535978647116
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "16 Kensington Ave",
+        "history": [
+          {
+            "year": 2007,
+            "name": "Sub Rosa Vintage",
+            "type": "Retail",
+            "subtype": "Vintage clothing"
+          },
+          {
+            "year": 2020,
+            "name": "The Bend Cannabis Co.",
+            "type": "Cannabis store"
+          },
+          {
+            "year": 2023,
+            "name": "Miriam and Micah Vintage",
+            "type": "Retail",
+            "subtype": "Vintage clothing"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.4003217458711,
+          43.6532594810842
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "64 Kensington Ave",
+        "history": [
+          {
+            "year": 2007,
+            "name": "Tutti Frutti",
+            "type": "Grocer",
+            "subtype": "Dry goods"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40066176243401,
+          43.654387909674995
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "66 Kensington Ave",
+        "history": [
+          {
+            "year": 1928,
+            "name": "Sanci's",
+            "type": "Grocer",
+            "subtype": "Produce"
+          },
+          {
+            "year": 2014,
+            "name": "Vacant",
+            "type": "Vacant"
+          },
+          {
+            "year": 2016,
+            "name": "Prohibition",
+            "type": "Retail",
+            "subtype": "Clothing"
+          },
+          {
+            "year": 2020,
+            "name": "Vacant",
+            "type": "Vacant"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40068235520526,
+          43.654435355398576
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "182 Baldwin St",
+        "history": [
+          {
+            "year": 1993,
+            "name": "Cheese Magic",
+            "type": "Raw foods",
+            "subtype": "Dairy"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40098877303778,
+          43.65479595038711
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "184 Baldwin St",
+        "history": [
+          {
+            "year": 1997,
+            "name": "My Market Bakery",
+            "type": "Raw foods",
+            "subtype": "Bakery"
+          },
+          {
+            "year": 2019,
+            "name": "Search & Rescued",
+            "type": "Retail",
+            "subtype": "Vintage clothing"
+          },
+          {
+            "year": 2020,
+            "name": "6x8 Market",
+            "type": "Retail",
+            "subtype": "Vintage clothing"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40105680835673,
+          43.654782927079594
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "204 Baldwin St",
+        "history": [
+          {
+            "year": 1976,
+            "name": "Unmarked market",
+            "type": "Grocer",
+            "subtype": "Dry goods"
+          },
+          {
+            "year": 2015,
+            "name": "Salamanca Bulk Food",
+            "type": "Grocer",
+            "subtype": "Dry goods"
+          },
+          {
+            "year": 2025,
+            "name": "Inky Dinky Tattoo and Piercing",
+            "type": "Service",
+            "subtype": "Tattoo"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40174222366265,
+          43.65463610422289
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "206 Baldwin St",
+        "history": [
+          {
+            "year": 1955,
+            "name": "Max & Son",
+            "type": "Raw foods",
+            "subtype": "Meat"
+          },
+          {
+            "year": 2014,
+            "name": "Hooked",
+            "type": "Raw foods",
+            "subtype": "Seafood"
+          },
+          {
+            "year": 2025,
+            "name": "Vacant",
+            "type": "Vacant"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40182335559605,
+          43.654623678678135
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "152 Augusta Ave",
+        "history": [
+          {
+            "year": 2007,
+            "name": "Lusitania Grocery",
+            "type": "Grocer",
+            "subtype": "Supermarket"
+          },
+          {
+            "year": 2011,
+            "name": "Vacant",
+            "type": "Vacant"
+          },
+          {
+            "year": 2015,
+            "name": "Krudar Muay Thai",
+            "type": "Service",
+            "subtype": "Gym"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40150955861685,
+          43.65281334474967
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "204 Augusta Ave",
+        "history": [
+          {
+            "year": 2007,
+            "name": "Kensington Fashion Outlet",
+            "type": "Retail",
+            "subtype": "Clothing"
+          },
+          {
+            "year": 2011,
+            "name": "Roach O Rama",
+            "type": "Cannabis store"
+          },
+          {
+            "year": 2018,
+            "name": "HotBox",
+            "type": "Cannabis store"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.4021403522253,
+          43.65453377643798
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "206 Augusta Ave",
+        "history": [
+          {
+            "year": 2007,
+            "name": "Sam's Vintage Army Surplus",
+            "type": "Retail",
+            "subtype": "Vintage clothing"
+          },
+          {
+            "year": 2009,
+            "name": "Vacant",
+            "type": "Vacant"
+          },
+          {
+            "year": 2011,
+            "name": "Funky Junky",
+            "type": "Retail",
+            "subtype": "Vintage clothing"
+          },
+          {
+            "year": 2014,
+            "name": "Iceman Video Games",
+            "type": "Retail",
+            "subtype": "Video game store"
+          },
+          {
+            "year": 2016,
+            "name": "HotBox",
+            "type": "Cannabis store"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40217836363065,
+          43.65462004061241
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "207 Augusta Ave",
+        "history": [
+          {
+            "year": 1937,
+            "name": "Roszler's Fruits",
+            "type": "Grocer",
+            "subtype": "Produce"
+          },
+          {
+            "year": 2011,
+            "name": "Aspetta",
+            "type": "Restaurant"
+          },
+          {
+            "year": 2016,
+            "name": "Cosmic Treats",
+            "type": "Restaurant"
+          },
+          {
+            "year": 2020,
+            "name": "Knockout Chicken",
+            "type": "Restaurant"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40164712654655,
+          43.654087199065415
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "210 Augusta Ave",
+        "history": [
+          {
+            "year": 2007,
+            "name": "Zimmerman Discount",
+            "type": "Retail",
+            "subtype": "Clothing"
+          },
+          {
+            "year": 2011,
+            "name": "4 Life Natural Foods",
+            "type": "Grocer",
+            "subtype": "Dry goods"
+          },
+          {
+            "year": 2025,
+            "name": "Vacant",
+            "type": "Vacant"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40222439282992,
+          43.65472567615489
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "234 Augusta Ave",
+        "history": [
+          {
+            "year": 2000,
+            "name": "J&J Fruit Market",
+            "type": "Grocer",
+            "subtype": "Produce"
+          },
+          {
+            "year": 2009,
+            "name": "Vacant",
+            "type": "Vacant"
+          },
+          {
+            "year": 2011,
+            "name": "Tasty Corner",
+            "type": "Restaurant"
+          },
+          {
+            "year": 2015,
+            "name": "Dolce Gelato",
+            "type": "Restaurant",
+            "subtype": "Take-out restaurant"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40244394693205,
+          43.65527955117601
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "241 Augusta Ave",
+        "history": [
+          {
+            "year": 2007,
+            "name": "Zimmerman's Fairland",
+            "type": "Grocer",
+            "subtype": "Supermarket"
+          },
+          {
+            "year": 2016,
+            "name": "Vacant",
+            "type": "Vacant"
+          },
+          {
+            "year": 2020,
+            "name": "One Plant",
+            "type": "Cannabis store"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40197162546814,
+          43.65475033937392
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "247 Augusta Ave",
+        "history": [
+          {
+            "year": 2007,
+            "name": "Perola Supermarket",
+            "type": "Grocer",
+            "subtype": "Dry goods"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40204497276811,
+          43.65499178316078
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "255 Augusta Ave",
+        "history": [
+          {
+            "year": 1980,
+            "name": "Oxford Fruit",
+            "type": "Grocer",
+            "subtype": "Produce"
+          },
+          {
+            "year": 2024,
+            "name": "Kensington Kitchen",
+            "type": "Restaurant",
+            "subtype": "Take-out restaurant"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40217688311371,
+          43.65518178046803
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "171 Baldwin St",
+        "history": [
+          {
+            "year": 1970,
+            "name": "Caribbean Corner",
+            "type": "Grocer",
+            "subtype": "Dry goods"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40029155735228,
+          43.65480207307579
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "176 Baldwin St",
+        "history": [
+          {
+            "year": 1959,
+            "name": "European Quality Meats and Sausages",
+            "type": "Raw foods",
+            "subtype": "Meat"
+          },
+          {
+            "year": 2014,
+            "name": "Sanagan's Meat Locker",
+            "type": "Raw foods",
+            "subtype": "Meat"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40078215452388,
+          43.65483841609012
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "189 Baldwin St",
+        "history": [
+          {
+            "year": 2007,
+            "name": "Sea Kings",
+            "type": "Raw foods",
+            "subtype": "Seafood"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40124210341291,
+          43.65458338416462
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "195 Baldwin St",
+        "history": [
+          {
+            "year": 1997,
+            "name": "New Seaway Fish Market",
+            "type": "Raw foods",
+            "subtype": "Seafood"
+          },
+          {
+            "year": 2014,
+            "name": "Super Mobile",
+            "type": "Retail",
+            "subtype": "Electronics store"
+          },
+          {
+            "year": 2019,
+            "name": "Flamingo Vintage",
+            "type": "Retail",
+            "subtype": "Vintage clothing"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.4014835768205,
+          43.65454775995327
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "196 Baldwin St",
+        "history": [
+          {
+            "year": 1997,
+            "name": "Seven Seas Fish Market",
+            "type": "Raw foods",
+            "subtype": "Seafood"
+          },
+          {
+            "year": 2014,
+            "name": "Vacant",
+            "type": "Vacant"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40143103660499,
+          43.6546928185678
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "198 Baldwin St",
+        "history": [
+          {
+            "year": 1997,
+            "name": "Coral Sea Fish Market",
+            "type": "Raw foods",
+            "subtype": "Seafood"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40137767574258,
+          43.654704309143895
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "200A Baldwin St",
+        "history": [
+          {
+            "year": 1976,
+            "name": "Unmarked market",
+            "type": "Grocer",
+            "subtype": "Dry goods"
+          },
+          {
+            "year": 2014,
+            "name": "Latin Taste",
+            "type": "Restaurant"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40157962573011,
+          43.65466277969414
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "200B Baldwin St",
+        "history": [
+          {
+            "year": 1976,
+            "name": "Reg Dry Foods",
+            "type": "Grocer",
+            "subtype": "Dry goods"
+          },
+          {
+            "year": 2018,
+            "name": "Vacant",
+            "type": "Vacant"
+          },
+          {
+            "year": 2019,
+            "name": "Daan Go Cake Lab",
+            "type": "Restaurant",
+            "subtype": "Take-out restaurant"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40164655408672,
+          43.65465218077948
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "301 College St",
+        "history": [
+          {
+            "year": 2002,
+            "name": "Zen Buddhist Temple",
+            "type": "Service",
+            "subtype": "Place of worship"
+          },
+          {
+            "year": 2011,
+            "name": "Vacant",
+            "type": "Vacant"
+          },
+          {
+            "year": 2016,
+            "name": "CityMarket Value Mart",
+            "type": "Grocer",
+            "subtype": "Supermarket"
+          },
+          {
+            "year": 2020,
+            "name": "T&T Supermarket",
+            "type": "Grocer",
+            "subtype": "Supermarket"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40159462847697,
+          43.65748623506049
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "72 Kensington Ave",
+        "history": [
+          {
+            "year": 1915,
+            "name": "Mendel's Creamery",
+            "type": "Raw foods",
+            "subtype": "Dairy"
+          },
+          {
+            "year": 2015,
+            "name": "Vacant",
+            "type": "Vacant"
+          },
+          {
+            "year": 2020,
+            "name": "Seven Lives",
+            "type": "Restaurant"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40070322159444,
+          43.65449922883419
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "76 Kensington Ave",
+        "history": [
+          {
+            "year": 2007,
+            "name": "Global Cheese",
+            "type": "Raw foods",
+            "subtype": "Dairy"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40073399879542,
+          43.6545821282337
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "80 Kensington Ave",
+        "history": [
+          {
+            "year": 1930,
+            "name": "Castle Fruit",
+            "type": "Grocer",
+            "subtype": "Produce"
+          },
+          {
+            "year": 2019,
+            "name": "Vacant",
+            "type": "Vacant"
+          },
+          {
+            "year": 2020,
+            "name": "The Kensary",
+            "type": "Cannabis store"
+          },
+          {
+            "year": 2025,
+            "name": "Love, Calista",
+            "type": "Retail",
+            "subtype": "Jewelry store"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40080541566435,
+          43.65467697832706
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "65 Nassau St",
+        "history": [
+          {
+            "year": 1930,
+            "name": "Augusta Fruit Market",
+            "type": "Grocer",
+            "subtype": "Produce"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40193441831107,
+          43.655213112439405
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "326 Spadina Ave",
+        "history": [
+          {
+            "year": 2007,
+            "name": "Tri Pacific Ltd.",
+            "type": "Grocer",
+            "subtype": "Produce"
+          },
+          {
+            "year": 2019,
+            "name": "Tech Zone",
+            "type": "Retail",
+            "subtype": "Electronics store"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.39867286021165,
+          43.653835202058644
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "14 St Andrew St",
+        "history": [
+          {
+            "year": 2007,
+            "name": "Loc 'N Twist",
+            "type": "Service",
+            "subtype": "Hair salon"
+          },
+          {
+            "year": 2014,
+            "name": "MOJO",
+            "type": "Restaurant"
+          },
+          {
+            "year": 2015,
+            "name": "Vital Life",
+            "type": "Restaurant"
+          },
+          {
+            "year": 2020,
+            "name": "Trees in the Six",
+            "type": "Cannabis store"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.39959450171074,
+          43.65436788312968
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "36 St Andrew St",
+        "history": [
+          {
+            "year": 1930,
+            "name": "Kensington Fruit Market",
+            "type": "Grocer",
+            "subtype": "Produce"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40034091440124,
+          43.65413205280082
+        ],
+        "type": "Point"
+      }
+    }
+  ]
+}

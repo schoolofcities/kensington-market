@@ -1,16 +1,7 @@
 <script>
-    // TO DO
-    // Finalize mobile version
-    // finalize categories and color selection
-    // use static basemap instead of Carto
-    // add sankey diagram
-    // add pie charts
-    // article
-
     import MapTimeline from "$lib/MapTimeline.svelte";
     import Timeline from "$lib/Timeline.svelte";
     import TimelineLegend from "$lib/TimelineLegend.svelte";
-    import kmcltImage from "../assets/kmclt.png";
 
     let sliderYear = 2025.5;
     let hoveredAddress = null; // Shared hover state
@@ -21,10 +12,7 @@
 <!-- Blog Content -->
 <main>
     <div class="text-content">
-        <a href="/">
-            <img src={kmcltImage} alt="Kensington Market" class="logo" />
-        </a>
-        <h1>Mapping change in Kensington Market</h1>
+        <h1>The title</h1>
         <p>
             <a href="">Farzaneh Hemmasi</a>, <a href="">Emily Hertzman</a>,
             <a href="">Scott McCallum</a> | Month 2025
@@ -94,15 +82,16 @@
 
     <!-- Timeline and Map with shared legend header -->
     <h2 class="section-title">
-        Kensington Market: Mapping the disappearance of grocers and rise of cannabis stores since 2007
+        Mapping the disappearance of grocers and the rise of cannabis stores since 2007
     </h2>
-    <p class="section-description">
+    <h3></h3>
+    <!-- <p class="section-description">
         The map and timeline below visualize the historical transitions of
         grocers and raw food vendors in Kensington Market. The visualization
         highlights how many locations originally operated as grocers and later
         transitioned into other types of businesses, illustrating patterns of
         commercial change and succession in the neighbourhood over time. Additionally, we tracked the rise of cannabis stores as an emerging retail subcategory of interest.
-    </p>
+    </p> -->
     <div class="timeline-map-wrapper">
         <div class="timeline-map-container">
             <div class="timeline-column">
@@ -130,12 +119,11 @@
             </div>
         </div>
     </div>
-
 </main>
 
 <style>
     .section-description {
-        max-width: 600px;
+        max-width: 800px;
         margin: 0 auto 2rem auto;
         font-size: 1rem;
         color: #444;
@@ -147,7 +135,7 @@
         margin: 2rem auto 1rem auto;
         color: #222;
         letter-spacing: 0.01em;
-        max-width: 600px;
+        max-width: 800px;
         text-align: left;
     }
     :global(body) {
@@ -161,6 +149,7 @@
             sans-serif;
         line-height: 1.6;
         color: #333;
+        background-color: #ffffff;
     }
 
     header {
@@ -177,7 +166,7 @@
     }
 
     .text-content {
-        max-width: 600px;
+        max-width: 800px;
         margin: 0 auto;
     }
 

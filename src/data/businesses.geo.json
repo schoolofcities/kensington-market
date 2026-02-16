@@ -4,48 +4,6 @@
     {
       "type": "Feature",
       "properties": {
-        "address": "44 Kensington Ave",
-        "history": [
-          {
-            "year": 2007,
-            "name": "Na Na",
-            "type": "Retail",
-            "subtype": "Vintage clothing"
-          },
-          {
-            "year": 2011,
-            "name": "Nepal Handicrafts",
-            "type": "Retail"
-          },
-          {
-            "year": 2016,
-            "name": "Canna Clinic",
-            "type": "Cannabis store"
-          },
-          {
-            "year": 2018,
-            "name": "Vacant",
-            "type": "Vacant"
-          },
-          {
-            "year": 2020,
-            "name": "Crazy Loko Vintage",
-            "type": "Retail",
-            "subtype": "Vintage clothing"
-          }
-        ]
-      },
-      "geometry": {
-        "coordinates": [
-          -79.40053009598962,
-          43.65386801318357
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "address": "48 Kensington Ave",
         "history": [
           {
@@ -105,37 +63,6 @@
     {
       "type": "Feature",
       "properties": {
-        "address": "25 Kensington Ave",
-        "history": [
-          {
-            "year": 2007,
-            "name": "Flashback",
-            "type": "Retail",
-            "subtype": "Vintage clothing"
-          },
-          {
-            "year": 2019,
-            "name": "Vacant",
-            "type": "Vacant"
-          },
-          {
-            "year": 2020,
-            "name": "Hot Buds",
-            "type": "Cannabis store"
-          }
-        ]
-      },
-      "geometry": {
-        "coordinates": [
-          -79.39994511976265,
-          43.653246611336506
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "address": "578 Dundas St W",
         "history": [
           {
@@ -162,38 +89,6 @@
         "coordinates": [
           -79.40044639846614,
           43.652535978647116
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "address": "16 Kensington Ave",
-        "history": [
-          {
-            "year": 2007,
-            "name": "Sub Rosa Vintage",
-            "type": "Retail",
-            "subtype": "Vintage clothing"
-          },
-          {
-            "year": 2020,
-            "name": "The Bend Cannabis Co.",
-            "type": "Cannabis store"
-          },
-          {
-            "year": 2023,
-            "name": "Miriam and Micah Vintage",
-            "type": "Retail",
-            "subtype": "Vintage clothing"
-          }
-        ]
-      },
-      "geometry": {
-        "coordinates": [
-          -79.4003217458711,
-          43.6532594810842
         ],
         "type": "Point"
       }
@@ -410,80 +305,6 @@
     {
       "type": "Feature",
       "properties": {
-        "address": "204 Augusta Ave",
-        "history": [
-          {
-            "year": 2007,
-            "name": "Kensington Fashion Outlet",
-            "type": "Retail",
-            "subtype": "Clothing"
-          },
-          {
-            "year": 2011,
-            "name": "Roach O Rama",
-            "type": "Cannabis store"
-          },
-          {
-            "year": 2018,
-            "name": "HotBox",
-            "type": "Cannabis store"
-          }
-        ]
-      },
-      "geometry": {
-        "coordinates": [
-          -79.4021403522253,
-          43.65453377643798
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "address": "206 Augusta Ave",
-        "history": [
-          {
-            "year": 2007,
-            "name": "Sam's Vintage Army Surplus",
-            "type": "Retail",
-            "subtype": "Vintage clothing"
-          },
-          {
-            "year": 2009,
-            "name": "Vacant",
-            "type": "Vacant"
-          },
-          {
-            "year": 2011,
-            "name": "Funky Junky",
-            "type": "Retail",
-            "subtype": "Vintage clothing"
-          },
-          {
-            "year": 2014,
-            "name": "Iceman Video Games",
-            "type": "Retail",
-            "subtype": "Video game store"
-          },
-          {
-            "year": 2016,
-            "name": "HotBox",
-            "type": "Cannabis store"
-          }
-        ]
-      },
-      "geometry": {
-        "coordinates": [
-          -79.40217836363065,
-          43.65462004061241
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "address": "207 Augusta Ave",
         "history": [
           {
@@ -523,13 +344,13 @@
         "address": "210 Augusta Ave",
         "history": [
           {
-            "year": 2007,
+            "year": 1951,
             "name": "Zimmerman Discount",
             "type": "Retail",
             "subtype": "Clothing"
           },
           {
-            "year": 2011,
+            "year": 2014,
             "name": "4 Life Natural Foods",
             "type": "Grocer",
             "subtype": "Dry goods"
@@ -1050,42 +871,6 @@
     {
       "type": "Feature",
       "properties": {
-        "address": "14 St Andrew St",
-        "history": [
-          {
-            "year": 2007,
-            "name": "Loc 'N Twist",
-            "type": "Service",
-            "subtype": "Hair salon"
-          },
-          {
-            "year": 2014,
-            "name": "MOJO",
-            "type": "Restaurant"
-          },
-          {
-            "year": 2015,
-            "name": "Vital Life",
-            "type": "Restaurant"
-          },
-          {
-            "year": 2020,
-            "name": "Trees in the Six",
-            "type": "Cannabis store"
-          }
-        ]
-      },
-      "geometry": {
-        "coordinates": [
-          -79.39959450171074,
-          43.65436788312968
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "address": "36 St Andrew St",
         "history": [
           {
@@ -1100,6 +885,38 @@
         "coordinates": [
           -79.40034091440124,
           43.65413205280082
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "229 Augusta Ave",
+        "history": [
+          {
+            "year": 1993,
+            "name": "Sun Wah Fruit Market",
+            "type": "Grocer",
+            "subtype": "Produce"
+          },
+                    {
+            "year": 2021,
+            "name": "Vacant",
+            "type": "Vacant"
+          },
+          {
+            "year": 2025,
+            "name": "Augusta Coffee Bar",
+            "type": "Restaurant",
+            "subtype": "Eat-in Restaurant / Cafe"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40188045821014,
+          43.65446696084468
         ],
         "type": "Point"
       }
