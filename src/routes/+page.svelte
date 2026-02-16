@@ -1,8 +1,11 @@
 <script>
-    import MapTimeline from "$lib/MapTimeline.svelte";
-    import Timeline from "$lib/Timeline.svelte";
-    import TimelineLegend from "$lib/TimelineLegend.svelte";
+    import TimelineVisualization from "$lib/TimelineVisualization.svelte";
     import sankeyImage from "../assets/sankey-2007-2025.png";
+    import drumMap from "../assets/drum-map.png";
+    import pieNonRes from "../assets/pieNonRes.png";
+    import pieRestaurants from "../assets/pieRestaurants.png";
+    import pieRetail from "../assets/pieRetail.png";
+    import bars from "../assets/bars.png";
 
     let sliderYear = 2025.5;
     let hoveredAddress = null; // Shared hover state
@@ -13,11 +16,34 @@
 <!-- Blog Content -->
 <main>
     <div class="text-content">
-        <h1>The title</h1>
-        <p>
-            <a href="">Farzaneh Hemmasi</a>, <a href="">Emily Hertzman</a>,
-            <a href="">Scott McCallum</a> | Month 2025
-        </p>
+        <h1>Kensington Market: A Neighbourhood of Change</h1>
+        <div class="authors">
+            <p>
+                Authors:
+                <a href="https://farzaneh-hemmasi.com/" target="_blank"
+                    >Farzaneh Hemmasi</a
+                >,
+                <a
+                    href="https://www.linkedin.com/in/emily-hertzman-8b312b88/"
+                    target="_blank">Emily Hertzman</a
+                >,
+            </p>
+            <p>
+                Data visualisation:
+                <a
+                    href="https://www.linkedin.com/in/scott-christian-mccallum/"
+                    target="_blank">Scott McCallum</a
+                >
+            </p>
+            <p>February 2026</p>
+        </div>
+        <div class="" style="display: flex; justify-content: center;">
+            <img src={drumMap} alt="" style="width: 90%;" />
+        </div>
+        <div class="caption">
+            Business Map of The Kensington Market from The Kensington Market
+            Drum, December-January 1989-1990. C/o [map author]
+        </div>
 
         <div class="blog-text">
             <p>
@@ -31,9 +57,17 @@
             </p>
         </div>
 
-        <div class="pie-charts"></div>
-
-        <div class="blog-text">
+        <div class="pie-charts" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 0; margin: 0;">
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <img src={pieNonRes} alt="Pie chart of non-restaurant businesses" style="height: 250px; width: auto;" />
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <img src={pieRestaurants} alt="Pie chart of restaurants" style="height: 250px; width: auto;" />
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <img src={pieRetail} alt="Pie chart of retail" style="height: 250px; width: auto;" />
+            </div>
+        </div>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -45,98 +79,71 @@
             </p>
         </div>
 
-        <div class="sankey" style="max-width: 500px;">
-            <img src={sankeyImage} alt="Sankey diagram showing business transitions 2007-2025" />
+        <div class="sankey" style="display: flex; justify-content: center;">
+            <img                src={bars}
+                alt="Bar chart"
+                style="width: 90%; max-width: 500px;"
+            />
         </div>
-    
+
+        <div class="sankey" style="display: flex; justify-content: center;">
+            <img                src={sankeyImage}
+                alt="Sankey diagram showing business transitions 2007-2025"
+                style="width: 100%; max-width: 500px;"
+            />
+        </div>
+
+                <div class="blog-text">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </div>
 
         <div class="blog-text">
             <h2>The Disappearance of Small Grocers</h2>
-            <p>
-                We were interested in mapping two major trends observed in
-                Kensington Market over the past 20 years: (1) the disappearance
-                of small grocers and (2) the rise of cannabis stores.
-            </p>
-            <p>
-                We were particularly interested in mapping the change of these
-                two categories as they symbolize the broader shift in Kensington
-                Market from a historically livable neighbourhood, where
-                amenities for everyday life such as produce and raw food stores
-                are accessible and close by from a variety of small businesses,
-                to a retail destination, largely centered around shopping and
-                leisure.
-            </p>
-
-            <p>
-                The proliferation of cannabis stores is both notable and
-                noticeable. In 2025 there were 5 cannabis stores in the
-                neighbourhood. For a neighbourhood the size of Kensington Market
-                to have this many cannabis stores is telling of the broader
-                change from serving the local community to serving customers
-                from outside the neighbourhood.
-            </p>
-            <p>
-                Increasingly a site of leisure and consumption, landlords may
-                have favoured higher-paying tenants, such as cannabis retailers,
-                over other businesses such as traditional grocers. Rents go up,
-                local amenities get priced out, the neighbourhood changes.
-            </p>
         </div>
-    </div>
+
 
     <!-- Timeline and Map with shared legend header -->
     <h2 class="section-title">
-        Mapping the disappearance of grocers and the rise of cannabis stores since 2007
+        Mapping the disappearance of grocers and the rise of cannabis stores
+        since 2007
     </h2>
-    <h3></h3>
-    <!-- <p class="section-description">
-        The map and timeline below visualize the historical transitions of
-        grocers and raw food vendors in Kensington Market. The visualization
-        highlights how many locations originally operated as grocers and later
-        transitioned into other types of businesses, illustrating patterns of
-        commercial change and succession in the neighbourhood over time. Additionally, we tracked the rise of cannabis stores as an emerging retail subcategory of interest.
-    </p> -->
-    <div class="timeline-map-wrapper">
-        <div class="timeline-map-container">
-            <div class="timeline-column">
-                <div class="timeline-block">
-                    <TimelineLegend
-                        {sliderYear}
-                        {yearlyTypeCounts}
-                        bind:enabledTypes
-                    />
-                    <div class="timeline-content">
-                        <Timeline
-                            bind:sliderYear
-                            bind:hoveredAddress
-                            bind:yearlyTypeCounts
-                        />
-                    </div>
-                </div>
-            </div>
-            <div class="map-column">
-                <MapTimeline
-                    bind:sliderYear
-                    bind:hoveredAddress
-                    {enabledTypes}
-                />
-            </div>
+    <TimelineVisualization
+        bind:sliderYear
+        bind:hoveredAddress
+        bind:yearlyTypeCounts
+        bind:enabledTypes
+    />
+
+    <div class="text-content">
+        <div class="blog-text">
+            <h2>Conclusion</h2>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
         </div>
     </div>
 </main>
 
 <style>
-    .section-description {
-        max-width: 800px;
-        margin: 0 auto 2rem auto;
-        font-size: 1rem;
-        color: #444;
-        text-align: left;
-    }
     .section-title {
         font-size: 1.2rem;
         font-weight: 500;
-        margin: 2rem auto 1rem auto;
+        margin: 0rem auto 0rem auto;
         color: #222;
         letter-spacing: 0.01em;
         max-width: 800px;
@@ -151,22 +158,13 @@
             "Segoe UI",
             Roboto,
             sans-serif;
-        line-height: 1.6;
-        color: #333;
+        line-height: 1.2;
+        color: #5c5c5c;
         background-color: #ffffff;
     }
 
-    header {
-        padding: 0.5em 1em;
-        border-bottom: 1px solid #e0e0e0;
-    }
-
-    .logo {
-        height: 110px;
-    }
-
     main {
-        padding: 3rem 2rem 0 2rem;
+        padding: 0rem 2rem 4rem 2rem;
     }
 
     .text-content {
@@ -175,136 +173,35 @@
     }
 
     h1 {
-        margin-bottom: 2rem;
+        margin-bottom: 0em;
         color: #222;
+    }
+
+    .authors {
+        font-size: 0.8rem;
+        line-height: 0.5;
     }
 
     .blog-text {
         font-size: 1.1rem;
-        color: #444;
+        color: #2c2c2c;
+        max-width: 800px;
     }
 
     .blog-text p {
         margin-bottom: 1.5rem;
     }
 
-    .timeline-map-wrapper {
-        margin: 2rem auto;
-        max-width: 1200px;
-        border: 1px solid #000;
-        position: relative;
-    }
-    .legend-overlay {
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 100;
-        padding: 16px 32px 20px 32px;
+    .sankey {
         display: flex;
-        flex-wrap: wrap;
-        gap: 10px 16px;
-        width: 100%;
-        min-width: 0;
-        max-width: none;
-        background: none !important;
-        box-shadow: none !important;
-        border-radius: 0 !important;
+        flex-direction: column;
         align-items: center;
-        box-sizing: border-box;
     }
 
-    .timeline-map-container {
-        display: flex;
-        gap: 0;
-        height: auto;
-    }
-    .timeline-column {
-        flex: 1;
-        min-width: 0;
-        display: flex;
-        flex-direction: column;
-        border-right: 1px solid #000;
-        height: 600px;
-        min-height: 0;
-    }
-    .timeline-block {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        min-height: 0;
-    }
-    .timeline-content {
-        flex: 1 1 0%;
-        min-height: 0;
-        display: flex;
-        flex-direction: column;
-    }
-    .map-column {
-        flex: 1;
-        min-width: 0;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-    }
-
-    @media (max-width: 900px) {
-        .timeline-map-container {
-            flex-direction: column;
-            min-height: 0;
-        }
-        .timeline-column {
-            order: 2;
-            border-right: none;
-            height: 240px;
-        }
-        .timeline-block {
-            height: 100%;
-            min-height: 0;
-        }
-        .timeline-content {
-            flex: 1 1 0%;
-            min-height: 0;
-            display: flex;
-            flex-direction: column;
-        }
-        .map-column {
-            order: 1;
-            height: 600px;
-        }
-    }
-    .map-column {
-        flex: 1;
-        min-width: 0;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-    }
-
-    @media (max-width: 900px) {
-        .timeline-map-container {
-            flex-direction: column;
-            min-height: 0;
-        }
-        .timeline-column {
-            order: 2;
-            border-right: none;
-            border-top: 1px solid #000;
-            height: 240px;
-        }
-        .timeline-block {
-            height: 100%;
-            min-height: 0;
-        }
-        .timeline-content {
-            flex: 1 1 0%;
-            min-height: 0;
-            display: flex;
-            flex-direction: column;
-        }
-        .map-column {
-            order: 1;
-            height: 600px;
-        }
+    .caption {
+        font-size: 0.8rem;
+        color: #979797;
+        margin-top: 0.5rem;
+        text-align: center;
     }
 </style>

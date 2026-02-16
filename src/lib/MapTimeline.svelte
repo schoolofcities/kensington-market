@@ -5,7 +5,7 @@
     import "../assets/styles.css";
     import { typeColors, getColor } from "./typeColors.js";
     import Businesses from "../data/businesses.geo.json";
-    import Boundary from "../data/km-boundary.geo.json";
+    import Boundary from "../data/km-boundary-skinny.geo.json";
 
     let map;
     let mapContainer;
@@ -294,9 +294,10 @@
             style: "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json",
             center: [-79.40090659443388, 43.65414351296272],
             bearing: -15.5,
-            zoom: 16.199136046497543,
+            zoom: 14,
             projection: "globe",
             maxPitch: 0,
+            maxZoom: 17,
             scrollZoom: true,
             attributionControl: true,
             maxBounds: [
@@ -309,7 +310,7 @@
 
         // Log initial map position
         map.on("load", () => {
-            map.setZoom(16.199136046497543);
+            map.setZoom(14);
             console.log("Map loaded:", {
                 center: map.getCenter(),
                 bearing: map.getBearing()
@@ -357,9 +358,9 @@
                 type: "line",
                 source: "boundary",
                 paint: {
-                    "line-color": "#666",
-                    "line-width": 0,
-                    "line-dasharray": [2, 0],
+                    "line-color": "#000",
+                    "line-width": 1.5,
+                    "line-dasharray": [1, 0],
                 },
             });
 
