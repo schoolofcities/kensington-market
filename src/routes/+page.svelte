@@ -239,7 +239,6 @@
     .map-column {
         flex: 1;
         min-width: 0;
-        border-top: 1px solid #000;
         position: relative;
         display: flex;
         flex-direction: column;
@@ -253,7 +252,6 @@
         .timeline-column {
             order: 2;
             border-right: none;
-            border-top: 1px solid #000;
             height: 240px;
         }
         .timeline-block {
@@ -274,7 +272,6 @@
     .map-column {
         flex: 1;
         min-width: 0;
-        border-top: 1px solid #000;
         position: relative;
         display: flex;
         flex-direction: column;

@@ -826,4 +826,14 @@
             height: 9px;
         }
     }
+
+    @media (max-width: 450px) {
+        .legend-section {
+            display: none;
+        }
+
+        .timeline-container {
+            display: none;
+        }
+    }
 </style>
