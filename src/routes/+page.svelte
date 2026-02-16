@@ -2,6 +2,7 @@
     import MapTimeline from "$lib/MapTimeline.svelte";
     import Timeline from "$lib/Timeline.svelte";
     import TimelineLegend from "$lib/TimelineLegend.svelte";
+    import sankeyImage from "../assets/sankey-2007-2025.png";
 
     let sliderYear = 2025.5;
     let hoveredAddress = null; // Shared hover state
@@ -44,7 +45,10 @@
             </p>
         </div>
 
-        <div class="sankey"></div>
+        <div class="sankey" style="max-width: 500px;">
+            <img src={sankeyImage} alt="Sankey diagram showing business transitions 2007-2025" />
+        </div>
+    
 
         <div class="blog-text">
             <h2>The Disappearance of Small Grocers</h2>
