@@ -29,8 +29,34 @@
     }
     
     function toggleType(type) {
-        enabledTypes[type] = !enabledTypes[type];
-        enabledTypes = { ...enabledTypes }; // Trigger reactivity
+        // Check if we're currently filtering (not all types enabled)
+        const allEnabled = Object.keys(typeColors).every(t => enabledTypes[t]);
+        const isCurrentlyEnabled = enabledTypes[type];
+        
+        if (allEnabled) {
+            // First click: isolate this type
+            enabledTypes = Object.keys(typeColors).reduce((acc, t) => {
+                acc[t] = t === type;
+                return acc;
+            }, {});
+        } else if (isCurrentlyEnabled) {
+            // Click an enabled type: remove it from selection
+            enabledTypes[type] = false;
+            
+            // If all are now disabled, restore all
+            if (Object.keys(typeColors).every(t => !enabledTypes[t])) {
+                enabledTypes = Object.keys(typeColors).reduce((acc, t) => {
+                    acc[t] = true;
+                    return acc;
+                }, {});
+            } else {
+                enabledTypes = { ...enabledTypes };
+            }
+        } else {
+            // Click a disabled type: add it to selection (multi-select)
+            enabledTypes[type] = true;
+            enabledTypes = { ...enabledTypes };
+        }
     }
 </script>
 
@@ -46,10 +72,12 @@
             <div 
                 class="legend-item" 
                 class:disabled={!isEnabled}
+                class:isolated={!isEnabled}
                 on:click={() => toggleType(type)}
                 role="button"
                 tabindex="0"
                 on:keydown={(e) => e.key === 'Enter' && toggleType(type)}
+                title="Click to toggle"
             >
                 <div
                     class="legend-color"
@@ -108,6 +136,10 @@
     
     .legend-item:hover {
         background-color: rgba(0, 0, 0, 0.08);
+    }
+    
+    .legend-item.isolated {
+        font-weight: bold;
     }
     
     .legend-item.disabled {
