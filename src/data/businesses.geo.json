@@ -7,10 +7,10 @@
         "address": "48 Kensington Ave",
         "history": [
           {
-            "year": 2007,
+            "year": 1989,
             "name": "Essence of Life",
-"type": "Dry goods",
-"subtype": "Dry goods"
+            "type": "Dry goods",
+            "subtype": "Dry goods"
           }
         ]
       },
@@ -99,10 +99,10 @@
         "address": "64 Kensington Ave",
         "history": [
           {
-            "year": 2007,
+            "year": 1990,
             "name": "Tutti Frutti",
-"type": "Dry goods",
-"subtype": "Dry goods"
+            "type": "Dry goods",
+            "subtype": "Dry goods"
           }
         ]
       },
@@ -211,16 +211,10 @@
         "address": "204 Baldwin St",
         "history": [
           {
-            "year": 1976,
-            "name": "Unmarked market",
-"type": "Dry goods",
-"subtype": "Dry goods"
-          },
-          {
-            "year": 2015,
+            "year": 1977,
             "name": "Salamanca Bulk Food",
-"type": "Dry goods",
-"subtype": "Dry goods"
+            "type": "Dry goods",
+            "subtype": "Dry goods"
           },
           {
             "year": 2025,
@@ -276,7 +270,7 @@
         "address": "152 Augusta Ave",
         "history": [
           {
-            "year": 2007,
+            "year": 1980,
             "name": "Lusitania Grocery",
             "type": "Supermarket",
             "subtype": "Supermarket"
@@ -352,8 +346,8 @@
           {
             "year": 2014,
             "name": "4 Life Natural Foods",
-"type": "Dry goods",
-"subtype": "Dry goods"
+            "type": "Dry goods",
+            "subtype": "Dry goods"
           },
           {
             "year": 2025,
@@ -376,7 +370,7 @@
         "address": "234 Augusta Ave",
         "history": [
           {
-            "year": 2000,
+            "year": 1967,
             "name": "J&J Fruit Market",
             "type": "Produce",
             "subtype": "Produce"
@@ -413,7 +407,7 @@
         "address": "241 Augusta Ave",
         "history": [
           {
-            "year": 2007,
+            "year": 2005,
             "name": "Zimmerman's Fairland",
             "type": "Supermarket",
             "subtype": "Supermarket"
@@ -444,10 +438,10 @@
         "address": "247 Augusta Ave",
         "history": [
           {
-            "year": 2007,
+            "year": 1967,
             "name": "Perola Supermarket",
-"type": "Dry goods",
-"subtype": "Dry goods"
+            "type": "Dry goods",
+            "subtype": "Dry goods"
           }
         ]
       },
@@ -494,8 +488,8 @@
           {
             "year": 1970,
             "name": "Caribbean Corner",
-"type": "Dry goods",
-"subtype": "Dry goods"
+            "type": "Dry goods",
+            "subtype": "Dry goods"
           }
         ]
       },
@@ -540,7 +534,7 @@
         "address": "189 Baldwin St",
         "history": [
           {
-            "year": 2007,
+            "year": 1960,
             "name": "Sea Kings",
             "type": "Raw foods",
             "subtype": "Seafood"
@@ -642,9 +636,9 @@
         "history": [
           {
             "year": 1976,
-            "name": "Unmarked market",
-"type": "Dry goods",
-"subtype": "Dry goods"
+            "name": "Unnamed market",
+            "type": "Dry goods",
+            "subtype": "Dry goods"
           },
           {
             "year": 2014,
@@ -667,10 +661,10 @@
         "address": "200B Baldwin St",
         "history": [
           {
-            "year": 1976,
+            "year": 1975,
             "name": "Reg Dry Foods",
-"type": "Dry goods",
-"subtype": "Dry goods"
+            "type": "Dry goods",
+            "subtype": "Dry goods"
           },
           {
             "year": 2018,
@@ -768,7 +762,7 @@
         "address": "76 Kensington Ave",
         "history": [
           {
-            "year": 2007,
+            "year": 1970,
             "name": "Global Cheese",
             "type": "Raw foods",
             "subtype": "Dairy"
@@ -900,7 +894,7 @@
             "type": "Produce",
             "subtype": "Produce"
           },
-                    {
+          {
             "year": 2021,
             "name": "Vacant",
             "type": "Vacant"
