@@ -297,7 +297,7 @@
             zoom: 14,
             projection: "globe",
             maxPitch: 0,
-            maxZoom: 17,
+            maxZoom: 20,
             scrollZoom: true,
             attributionControl: true,
             maxBounds: [
