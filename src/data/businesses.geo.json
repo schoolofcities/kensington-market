@@ -865,6 +865,32 @@
     {
       "type": "Feature",
       "properties": {
+        "address": "17 St Andrew St",
+        "history": [
+          {
+            "year": 1962,
+            "name": "St. Andrew Poultry",
+            "type": "Raw foods",
+            "subtype": "Raw foods"
+          },
+          {
+            "year": 2015,
+            "name": "Vacant",
+            "type": "Vacant"
+          }
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          -79.39961933856505,
+          43.65408105426931
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "address": "36 St Andrew St",
         "history": [
           {

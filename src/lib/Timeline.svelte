@@ -293,14 +293,16 @@
             address: f.properties.address,
             history: f.properties.history,
         })).sort((a, b) => {
-            // Parse address into number and street name
+            // Parse address into number, suffix, and street name
             const parseAddress = (addr) => {
-                const parts = addr.match(/^(\d+)\s+(.+)$/);
+                const parts = addr.match(/^(\d+)([A-Z]?)\s+(.+)$/);
                 return parts ? { 
-                    number: parseInt(parts[1], 10), 
-                    street: parts[2] 
+                    number: parseInt(parts[1], 10),
+                    suffix: parts[2] || '',
+                    street: parts[3] 
                 } : { 
-                    number: 0, 
+                    number: 0,
+                    suffix: '',
                     street: addr 
                 };
             };
@@ -315,7 +317,13 @@
             }
             
             // Then sort by address number numerically
-            return addressA.number - addressB.number;
+            const numberCompare = addressA.number - addressB.number;
+            if (numberCompare !== 0) {
+                return numberCompare;
+            }
+            
+            // Finally sort by suffix alphabetically (A, B, C, etc.)
+            return addressA.suffix.localeCompare(addressB.suffix);
         });
 
         preCalculateYearlyCounts();
