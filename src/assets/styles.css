@@ -83,5 +83,7 @@ body {
 @media (max-width: 480px) {
     html, body {
         font-size: 13px;
+        padding: 0;
+        margin: 0;
     }
 }

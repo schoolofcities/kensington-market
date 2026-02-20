@@ -167,6 +167,12 @@
         padding: 0rem 2rem 4rem 2rem;
     }
 
+    @media (max-width: 480px) {
+        main {
+            padding: 0rem 1rem 2rem 1rem;
+        }
+    }
+
     .text-content {
         max-width: 800px;
         margin: 0 auto;

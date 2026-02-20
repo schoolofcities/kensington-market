@@ -127,6 +127,10 @@
 
     /* Mobile screens */
     @media (max-width: 480px) {
+        .timeline-visualization {
+            margin: 0.5rem 0.25rem;
+        }
+
         .timeline-column {
             height: 150px;
         }

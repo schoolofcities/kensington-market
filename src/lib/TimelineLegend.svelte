@@ -181,14 +181,28 @@
 
     /* Extra small screens */
     @media (max-width: 480px) {
+        .legend-section {
+            overflow: visible;
+        }
+
         .legend-container {
-            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-            gap: 4px 8px;
-            padding: 4px 12px;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 4px 6px;
+            padding: 4px 8px;
+            overflow: visible;
         }
 
         .legend-item {
             font-size: 10px;
+            padding: 3px 4px;
+            white-space: normal;
+            word-break: break-word;
+            overflow: visible;
+        }
+
+        .legend-text {
+            overflow: visible;
+            white-space: normal;
         }
     }
 </style>
