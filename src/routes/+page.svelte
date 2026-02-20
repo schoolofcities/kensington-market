@@ -58,47 +58,63 @@
             </p>
         </div>
 
-        <div class="pie-charts" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 0; margin: 0;">
-            <div style="display: flex; flex-direction: column; align-items: center;">
-                <img src={pieNonRes} alt="Pie chart of non-restaurant businesses" style="height: 250px; width: auto;" />
-            </div>
-            <div style="display: flex; flex-direction: column; align-items: center;">
-                <img src={pieRestaurants} alt="Pie chart of restaurants" style="height: 250px; width: auto;" />
-            </div>
-            <div style="display: flex; flex-direction: column; align-items: center;">
-                <img src={pieRetail} alt="Pie chart of retail" style="height: 250px; width: auto;" />
-            </div>
-        </div>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-        </div>
-
-        <div class="sankey" style="display: flex; justify-content: center;">
-            <img                src={bars}
-                alt="Bar chart"
-                style="width: 90%; max-width: 500px;"
-            />
-        </div>
-
-        <div class="sankey" style="display: flex; justify-content: center;">
-            <picture>
-                <source media="(max-width: 480px)" srcset={sankeyImageMobile} />
+        <div
+            class="pie-charts"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 0; margin: 0;"
+        >
+            <div
+                style="display: flex; flex-direction: column; align-items: center;"
+            >
                 <img
-                    src={sankeyImageStandard}
-                    alt="Sankey diagram showing business transitions 2007-2025"
-                    style="width: 100%; max-width: 500px;"
+                    src={pieNonRes}
+                    alt="Pie chart of non-restaurant businesses"
+                    style="height: 400px; width: auto;"
                 />
-            </picture>
+            </div>
+            <div
+                style="display: flex; flex-direction: column; align-items: center;"
+            >
+                <img
+                    src={pieRestaurants}
+                    alt="Pie chart of restaurants"
+                    style="height: 400px; width: auto;"
+                />
+            </div>
+            <div
+                style="display: flex; flex-direction: column; align-items: center;"
+            >
+                <img
+                    src={pieRetail}
+                    alt="Pie chart of retail"
+                    style="height: 400px; width: auto;"
+                />
+            </div>
         </div>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </div>
 
-                <div class="blog-text">
+    <div class="sankey" style="display: flex; justify-content: center;">
+        <img src={bars} alt="Bar chart" style="width: 100%; max-width: 500px;" />
+    </div>
+
+    <div class="sankey" style="display: flex; justify-content: center;">
+        <picture>
+            <source media="(max-width: 480px)" srcset={sankeyImageMobile} />
+            <img
+                src={sankeyImageStandard}
+                alt="Sankey diagram showing business transitions 2007-2025"
+                style="width: 100%; max-width: 700px;"
+            />
+        </picture>
+        <div class="blog-text">
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -109,15 +125,11 @@
                 sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
         </div>
-
-        <div class="blog-text">
-            <h2>The Disappearance of Small Grocers</h2>
-        </div>
-
+    </div>
 
     <!-- Timeline and Map with shared legend header -->
     <h2 class="section-title">
-        Mapping the disappearance of grocers and the rise of cannabis stores
+        Mapping the disappearance of grocers
         since 2007
     </h2>
     <TimelineVisualization
@@ -183,10 +195,18 @@
         margin: 0 auto;
     }
 
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: normal;
+    }
+
     h1 {
         margin-bottom: 0em;
         color: #222;
-        font-weight: normal;
     }
 
     .authors {
