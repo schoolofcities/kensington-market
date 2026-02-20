@@ -1,6 +1,7 @@
 <script>
     import TimelineVisualization from "$lib/TimelineVisualization.svelte";
-    import sankeyImage from "../assets/sankey-2007-2025.png";
+    import sankeyImageStandard from "../assets/sankey-standard.png";
+    import sankeyImageMobile from "../assets/sankey-mobile.png";
     import drumMap from "../assets/drum-map.png";
     import pieNonRes from "../assets/pieNonRes.png";
     import pieRestaurants from "../assets/pieRestaurants.png";
@@ -87,10 +88,14 @@
         </div>
 
         <div class="sankey" style="display: flex; justify-content: center;">
-            <img                src={sankeyImage}
-                alt="Sankey diagram showing business transitions 2007-2025"
-                style="width: 100%; max-width: 500px;"
-            />
+            <picture>
+                <source media="(max-width: 480px)" srcset={sankeyImageMobile} />
+                <img
+                    src={sankeyImageStandard}
+                    alt="Sankey diagram showing business transitions 2007-2025"
+                    style="width: 100%; max-width: 500px;"
+                />
+            </picture>
         </div>
 
                 <div class="blog-text">
@@ -181,6 +186,7 @@
     h1 {
         margin-bottom: 0em;
         color: #222;
+        font-weight: normal;
     }
 
     .authors {
