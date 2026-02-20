@@ -114,7 +114,7 @@
 
     .legend-container {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: 8px 12px;
         padding: 8px 18px;
         width: 100%;
@@ -165,7 +165,7 @@
     /* Mobile responsive adjustments */
     @media (max-width: 839px) {
         .legend-container {
-            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
             gap: 6px 10px;
             padding: 6px 15px;
         }
@@ -182,7 +182,7 @@
         }
 
         .legend-container {
-            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
             gap: 4px 6px;
             padding: 4px 8px;
             overflow: visible;
