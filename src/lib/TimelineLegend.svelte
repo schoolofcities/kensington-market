@@ -138,10 +138,6 @@
         background-color: rgba(0, 0, 0, 0.08);
     }
     
-    .legend-item.isolated {
-        font-weight: bold;
-    }
-    
     .legend-item.disabled {
         opacity: 0.5;
     }
