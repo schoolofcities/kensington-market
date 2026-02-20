@@ -201,10 +201,17 @@
         });
         timelineHtml += `</div>`;
 
+        // Determine popup anchor based on screen position
+        const screenPos = map.project(feature.geometry.coordinates);
+        const canvasWidth = map.getCanvas().clientWidth;
+        const midpoint = canvasWidth / 2;
+        const anchor = screenPos.x < midpoint ? 'left' : 'right';
+
         activePopup = new maplibregl.Popup({
             closeButton: false,
             closeOnClick: false, // Don't close on click to allow timeline hover
             closeOnMove: false, // Don't close when map moves
+            anchor: anchor,
         })
             .setLngLat(feature.geometry.coordinates)
             .setHTML(timelineHtml)
@@ -294,15 +301,16 @@
             style: "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json",
             center: [-79.40282183709127, 43.65487176137049],
             bearing: -15.5,
-            zoom: 14,
+            zoom: 15,
             projection: "globe",
             maxPitch: 0,
             maxZoom: 20,
+            minZoom: 14,
             scrollZoom: true,
             attributionControl: true,
             maxBounds: [
-                [-79.45, 43.651118426591346],
-                [-79.35, 43.65862486157258],
+                [-79.5, 43.64],
+                [-79.3, 43.67],
             ],
             dragRotate: false,
             touchRotate: false,
@@ -310,7 +318,7 @@
 
         // Log initial map position
         map.on("load", () => {
-            map.setZoom(14);
+            map.setZoom(15);
             console.log("Map loaded:", {
                 center: map.getCenter(),
                 bearing: map.getBearing()
