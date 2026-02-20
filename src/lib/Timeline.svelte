@@ -794,30 +794,20 @@
         }
     }
 
-    /* Extra small screens */
-    @media (max-width: 480px) {
-
-                .vertical-indicator-line {
-            transform: translateX(-8px);
-        }
-
-
+    /* Tablet screens */
+    @media (max-width: 768px) {
         .timeline-header-address {
             font-size: 10px;
-            padding: 0px 4px;
+            padding: 0px 5px;
         }
 
         .timeline-address {
             font-size: 10px;
-            padding: 0px 4px;
+            padding: 0px 5px;
         }
 
         .year-label {
             font-size: 10px;
-        }
-
-        .year-label.abbreviated {
-            font-size: 8px;
         }
 
         .timeline-row {
@@ -832,6 +822,68 @@
         .timeline-circle.hovered {
             width: 9px;
             height: 9px;
+        }
+
+        .hover-popup {
+            font-size: 9px;
+            padding: 3px 5px;
+        }
+    }
+
+    /* Extra small screens */
+    @media (max-width: 480px) {
+        .vertical-indicator-line {
+            transform: translateX(-8px);
+        }
+
+        .timeline-header-address {
+            font-size: 10px;
+            padding: 0px 3px;
+        }
+
+        .timeline-address {
+            font-size: 10px;
+            padding: 0px 3px;
+        }
+
+        .year-label {
+            font-size: 8px;
+        }
+
+        .year-label.abbreviated {
+            font-size: 7px;
+        }
+
+        .timeline-row {
+            height: 14px;
+        }
+
+        .timeline-circle {
+            width: 5px;
+            height: 5px;
+        }
+
+        .timeline-circle.hovered {
+            width: 8px;
+            height: 8px;
+        }
+
+        .hover-popup {
+            font-size: 9px;
+            padding: 3px 4px;
+        }
+
+        .popup-name {
+            font-size: 9px;
+        }
+
+        .popup-duration {
+            font-size: 8px;
+        }
+
+        .timeline-list {
+            padding-right: 12px;
+            margin-right: -12px;
         }
     }
 

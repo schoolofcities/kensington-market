@@ -113,4 +113,26 @@
             height: 600px;
         }
     }
+
+    /* Tablet screens */
+    @media (max-width: 768px) {
+        .timeline-column {
+            height: 200px;
+        }
+
+        .map-column {
+            height: 400px;
+        }
+    }
+
+    /* Mobile screens */
+    @media (max-width: 480px) {
+        .timeline-column {
+            height: 150px;
+        }
+
+        .map-column {
+            height: 300px;
+        }
+    }
 </style>

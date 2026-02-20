@@ -292,7 +292,7 @@
         map = new maplibregl.Map({
             container: mapContainer,
             style: "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json",
-            center: [-79.40090659443388, 43.65414351296272],
+            center: [-79.40282183709127, 43.65487176137049],
             bearing: -15.5,
             zoom: 14,
             projection: "globe",
@@ -301,8 +301,8 @@
             scrollZoom: true,
             attributionControl: true,
             maxBounds: [
-                [-79.40868603317146, 43.651118426591346],
-                [-79.39711887690949, 43.65862486157258],
+                [-79.45, 43.651118426591346],
+                [-79.35, 43.65862486157258],
             ],
             dragRotate: false,
             touchRotate: false,
