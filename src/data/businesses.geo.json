@@ -140,6 +140,11 @@
             "year": 2020,
             "name": "Vacant",
             "type": "Vacant"
+          },
+          {
+            "year": 2025,
+            "name": "Bazaar",
+            "type": "Retail"
           }
         ]
       },
