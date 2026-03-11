@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 770.28 657.18">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+      }
+
+      .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14, .cls-15 {
+        font-family: ABCFavoritVariableUnlicensedTrial-Regular, 'ABC Favorit Variable Unlicensed Trial';
+        font-variation-settings: 'wght' 400, 'slnt' 0;
+      }
+
+      .cls-4, .cls-5, .cls-6, .cls-8, .cls-9, .cls-11, .cls-12, .cls-13, .cls-14, .cls-15 {
+        font-size: 16px;
+      }
+
+      .cls-16, .cls-5 {
+        fill: #82a0d3;
+      }
+
+      .cls-16, .cls-2, .cls-17, .cls-3, .cls-18, .cls-19, .cls-20, .cls-21, .cls-22 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-16, .cls-17, .cls-18, .cls-19, .cls-20, .cls-21, .cls-22 {
+        stroke: #fff;
+        stroke-width: .75px;
+      }
+
+      .cls-6, .cls-19 {
+        fill: #e1c542;
+      }
+
+      .cls-2 {
+        stroke: #ccc;
+      }
+
+      .cls-7 {
+        fill: #6b6b6b;
+        font-size: 12px;
+      }
+
+      .cls-17, .cls-13 {
+        fill: #6459a7;
+      }
+
+      .cls-8 {
+        fill: #a1a1a1;
+      }
+
+      .cls-3 {
+        stroke: #333;
+      }
+
+      .cls-18, .cls-14 {
+        fill: #46c0b5;
+      }
+
+      .cls-20, .cls-9 {
+        fill: #1b8079;
+      }
+
+      .cls-21, .cls-12 {
+        fill: #e64c3c;
+      }
+
+      .cls-10 {
+        fill: #757575;
+        font-size: 26.61px;
+      }
+
+      .cls-11 {
+        fill: #fff;
+      }
+
+      .cls-22, .cls-15 {
+        fill: #5ac7da;
+      }
+
+      .cls-23 {
+        opacity: 0;
+      }
+    </style>
+  </defs>
+  <line class="cls-3" x1="54.75" y1="577.6" x2="631.31" y2="577.6"/>
+  <line class="cls-2" x1="54.75" y1="455.83" x2="631.31" y2="455.83"/>
+  <line class="cls-2" x1="54.75" y1="332.99" x2="631.31" y2="332.99"/>
+  <line class="cls-2" x1="54.75" y1="210.15" x2="631.31" y2="210.15"/>
+  <line class="cls-2" x1="54.75" y1="87.3" x2="631.31" y2="87.3"/>
+  <path class="cls-23" d="M187.36,577.06v1.08h-.89v-104.52h.89v1.08h-86.04v-1.08h.89v104.52h-.89v-1.08h86.04ZM187.36,579.21h-86.93v-106.68h87.81v106.68h-.89"/>
+  <rect class="cls-21" x="101.32" y="473.07" width="86.04" height="105.06"/>
+  <path class="cls-23" d="M320.41,577.06v1.08h-.89v-135.77h.89v1.08h-86.04v-1.08h.89v135.77h-.89v-1.08h86.04ZM320.41,579.21h-86.93v-137.93h87.81v137.93h-.89"/>
+  <rect class="cls-21" x="234.37" y="438.56" width="86.04" height="139.57"/>
+  <path class="cls-23" d="M452.58,577.06v1.08h-.89v-134.7h.89v1.08h-86.04v-1.08h.89v134.7h-.89v-1.08h86.04ZM452.58,579.21h-86.93v-136.85h87.81v136.85h-.89"/>
+  <rect class="cls-21" x="366.54" y="440" width="86.04" height="138.13"/>
+  <path class="cls-23" d="M585.63,577.06v1.08h-.89v-158.4h.89v1.08h-86.04v-1.08h.89v158.4h-.89v-1.08h86.04ZM585.63,579.21h-86.93v-160.56h87.81v160.56h-.89"/>
+  <rect class="cls-21" x="499.59" y="417.8" width="86.04" height="160.34"/>
+  <path class="cls-23" d="M187.36,472.53v1.08h-.89v-134.7h.89v1.08h-86.04v-1.08h.89v134.7h-.89v-1.08h86.04ZM187.36,474.69h-86.93v-136.85h87.81v136.85h-.89"/>
+  <rect class="cls-17" x="101.32" y="337.68" width="86.04" height="135.39"/>
+  <path class="cls-23" d="M320.41,441.28v1.08h-.89v-130.39h.89v1.08h-86.04v-1.08h.89v130.39h-.89v-1.08h86.04ZM320.41,443.44h-86.93v-132.54h87.81v132.54h-.89"/>
+  <rect class="cls-17" x="234.37" y="304.53" width="86.04" height="134.04"/>
+  <path class="cls-23" d="M452.58,442.36v1.08h-.89v-130.39h.89v1.08h-86.04v-1.08h.89v130.39h-.89v-1.08h86.04ZM452.58,444.52h-86.93v-132.54h87.81v132.54h-.89"/>
+  <rect class="cls-17" x="366.54" y="306.29" width="86.04" height="133.71"/>
+  <path class="cls-23" d="M585.63,418.66v1.08h-.89v-143.32h.89v1.08h-86.04v-1.08h.89v143.32h-.89v-1.08h86.04ZM585.63,420.81h-86.93v-145.47h87.81v145.47h-.89"/>
+  <rect class="cls-17" x="499.59" y="272.73" width="86.04" height="145.07"/>
+  <path class="cls-23" d="M187.36,337.84v1.08h-.89v-64.65h.89v1.08h-86.04v-1.08h.89v64.65h-.89v-1.08h86.04ZM187.36,339.99h-86.93v-66.81h87.81v66.81h-.89"/>
+  <rect class="cls-20" x="101.32" y="272.7" width="86.04" height="64.99"/>
+  <path class="cls-23" d="M320.41,310.9v1.08h-.89v-51.72h.89v1.08h-86.04v-1.08h.89v51.72h-.89v-1.08h86.04ZM320.41,313.05h-86.93v-53.88h87.81v53.88h-.89"/>
+  <rect class="cls-20" x="234.37" y="251.35" width="86.04" height="53.17"/>
+  <path class="cls-23" d="M452.58,311.98v1.08h-.89v-51.72h.89v1.08h-86.04v-1.08h.89v51.72h-.89v-1.08h86.04ZM452.58,314.13h-86.93v-53.88h87.81v53.88h-.89"/>
+  <rect class="cls-20" x="366.54" y="253.24" width="86.04" height="53.04"/>
+  <path class="cls-23" d="M585.63,275.34v1.08h-.89v-30.17h.89v1.08h-86.04v-1.08h.89v30.17h-.89v-1.08h86.04ZM585.63,277.49h-86.93v-32.33h87.81v32.33h-.89"/>
+  <rect class="cls-20" x="499.59" y="242.19" width="86.04" height="30.54"/>
+  <path class="cls-23" d="M187.36,273.18v1.08h-.89v-42.03h.89v1.08h-86.04v-1.08h.89v42.03h-.89v-1.08h86.04ZM187.36,275.34h-86.93v-44.18h87.81v44.18h-.89"/>
+  <rect class="cls-19" x="101.32" y="230.45" width="86.04" height="42.24"/>
+  <path class="cls-23" d="M320.41,259.18v1.08h-.89v-28.02h.89v1.08h-86.04v-1.08h.89v28.02h-.89v-1.08h86.04ZM320.41,261.33h-86.93v-30.17h87.81v30.17h-.89"/>
+  <rect class="cls-19" x="234.37" y="222.55" width="86.04" height="28.8"/>
+  <path class="cls-23" d="M452.58,260.25v1.08h-.89v-26.94h.89v1.08h-86.04v-1.08h.89v26.94h-.89v-1.08h86.04ZM452.58,262.41h-86.93v-29.09h87.81v29.09h-.89"/>
+  <rect class="cls-19" x="366.54" y="225.62" width="86.04" height="27.63"/>
+  <path class="cls-23" d="M585.63,245.17v1.08h-.89v-23.71h.89v1.08h-86.04v-1.08h.89v23.71h-.89v-1.08h86.04ZM585.63,247.32h-86.93v-25.86h87.81v25.86h-.89"/>
+  <rect class="cls-19" x="499.59" y="218.19" width="86.04" height="24"/>
+  <polyline class="cls-1" points="631.33 87.48 631.33 577.92 54.49 577.92 54.49 87.48"/>
+  <path class="cls-23" d="M187.36,231.16v1.08h-.89v-90.52h.89v1.08h-86.04v-1.08h.89v90.52h-.89v-1.08h86.04ZM187.36,233.31h-86.93v-92.67h87.81v92.67h-.89"/>
+  <rect class="cls-16" x="101.32" y="139.47" width="86.04" height="90.98"/>
+  <path class="cls-23" d="M320.41,231.16v1.08h-.89v-85.13h.89v1.08h-86.04v-1.08h.89v85.13h-.89v-1.08h86.04ZM320.41,233.31h-86.93v-87.28h87.81v87.28h-.89"/>
+  <rect class="cls-16" x="234.37" y="135.04" width="86.04" height="87.51"/>
+  <path class="cls-23" d="M452.58,233.31v1.08h-.89v-90.52h.89v1.08h-86.04v-1.08h.89v90.52h-.89v-1.08h86.04ZM452.58,235.47h-86.93v-92.67h87.81v92.67h-.89"/>
+  <rect class="cls-16" x="366.54" y="132.79" width="86.04" height="92.83"/>
+  <path class="cls-23" d="M585.63,221.46v1.08h-.89v-80.82h.89v1.08h-86.04v-1.08h.89v80.82h-.89v-1.08h86.04ZM585.63,223.62h-86.93v-82.97h87.81v82.97h-.89"/>
+  <rect class="cls-16" x="499.59" y="136.39" width="86.04" height="81.81"/>
+  <polyline class="cls-1" points="631.33 87.48 631.33 577.92 54.49 577.92 54.49 87.48"/>
+  <path class="cls-23" d="M187.36,140.64v1.08h-.89v-40.95h.89v1.08h-86.04v-1.08h.89v40.95h-.89v-1.08h86.04ZM187.36,142.8h-86.93v-43.1h87.81v43.1h-.89"/>
+  <rect class="cls-22" x="101.32" y="98.31" width="86.04" height="41.16"/>
+  <path class="cls-23" d="M320.41,146.03v1.08h-.89v-34.48h.89v1.08h-86.04v-1.08h.89v34.48h-.89v-1.08h86.04ZM320.41,148.19h-86.93v-36.64h87.81v36.64h-.89"/>
+  <rect class="cls-22" x="234.37" y="99.59" width="86.04" height="35.45"/>
+  <path class="cls-23" d="M452.58,142.8v1.08h-.89v-34.48h.89v1.08h-86.04v-1.08h.89v34.48h-.89v-1.08h86.04ZM452.58,144.95h-86.93v-36.64h87.81v36.64h-.89"/>
+  <rect class="cls-22" x="366.54" y="97.43" width="86.04" height="35.36"/>
+  <path class="cls-23" d="M585.63,140.64v1.08h-.89v-30.17h.89v1.08h-86.04v-1.08h.89v30.17h-.89v-1.08h86.04ZM585.63,142.8h-86.93v-32.33h87.81v32.33h-.89"/>
+  <rect class="cls-22" x="499.59" y="105.85" width="86.04" height="30.54"/>
+  <path class="cls-23" d="M187.36,99.7v1.08h-.89v-10.78h.89v1.08h-86.04v-1.08h.89v10.78h-.89v-1.08h86.04ZM187.36,101.85h-86.93v-12.93h87.81v12.93h-.89"/>
+  <rect class="cls-18" x="101.32" y="87.48" width="86.04" height="10.83"/>
+  <path class="cls-23" d="M320.41,111.55v1.08h-.89v-11.85h.89v1.08h-86.04v-1.08h.89v11.85h-.89v-1.08h86.04ZM320.41,113.7h-86.93v-14.01h87.81v14.01h-.89"/>
+  <rect class="cls-18" x="234.37" y="87.41" width="86.04" height="12.19"/>
+  <path class="cls-23" d="M452.58,108.32v1.08h-.89v-9.7h.89v1.08h-86.04v-1.08h.89v9.7h-.89v-1.08h86.04ZM452.58,110.47h-86.93v-11.85h87.81v11.85h-.89"/>
+  <rect class="cls-18" x="366.54" y="87.48" width="86.04" height="9.95"/>
+  <path class="cls-23" d="M585.63,110.47v1.08h-.89v-18.32h.89v1.08h-86.04v-1.08h.89v18.32h-.89v-1.08h86.04ZM585.63,112.63h-86.93v-20.47h87.81v20.47h-.89"/>
+  <rect class="cls-18" x="499.59" y="87.3" width="86.04" height="18.54"/>
+  <polyline class="cls-1" points="631.33 87.48 631.33 577.92 54.49 577.92 54.49 87.48"/>
+  <path class="cls-23" d="M187.36,88.92v1.08h-.89v-1.08h-84.27v1.08h-.89v-1.08h86.04ZM187.36,91.07h-86.93v-2.16h.89-.89c0-1.19.79-2.16,1.77-2.16v1.08-1.08h84.27v1.08-1.08c.98,0,1.77.96,1.77,2.16h-.89.89v2.16h-.89"/>
+  <polyline class="cls-1" points="631.33 87.48 631.33 577.92 54.49 577.92 54.49 87.48"/>
+  <text class="cls-4" transform="translate(24.37 578.03)"><tspan x="0" y="0">0%</tspan></text>
+  <text class="cls-4" transform="translate(16.2 455.83)"><tspan x="0" y="0">25%</tspan></text>
+  <text class="cls-4" transform="translate(16.73 332.7)"><tspan x="0" y="0">50%</tspan></text>
+  <text class="cls-4" transform="translate(17.11 210.15)"><tspan x="0" y="0">75%</tspan></text>
+  <text class="cls-4" transform="translate(9.13 87.3)"><tspan x="0" y="0">100%</tspan></text>
+  <text class="cls-4" transform="translate(118.26 598.46)"><tspan x="0" y="0">2009</tspan></text>
+  <text class="cls-4" transform="translate(258.93 598.62)"><tspan x="0" y="0">2019</tspan></text>
+  <text class="cls-4" transform="translate(390.15 598.3)"><tspan x="0" y="0">2020</tspan></text>
+  <text class="cls-4" transform="translate(524.68 598.3)"><tspan x="0" y="0">2025</tspan></text>
+  <text class="cls-14" transform="translate(613.09 102.39)"><tspan x="0" y="0">Arts &amp; performance</tspan></text>
+  <text class="cls-15" transform="translate(611.54 126.63)"><tspan x="0" y="0">Medical</tspan></text>
+  <text class="cls-5" transform="translate(610.67 183.44)"><tspan x="0" y="0">Services</tspan></text>
+  <text class="cls-6" transform="translate(610.1 239.79)"><tspan x="0" y="0">Social / community</tspan></text>
+  <text class="cls-9" transform="translate(610.1 266.59)"><tspan x="0" y="0">Foodstuffs</tspan></text>
+  <text class="cls-13" transform="translate(610.1 353.46)"><tspan x="0" y="0">Retail</tspan></text>
+  <text class="cls-12" transform="translate(608.66 505.63)"><tspan x="0" y="0">Restaurants and bars</tspan></text>
+  <text class="cls-11" transform="translate(522 510.25)"><tspan x="0" y="0">32.7%</tspan></text>
+  <text class="cls-11" transform="translate(522.74 353.62)"><tspan x="0" y="0">29.5%</tspan></text>
+  <text class="cls-11" transform="translate(525.48 262.41)"><tspan x="0" y="0">6.3%</tspan></text>
+  <text class="cls-11" transform="translate(523.54 234.39)"><tspan x="0" y="0">4.9%</tspan></text>
+  <text class="cls-11" transform="translate(524.34 182.13)"><tspan x="0" y="0">16.6%</tspan></text>
+  <text class="cls-11" transform="translate(524.34 126.63)"><tspan x="0" y="0">6.3%</tspan></text>
+  <text class="cls-11" transform="translate(526.34 102.39)"><tspan x="0" y="0">3.7%</tspan></text>
+  <text class="cls-11" transform="translate(387.35 521)"><tspan x="0" y="0">28.1%</tspan></text>
+  <text class="cls-11" transform="translate(388.15 377.17)"><tspan x="0" y="0">27.2%</tspan></text>
+  <text class="cls-11" transform="translate(388.15 286.27)"><tspan x="0" y="0">10.8%</tspan></text>
+  <text class="cls-11" transform="translate(393.29 246.24)"><tspan x="0" y="0">5.8%</tspan></text>
+  <text class="cls-11" transform="translate(388.15 182.29)"><tspan x="0" y="0">18.7%</tspan></text>
+  <text class="cls-11" transform="translate(390.93 121.2)"><tspan x="0" y="0">7.2%</tspan></text>
+  <text class="cls-8" transform="translate(393.87 81.96)"><tspan x="0" y="0">2.2%</tspan></text>
+  <text class="cls-11" transform="translate(255.22 524.04)"><tspan x="0" y="0">28.5%</tspan></text>
+  <text class="cls-11" transform="translate(256.02 380.22)"><tspan x="0" y="0">27.4%</tspan></text>
+  <text class="cls-11" transform="translate(256.02 286.32)"><tspan x="0" y="0">10.7%</tspan></text>
+  <text class="cls-11" transform="translate(261.16 244.29)"><tspan x="0" y="0">5.9%</tspan></text>
+  <text class="cls-11" transform="translate(256.02 185.34)"><tspan x="0" y="0">17.9%</tspan></text>
+  <text class="cls-11" transform="translate(258.8 124.24)"><tspan x="0" y="0">7.2%</tspan></text>
+  <text class="cls-8" transform="translate(261.73 85.01)"><tspan x="0" y="0">2.4%</tspan></text>
+  <text class="cls-11" transform="translate(121.1 524.04)"><tspan x="0" y="0">21.3%</tspan></text>
+  <text class="cls-11" transform="translate(121.9 410.46)"><tspan x="0" y="0">27.6%</tspan></text>
+  <text class="cls-11" transform="translate(125.06 310.9)"><tspan x="0" y="0">13.3%</tspan></text>
+  <text class="cls-11" transform="translate(127.61 257.46)"><tspan x="0" y="0">8.7%</tspan></text>
+  <text class="cls-11" transform="translate(121.9 189.13)"><tspan x="0" y="0">18.5%</tspan></text>
+  <text class="cls-11" transform="translate(124.68 124.24)"><tspan x="0" y="0">8.3%</tspan></text>
+  <text class="cls-8" transform="translate(127.61 85.01)"><tspan x="0" y="0">2.4%</tspan></text>
+  <text class="cls-10" transform="translate(49.08 43.79)"><tspan x="0" y="0">Kensington Market non-residential change 2009 - 2025</tspan></text>
+  <text class="cls-7" transform="translate(51.84 638.97)"><tspan x="0" y="0">Source: KMCLT, Data Axle Canadian Historical Business Data 2025</tspan></text>
+</svg>
