@@ -1,10 +1,4 @@
 @font-face {
-    font-family: FavoritVariable;
-    src: url("./fonts/ABCFavoritVariable-Trial.ttf");
-    font-display: swap;
-}
-
-@font-face {
 	font-family: TradeGothicBold;
 	src: url("fonts/Trade Gothic LT Bold.ttf");
 }
@@ -83,7 +77,7 @@
 
 
 :root {
-    font-family: -apple-system, Roboto, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: OpenSans;
     --brandBlack: #000000;
     --brandWhite: #ffffff;
     --brandGray: #D0D1C9;
@@ -161,6 +155,8 @@ main {
 	padding-left: 20px;
 	padding-right: 20px;
 	padding-top: 0px;
+	margin-bottom: 40px;
+	margin-top: 20px;
 }
 
 h1 {
@@ -178,9 +174,9 @@ h2 {
 	font-family: TradeGothicBold;
 	font-weight: normal;
 	font-size: 38px;
-	margin-top: 30px;
+	margin-top: 70px;
 	margin-bottom: 0px;
-    text-decoration: underline;
+    /* text-decoration: underline; */
 	color: var(--brandBlack);
 }
 
@@ -209,7 +205,7 @@ p {
 	text-align: left;
 	padding-top: 2px;
 	padding-bottom: 2px;
-	font-size: 22px;
+	font-size: 20px;
 	line-height: 32px;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -269,11 +265,18 @@ li {
 	text-align: left;
 	padding-top: 7px;
 	padding-bottom: 7px;
-	font-size: 21px;
-	line-height: 28px;
+	font-size: 20px;
+	line-height: 32px;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizeLegibility;
+}
+
+@media screen and (max-width: 600px) {
+	li {
+		font-size: 17px;
+		line-height: 26px;
+	}
 }
 
 .quote {
@@ -395,8 +398,8 @@ li {
 
 
 .caption-container {
-	margin-top: 2px;
-	margin-bottom: 0px;
+	margin-top: 0px;
+	margin-bottom: 10px;
 	padding-top: 2px;
 	width: 100%;
 }
@@ -405,7 +408,7 @@ li {
 	font-family: OpenSansBold;
 	font-weight: normal;
 	color: var(--brandGray80);
-	font-size: 12px;
+	font-size: 13px;
 	line-height: 18px;
 	text-align: left;
 	padding-left: 0px;
@@ -424,9 +427,9 @@ li {
 }
 
 .caption-source {
-	font-family: OpenSans;
+	font-family: OpenSansItalic;
 	font-weight: normal;
-	color: var(--brandGray60);
+	color: var(--brandGray70);
 }
 
 .caption-source a  {

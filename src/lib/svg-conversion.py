@@ -12,11 +12,13 @@ FONT_MAP = {
 	# Bold variants
 	"Open Sans Bold": "OpenSansBold",
 	"OpenSans Bold": "OpenSansBold",
+	"Open Sans, Bold": "OpenSansBold",
 	"Bold": "OpenSansBold",  # Catch-all for any font with bold weight
 	
 	# Italic variants
 	"Open Sans Italic": "OpenSansItalic",
 	"OpenSans Italic": "OpenSansItalic",
+	"Open Sans, Italic": "OpenSansItalic",
 	"Italic": "OpenSansItalic",  # Catch-all for any font with italic style
 	
 	# Bold Italic variants
@@ -66,63 +68,63 @@ def apply_font_map(root, font_map, svg_ns):
 	def inline_css_styles(svg_root, ns):
 		style_elements = svg_root.xpath(".//svg:style", namespaces={"svg": ns})
 		css_rules = {}
-		
+
 		for style_elem in style_elements:
 			if not style_elem.text:
 				continue
-				
+
 			# Improved CSS parsing that handles multiple selectors
 			for rule in style_elem.text.split('}'):
 				rule = rule.strip()
 				if not rule or '{' not in rule:
 					continue
-					
+
 				# Split selectors and declarations
 				selectors_part, declarations = rule.split('{', 1)
 				declarations = declarations.strip().rstrip(';')
-				
+
 				# Process each selector in comma-separated list
 				for selector in selectors_part.split(','):
 					selector = selector.strip()
 					if not selector.startswith('.'):
 						continue
-						
+
 					class_name = selector[1:]
 					# Append declarations to existing rules for this class
 					if class_name in css_rules:
 						css_rules[class_name] += '; ' + declarations
 					else:
 						css_rules[class_name] = declarations
-		
+
 		# Apply styles to elements
 		if css_rules:
 			for elem in svg_root.xpath(".//*[@class]", namespaces={"svg": ns}):
 				classes = elem.get("class", "").split()
 				inline_styles = []
-				
+
 				# Get existing inline style
 				existing_style = elem.get("style", "")
 				if existing_style:
 					inline_styles.append(existing_style.rstrip(';'))
-				
+
 				# Add styles from CSS classes
 				for class_name in classes:
 					if class_name in css_rules:
 						inline_styles.append(css_rules[class_name])
-				
+
 				# Combine all styles
 				if inline_styles:
 					combined_style = '; '.join(
 						filter(None, [s.strip() for s in inline_styles])
 					) + ';'
 					elem.set("style", combined_style)
-		
+
 		# Remove style elements
 		for style_elem in style_elements:
 			parent = style_elem.getparent()
 			if parent is not None:
 				parent.remove(style_elem)
-	
+
 	# Process the SVG
 	inline_css_styles(root, svg_ns)  # Inline CSS styles first
 
@@ -131,7 +133,7 @@ def apply_font_map(root, font_map, svg_ns):
 	for node in text_nodes:
 		# Store original attributes
 		original_attrs = dict(node.attrib)
-		
+
 		# Parse style attribute
 		style = node.get("style", "")
 		style_parts = [part.strip() for part in style.split(";") if part.strip()]
@@ -145,7 +147,7 @@ def apply_font_map(root, font_map, svg_ns):
 		font_weight = original_attrs.get("font-weight", style_dict.get("font-weight", "normal")).lower()
 		font_style = original_attrs.get("font-style", style_dict.get("font-style", "normal")).lower()
 		current_font = style_dict.get("font-family", original_attrs.get("font-family", ""))
-		
+
 		# Clean current font name (remove quotes and get first font in stack)
 		current_font = current_font.strip("'\"").split(",")[0].strip()
 
@@ -169,17 +171,17 @@ def apply_font_map(root, font_map, svg_ns):
 				variants.extend([f"{current_font} Bold", "Bold"])
 			elif is_italic:
 				variants.extend([f"{current_font} Italic", "Italic"])
-			
+
 			# Generate possible keys in order of preference
 			for variant in variants:
 				# Try full font name with variant
 				lookup_keys.append(f"{current_font} {variant}" if " " not in variant else f"{current_font} {variant}")
 				# Try variant alone (will only match if font_map has standalone variants)
 				lookup_keys.append(variant)
-			
+
 			# Always try the base font name last
 			lookup_keys.append(current_font)
-		
+
 		# Find the first matching font in font_map
 		mapped_font = current_font  # default to original if no match found
 		for key in lookup_keys:
@@ -189,13 +191,13 @@ def apply_font_map(root, font_map, svg_ns):
 
 		# Rest of the function remains the same...
 		style_dict["font-family"] = mapped_font
-		
+
 		# Clean up font-weight and font-style
 		if "bold" in mapped_font.lower():
 			style_dict.pop("font-weight", None)
 		else:
 			style_dict["font-weight"] = "normal"
-			
+
 		if "italic" in mapped_font.lower():
 			style_dict.pop("font-style", None)
 		else:
@@ -212,16 +214,16 @@ def apply_font_map(root, font_map, svg_ns):
 
 		# Update the node
 		node.attrib.clear()
-		
+
 		# Set non-font attributes first
 		for attr, value in original_attrs.items():
 			if attr not in ["font-family", "font-weight", "font-style", "-inkscape-font-specification"]:
 				node.set(attr, value)
-		
+
 		# Set the style attribute
 		if updated_style:
 			node.set("style", updated_style)
-		
+
 		# Explicitly set font-family as an attribute if it's not in style
 		if "font-family" not in style_dict:
 			node.set("font-family", mapped_font)
@@ -269,12 +271,26 @@ def rasterize_non_text_elements(root, width, height, svg_ns, input_svg_path):
 
 
 def keep_only_text_elements(root, svg_ns):
+	# if made with inkscape, all text is labelled
+	NSMAP = {
+		"svg": "http://www.w3.org/2000/svg",
+		"inkscape": "http://www.inkscape.org/namespaces/inkscape"
+	}
+
+	text_elements = root.xpath('.//svg:g[@inkscape:label="text"]', namespaces=NSMAP)
+
+	if len(text_elements) > 0:
+		root.clear()
+		for elem in text_elements:
+			root.append(elem)
+		return
+
 	# First, make a copy of the root to work with
 	new_root = etree.Element(root.tag, root.attrib)
-	
+
 	# Find all text and tspan elements
 	text_elements = root.xpath(".//svg:text | .//svg:tspan", namespaces={"svg": svg_ns})
-	
+
 	# For each text element, we need to preserve its entire ancestor chain
 	for text_elem in text_elements:
 		# Build the ancestor chain
@@ -283,7 +299,7 @@ def keep_only_text_elements(root, svg_ns):
 		while current is not None and current != root:
 			ancestors.append(current)
 			current = current.getparent()
-		
+
 		# Now rebuild the hierarchy in our new root
 		current_parent = new_root
 		for ancestor in reversed(ancestors):
@@ -291,7 +307,7 @@ def keep_only_text_elements(root, svg_ns):
 			existing = None
 			if 'id' in ancestor.attrib:
 				existing = current_parent.xpath(f"./*[@id='{ancestor.attrib['id']}']")
-			
+
 			if existing:
 				current_parent = existing[0]
 			else:
@@ -299,12 +315,12 @@ def keep_only_text_elements(root, svg_ns):
 				new_elem = etree.Element(ancestor.tag, ancestor.attrib)
 				current_parent.append(new_elem)
 				current_parent = new_elem
-		
+
 		# Finally, add the text element itself with all its attributes
 		current_parent.append(etree.Element(text_elem.tag, text_elem.attrib))
 		if text_elem.text:
 			current_parent[-1].text = text_elem.text
-	
+
 	# Replace the original root's content with our new content
 	root.clear()
 	for attr, value in new_root.attrib.items():
@@ -325,7 +341,7 @@ def embed_png_as_background(root, png_bytes, width, height, svg_ns):
 
     # Create a group for the background image (behind everything)
     bg_group = etree.Element(f"{{{svg_ns}}}g", {"id": "background"})
-    
+
     # Create image element with plain href (no namespace prefix)
     image_attrs = {
         "x": str(x),
@@ -336,14 +352,14 @@ def embed_png_as_background(root, png_bytes, width, height, svg_ns):
         "href": data_uri
     }
     image_elem = etree.Element(f"{{{svg_ns}}}image", image_attrs)
-    
+
     bg_group.append(image_elem)
-    
+
     # Move all existing elements (text) to a foreground group
     fg_group = etree.Element(f"{{{svg_ns}}}g", {"id": "foreground"})
     for child in root[:]:
         fg_group.append(child)
-    
+
     # Add groups to root (background first, then foreground)
     root.append(bg_group)
     root.append(fg_group)
@@ -371,9 +387,9 @@ def process_svg(input_svg_path, output_svg_path, font_map):
 	# Write the final output with clean XML
 	with open(output_svg_path, 'wb') as f:
 		svg_string = etree.tostring(
-			root, 
-			pretty_print=True, 
-			xml_declaration=True, 
+			root,
+			# pretty_print=True,
+			xml_declaration=True,
 			encoding="UTF-8"
 		)
 		# Clean up any unwanted namespace prefixes
