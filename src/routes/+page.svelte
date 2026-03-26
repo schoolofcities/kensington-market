@@ -42,13 +42,15 @@
 		logoType="White"
 	/>
 
-	<div class="caption-container" style="margin-top: -62px; margin-bottom: 50px; margin-left: 3px; opacity: 0.6;">
+	
+
+	<div class="text">
+
+		<div class="caption-container" style="margin-top: -62px; margin-bottom: 70px; padding-left: 0px; opacity: 0.6;">
 		<p>
 			<span class="caption-text"><span class="caption-source">Video source: <a href="https://www.youtube.com/watch?v=AgOryaSbzkg" target="_blank">KMCLT Docuseries (School of Cities, 2023)</a></span></span>
 		</p>
 	</div>
-
-	<div class="text">
 
 		<AuthorDate 
 			credits={credits} 
