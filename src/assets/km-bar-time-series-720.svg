@@ -1,0 +1,971 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="Layer_1"
+   data-name="Layer 1"
+   viewBox="0 0 720 620"
+   version="1.1"
+   sodipodi:docname="km-bar-time-series-720.svg"
+   width="720"
+   height="620"
+   inkscape:version="1.4.2 (1:1.4.2+202505120738+ebf0e940d0)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview78"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.91527435"
+     inkscape:cx="280.24384"
+     inkscape:cy="591.62589"
+     inkscape:window-width="1920"
+     inkscape:window-height="1016"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_1"
+     showgrid="false">
+    <inkscape:grid
+       id="grid78"
+       units="px"
+       originx="0"
+       originy="0"
+       spacingx="0.99999996"
+       spacingy="1"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14902"
+       empspacing="5"
+       enabled="true"
+       visible="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <style
+       id="style1">
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+      }
+
+      .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14, .cls-15 {
+        font-family: ABCFavoritVariableUnlicensedTrial-Regular, 'ABC Favorit Variable Unlicensed Trial';
+        font-variation-settings: 'wght' 400, 'slnt' 0;
+      }
+
+      .cls-4, .cls-5, .cls-6, .cls-8, .cls-9, .cls-11, .cls-12, .cls-13, .cls-14, .cls-15 {
+        font-size: 16px;
+      }
+
+      .cls-16, .cls-5 {
+        fill: #82a0d3;
+      }
+
+      .cls-16, .cls-2, .cls-17, .cls-3, .cls-18, .cls-19, .cls-20, .cls-21, .cls-22 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-16, .cls-17, .cls-18, .cls-19, .cls-20, .cls-21, .cls-22 {
+        stroke: #fff;
+        stroke-width: .75px;
+      }
+
+      .cls-6, .cls-19 {
+        fill: #e1c542;
+      }
+
+      .cls-2 {
+        stroke: #ccc;
+      }
+
+      .cls-7 {
+        fill: #6b6b6b;
+        font-size: 12px;
+      }
+
+      .cls-17, .cls-13 {
+        fill: #6459a7;
+      }
+
+      .cls-8 {
+        fill: #a1a1a1;
+      }
+
+      .cls-3 {
+        stroke: #333;
+      }
+
+      .cls-18, .cls-14 {
+        fill: #46c0b5;
+      }
+
+      .cls-20, .cls-9 {
+        fill: #1b8079;
+      }
+
+      .cls-21, .cls-12 {
+        fill: #e64c3c;
+      }
+
+      .cls-10 {
+        fill: #757575;
+        font-size: 26.61px;
+      }
+
+      .cls-11 {
+        fill: #fff;
+      }
+
+      .cls-22, .cls-15 {
+        fill: #5ac7da;
+      }
+
+      .cls-23 {
+        opacity: 0;
+      }
+    </style>
+  </defs>
+  <line
+     class="cls-2"
+     x1="0"
+     y1="461.12878"
+     x2="576.56"
+     y2="461.12878"
+     id="line2" />
+  <line
+     class="cls-2"
+     x1="0"
+     y1="338.28882"
+     x2="576.56"
+     y2="338.28882"
+     id="line3" />
+  <line
+     class="cls-2"
+     x1="0"
+     y1="215.44881"
+     x2="576.56"
+     y2="215.44881"
+     id="line4" />
+  <line
+     class="cls-2"
+     x1="0"
+     y1="92.598816"
+     x2="576.56"
+     y2="92.598816"
+     id="line5" />
+  <path
+     class="cls-23"
+     d="m 132.61,582.35881 v 1.08 h -0.89 v -104.52 h 0.89 v 1.08 H 46.569999 v -1.08 h 0.89 v 104.52 h -0.89 v -1.08 z m 0,2.15 H 45.679999 v -106.68 H 133.49 v 106.68 h -0.89"
+     id="path5" />
+  <rect
+     class="cls-21"
+     x="46.57"
+     y="478.36884"
+     width="86.040001"
+     height="105.06"
+     id="rect5" />
+  <path
+     class="cls-23"
+     d="m 265.66,582.35881 v 1.08 h -0.89 v -135.77 h 0.89 v 1.08 h -86.04 v -1.08 h 0.89 v 135.77 h -0.89 v -1.08 z m 0,2.15 h -86.93 v -137.93 h 87.81 v 137.93 h -0.89"
+     id="path6" />
+  <rect
+     class="cls-21"
+     x="179.62"
+     y="443.85883"
+     width="86.040001"
+     height="139.57001"
+     id="rect6" />
+  <path
+     class="cls-23"
+     d="m 397.83,582.35881 v 1.08 h -0.89 v -134.7 h 0.89 v 1.08 h -86.04 v -1.08 h 0.89 v 134.7 h -0.89 v -1.08 z m 0,2.15 H 310.9 v -136.85 h 87.81 v 136.85 h -0.89"
+     id="path7" />
+  <rect
+     class="cls-21"
+     x="311.79001"
+     y="445.29883"
+     width="86.040001"
+     height="138.13"
+     id="rect7" />
+  <path
+     class="cls-23"
+     d="m 530.88,582.35881 v 1.08 h -0.89 v -158.4 h 0.89 v 1.08 h -86.04 v -1.08 h 0.89 v 158.4 h -0.89 v -1.08 z m 0,2.15 h -86.93 v -160.56 h 87.81 v 160.56 h -0.89"
+     id="path8" />
+  <rect
+     class="cls-21"
+     x="444.84"
+     y="423.09882"
+     width="86.040001"
+     height="160.34"
+     id="rect8" />
+  <path
+     class="cls-23"
+     d="m 132.61,477.82881 v 1.08 h -0.89 v -134.7 h 0.89 v 1.08 H 46.569999 v -1.08 h 0.89 v 134.7 h -0.89 v -1.08 z m 0,2.16 H 45.679999 v -136.85 H 133.49 v 136.85 h -0.89"
+     id="path9" />
+  <rect
+     class="cls-17"
+     x="46.57"
+     y="342.97882"
+     width="86.040001"
+     height="135.39"
+     id="rect9" />
+  <path
+     class="cls-23"
+     d="m 265.66,446.57881 v 1.08 h -0.89 v -130.39 h 0.89 v 1.08 h -86.04 v -1.08 h 0.89 v 130.39 h -0.89 v -1.08 z m 0,2.16 h -86.93 v -132.54 h 87.81 v 132.54 h -0.89"
+     id="path10" />
+  <rect
+     class="cls-17"
+     x="179.62"
+     y="309.8288"
+     width="86.040001"
+     height="134.03999"
+     id="rect10" />
+  <path
+     class="cls-23"
+     d="m 397.83,447.65881 v 1.08 h -0.89 v -130.39 h 0.89 v 1.08 h -86.04 v -1.08 h 0.89 v 130.39 h -0.89 v -1.08 z m 0,2.16 H 310.9 v -132.54 h 87.81 v 132.54 h -0.89"
+     id="path11" />
+  <rect
+     class="cls-17"
+     x="311.79001"
+     y="311.58881"
+     width="86.040001"
+     height="133.71001"
+     id="rect11" />
+  <path
+     class="cls-23"
+     d="m 530.88,423.95881 v 1.08 h -0.89 v -143.32 h 0.89 v 1.08 h -86.04 v -1.08 h 0.89 v 143.32 h -0.89 v -1.08 z m 0,2.15 h -86.93 v -145.47 h 87.81 v 145.47 h -0.89"
+     id="path12" />
+  <rect
+     class="cls-17"
+     x="444.84"
+     y="278.02881"
+     width="86.040001"
+     height="145.07001"
+     id="rect12" />
+  <path
+     class="cls-23"
+     d="m 132.61,343.13881 v 1.08 h -0.89 v -64.65 h 0.89 v 1.08 H 46.569999 v -1.08 h 0.89 v 64.65 h -0.89 v -1.08 z m 0,2.15 H 45.679999 v -66.81 H 133.49 v 66.81 h -0.89"
+     id="path13" />
+  <rect
+     class="cls-20"
+     x="46.57"
+     y="277.99884"
+     width="86.040001"
+     height="64.989998"
+     id="rect13" />
+  <path
+     class="cls-23"
+     d="m 265.66,316.19881 v 1.08 h -0.89 v -51.72 h 0.89 v 1.08 h -86.04 v -1.08 h 0.89 v 51.72 h -0.89 v -1.08 z m 0,2.15 h -86.93 v -53.88 h 87.81 v 53.88 h -0.89"
+     id="path14" />
+  <rect
+     class="cls-20"
+     x="179.62"
+     y="256.6488"
+     width="86.040001"
+     height="53.169998"
+     id="rect14" />
+  <path
+     class="cls-23"
+     d="m 397.83,317.27881 v 1.08 h -0.89 v -51.72 h 0.89 v 1.08 h -86.04 v -1.08 h 0.89 v 51.72 h -0.89 v -1.08 z m 0,2.15 H 310.9 v -53.88 h 87.81 v 53.88 h -0.89"
+     id="path15" />
+  <rect
+     class="cls-20"
+     x="311.79001"
+     y="258.53882"
+     width="86.040001"
+     height="53.040001"
+     id="rect15" />
+  <path
+     class="cls-23"
+     d="m 530.88,280.63881 v 1.08 h -0.89 v -30.17 h 0.89 v 1.08 h -86.04 v -1.08 h 0.89 v 30.17 h -0.89 v -1.08 z m 0,2.15 h -86.93 v -32.33 h 87.81 v 32.33 h -0.89"
+     id="path16" />
+  <rect
+     class="cls-20"
+     x="444.84"
+     y="247.48882"
+     width="86.040001"
+     height="30.540001"
+     id="rect16" />
+  <path
+     class="cls-23"
+     d="m 132.61,278.47881 v 1.08 h -0.89 v -42.03 h 0.89 v 1.08 H 46.569999 v -1.08 h 0.89 v 42.03 h -0.89 v -1.08 z m 0,2.16 H 45.679999 v -44.18 H 133.49 v 44.18 h -0.89"
+     id="path17" />
+  <rect
+     class="cls-19"
+     x="46.57"
+     y="235.74881"
+     width="86.040001"
+     height="42.240002"
+     id="rect17" />
+  <path
+     class="cls-23"
+     d="m 265.66,264.47881 v 1.08 h -0.89 v -28.02 h 0.89 v 1.08 h -86.04 v -1.08 h 0.89 v 28.02 h -0.89 v -1.08 z m 0,2.15 h -86.93 v -30.17 h 87.81 v 30.17 h -0.89"
+     id="path18" />
+  <rect
+     class="cls-19"
+     x="179.62"
+     y="227.84882"
+     width="86.040001"
+     height="28.799999"
+     id="rect18" />
+  <path
+     class="cls-23"
+     d="m 397.83,265.54881 v 1.08 h -0.89 v -26.94 h 0.89 v 1.08 h -86.04 v -1.08 h 0.89 v 26.94 h -0.89 v -1.08 z m 0,2.16 H 310.9 v -29.09 h 87.81 v 29.09 h -0.89"
+     id="path19" />
+  <rect
+     class="cls-19"
+     x="311.79001"
+     y="230.91881"
+     width="86.040001"
+     height="27.629999"
+     id="rect19" />
+  <path
+     class="cls-23"
+     d="m 530.88,250.46881 v 1.08 h -0.89 v -23.71 h 0.89 v 1.08 h -86.04 v -1.08 h 0.89 v 23.71 h -0.89 v -1.08 z m 0,2.15 h -86.93 v -25.86 h 87.81 v 25.86 h -0.89"
+     id="path20" />
+  <rect
+     class="cls-19"
+     x="444.84"
+     y="223.48882"
+     width="86.040001"
+     height="24"
+     id="rect20" />
+  <polyline
+     class="cls-1"
+     points="631.33 87.48 631.33 577.92 54.49 577.92 54.49 87.48"
+     id="polyline20"
+     transform="translate(-54.750001,5.2988129)" />
+  <path
+     class="cls-23"
+     d="m 132.61,236.45881 v 1.08 h -0.89 v -90.52 h 0.89 v 1.08 H 46.569999 v -1.08 h 0.89 v 90.52 h -0.89 v -1.08 z m 0,2.15 H 45.679999 v -92.67 H 133.49 v 92.67 h -0.89"
+     id="path21" />
+  <rect
+     class="cls-16"
+     x="46.57"
+     y="144.76881"
+     width="86.040001"
+     height="90.980003"
+     id="rect21" />
+  <path
+     class="cls-23"
+     d="m 265.66,236.45881 v 1.08 h -0.89 v -85.13 h 0.89 v 1.08 h -86.04 v -1.08 h 0.89 v 85.13 h -0.89 v -1.08 z m 0,2.15 h -86.93 v -87.28 h 87.81 v 87.28 h -0.89"
+     id="path22" />
+  <rect
+     class="cls-16"
+     x="179.62"
+     y="140.33881"
+     width="86.040001"
+     height="87.510002"
+     id="rect22" />
+  <path
+     class="cls-23"
+     d="m 397.83,238.60881 v 1.08 h -0.89 v -90.52 h 0.89 v 1.08 h -86.04 v -1.08 h 0.89 v 90.52 h -0.89 v -1.08 z m 0,2.16 H 310.9 v -92.67 h 87.81 v 92.67 h -0.89"
+     id="path23" />
+  <rect
+     class="cls-16"
+     x="311.79001"
+     y="138.08881"
+     width="86.040001"
+     height="92.830002"
+     id="rect23" />
+  <path
+     class="cls-23"
+     d="m 530.88,226.75881 v 1.08 h -0.89 v -80.82 h 0.89 v 1.08 h -86.04 v -1.08 h 0.89 v 80.82 h -0.89 v -1.08 z m 0,2.16 h -86.93 v -82.97 h 87.81 v 82.97 h -0.89"
+     id="path24" />
+  <rect
+     class="cls-16"
+     x="444.84"
+     y="141.68881"
+     width="86.040001"
+     height="81.809998"
+     id="rect24" />
+  <polyline
+     class="cls-1"
+     points="631.33 87.48 631.33 577.92 54.49 577.92 54.49 87.48"
+     id="polyline24"
+     transform="translate(-54.750001,5.2988129)" />
+  <path
+     class="cls-23"
+     d="m 132.61,145.93881 v 1.08 h -0.89 v -40.95 h 0.89 v 1.08 H 46.569999 v -1.08 h 0.89 v 40.95 h -0.89 v -1.08 z m 0,2.16 H 45.679999 v -43.1 H 133.49 v 43.1 h -0.89"
+     id="path25" />
+  <rect
+     class="cls-22"
+     x="46.57"
+     y="103.60881"
+     width="86.040001"
+     height="41.16"
+     id="rect25" />
+  <path
+     class="cls-23"
+     d="m 265.66,151.32881 v 1.08 h -0.89 v -34.48 h 0.89 v 1.08 h -86.04 v -1.08 h 0.89 v 34.48 h -0.89 v -1.08 z m 0,2.16 h -86.93 v -36.64 h 87.81 v 36.64 h -0.89"
+     id="path26" />
+  <rect
+     class="cls-22"
+     x="179.62"
+     y="104.88881"
+     width="86.040001"
+     height="35.450001"
+     id="rect26" />
+  <path
+     class="cls-23"
+     d="m 397.83,148.09881 v 1.08 h -0.89 v -34.48 h 0.89 v 1.08 h -86.04 v -1.08 h 0.89 v 34.48 h -0.89 v -1.08 z m 0,2.15 H 310.9 v -36.64 h 87.81 v 36.64 h -0.89"
+     id="path27" />
+  <rect
+     class="cls-22"
+     x="311.79001"
+     y="102.72881"
+     width="86.040001"
+     height="35.360001"
+     id="rect27" />
+  <path
+     class="cls-23"
+     d="m 530.88,145.93881 v 1.08 h -0.89 v -30.17 h 0.89 v 1.08 h -86.04 v -1.08 h 0.89 v 30.17 h -0.89 v -1.08 z m 0,2.16 h -86.93 v -32.33 h 87.81 v 32.33 h -0.89"
+     id="path28" />
+  <rect
+     class="cls-22"
+     x="444.84"
+     y="111.14881"
+     width="86.040001"
+     height="30.540001"
+     id="rect28" />
+  <path
+     class="cls-23"
+     d="m 132.61,104.99881 v 1.08 h -0.89 V 95.298813 h 0.89 v 1.08 H 46.569999 v -1.08 h 0.89 v 10.779997 h -0.89 v -1.08 z m 0,2.15 H 45.679999 V 94.218813 H 133.49 v 12.929997 h -0.89"
+     id="path29" />
+  <rect
+     class="cls-18"
+     x="46.57"
+     y="92.778816"
+     width="86.040001"
+     height="10.83"
+     id="rect29" />
+  <path
+     class="cls-23"
+     d="m 265.66,116.84881 v 1.08 h -0.89 v -11.85 h 0.89 v 1.08 h -86.04 v -1.08 h 0.89 v 11.85 h -0.89 v -1.08 z m 0,2.15 h -86.93 v -14.01 h 87.81 v 14.01 h -0.89"
+     id="path30" />
+  <rect
+     class="cls-18"
+     x="179.62"
+     y="92.708817"
+     width="86.040001"
+     height="12.19"
+     id="rect30" />
+  <path
+     class="cls-23"
+     d="m 397.83,113.61881 v 1.08 h -0.89 v -9.7 h 0.89 v 1.08 h -86.04 v -1.08 h 0.89 v 9.7 h -0.89 v -1.08 z m 0,2.15 H 310.9 v -11.85 h 87.81 v 11.85 h -0.89"
+     id="path31" />
+  <rect
+     class="cls-18"
+     x="311.79001"
+     y="92.778816"
+     width="86.040001"
+     height="9.9499998"
+     id="rect31" />
+  <path
+     class="cls-23"
+     d="m 530.88,115.76881 v 1.08 h -0.89 V 98.528813 h 0.89 v 1.08 h -86.04 v -1.08 h 0.89 v 18.319997 h -0.89 v -1.08 z m 0,2.16 H 443.95 V 97.458813 h 87.81 v 20.469997 h -0.89"
+     id="path32" />
+  <rect
+     class="cls-18"
+     x="444.84"
+     y="92.598816"
+     width="86.040001"
+     height="18.540001"
+     id="rect32" />
+  <polyline
+     class="cls-1"
+     points="631.33 87.48 631.33 577.92 54.49 577.92 54.49 87.48"
+     id="polyline32"
+     transform="translate(-54.750001,5.2988129)" />
+  <path
+     class="cls-23"
+     d="m 132.61,94.218813 v 1.08 h -0.89 v -1.08 H 47.449999 v 1.08 h -0.89 v -1.08 H 132.6 Z m 0,2.15 H 45.679999 v -2.16 h 0.89 -0.89 c 0,-1.19 0.79,-2.16 1.77,-2.16 v 1.08 -1.08 H 131.72 v 1.08 -1.08 c 0.98,0 1.77,0.96 1.77,2.16 h -0.89 0.89 v 2.16 h -0.89"
+     id="path33" />
+  <polyline
+     class="cls-1"
+     points="631.33 87.48 631.33 577.92 54.49 577.92 54.49 87.48"
+     id="polyline33"
+     transform="translate(-54.750001,5.2988129)" />
+  <text
+     class="cls-4"
+     id="text33"
+     x="-0.69726562"
+     y="580.4184"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="-0.69726562"
+       y="580.4184"
+       id="tspan33"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">0%</tspan></text>
+  <text
+     class="cls-4"
+     id="text34"
+     x="-0.065152012"
+     y="456.23676"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="-0.065152012"
+       y="456.23676"
+       id="tspan34"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">25%</tspan></text>
+  <text
+     class="cls-4"
+     id="text35"
+     x="0.46484676"
+     y="333.10681"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="0.46484676"
+       y="333.10681"
+       id="tspan35"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">50%</tspan></text>
+  <text
+     class="cls-4"
+     id="text36"
+     x="0.84484786"
+     y="210.55678"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="0.84484786"
+       y="210.55678"
+       id="tspan36"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">75%</tspan></text>
+  <text
+     class="cls-4"
+     id="text37"
+     x="-1.2851562"
+     y="87.706787"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="-1.2851562"
+       y="87.706787"
+       id="tspan37"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">100%</tspan></text>
+  <text
+     class="cls-4"
+     id="text37-9"
+     x="-1.2851562"
+     y="63.711914"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'slnt' 0, 'wght' 400"><tspan
+       x="-1.2851562"
+       y="63.711914"
+       id="tspan37-1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Percent of all non-residential uses in Kensington Market</tspan></text>
+  <text
+     class="cls-4"
+     id="text37-5"
+     x="-1.2851562"
+     y="58.656914"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'slnt' 0, 'wght' 400"><tspan
+       x="-1.2851562"
+       y="58.656914"
+       id="tspan37-3"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal" /></text>
+  <text
+     class="cls-4"
+     id="text38"
+     x="69.990135"
+     y="603.75885"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="69.990135"
+       y="603.75885"
+       id="tspan38"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">2009</tspan></text>
+  <text
+     class="cls-4"
+     id="text39"
+     x="210.66013"
+     y="603.91882"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="210.66013"
+       y="603.91882"
+       id="tspan39"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">2019</tspan></text>
+  <text
+     class="cls-4"
+     id="text40"
+     x="341.88013"
+     y="603.59882"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="341.88013"
+       y="603.59882"
+       id="tspan40"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">2020</tspan></text>
+  <text
+     class="cls-4"
+     id="text41"
+     x="476.41013"
+     y="603.59882"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="476.41013"
+       y="603.59882"
+       id="tspan41"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">2025</tspan></text>
+  <text
+     class="cls-14"
+     id="text42"
+     x="542.11621"
+     y="107.67006"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="542.11621"
+       y="107.67006"
+       id="tspan42"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Arts &amp; performance</tspan></text>
+  <text
+     class="cls-15"
+     id="text43"
+     x="540.56616"
+     y="130.11008"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="540.56616"
+       y="130.11008"
+       id="tspan43"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Medical</tspan></text>
+  <text
+     class="cls-5"
+     id="text44"
+     x="539.69617"
+     y="186.92007"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="539.69617"
+       y="186.92007"
+       id="tspan44"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Services</tspan></text>
+  <text
+     class="cls-6"
+     id="text45"
+     x="539.12616"
+     y="243.27007"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="539.12616"
+       y="243.27007"
+       id="tspan45"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Social / community</tspan></text>
+  <text
+     class="cls-9"
+     id="text46"
+     x="539.12616"
+     y="270.07007"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="539.12616"
+       y="270.07007"
+       id="tspan46"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Foodstuffs</tspan></text>
+  <text
+     class="cls-13"
+     id="text47"
+     x="539.12616"
+     y="356.94006"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="539.12616"
+       y="356.94006"
+       id="tspan47"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Retail</tspan></text>
+  <text
+     class="cls-12"
+     id="text48"
+     x="537.68616"
+     y="509.11011"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="537.68616"
+       y="509.11011"
+       id="tspan48"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Restaurants and bars</tspan></text>
+  <text
+     class="cls-11"
+     id="text49"
+     x="467.25"
+     y="515.54883"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="467.25"
+       y="515.54883"
+       id="tspan49"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">32.7%</tspan></text>
+  <text
+     class="cls-11"
+     id="text50"
+     x="467.98999"
+     y="358.91882"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="467.98999"
+       y="358.91882"
+       id="tspan50"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">29.5%</tspan></text>
+  <text
+     class="cls-11"
+     id="text51"
+     x="470.72998"
+     y="267.7088"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="470.72998"
+       y="267.7088"
+       id="tspan51"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">6.3%</tspan></text>
+  <text
+     class="cls-11"
+     id="text52"
+     x="468.78998"
+     y="239.68881"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="468.78998"
+       y="239.68881"
+       id="tspan52"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">4.9%</tspan></text>
+  <text
+     class="cls-11"
+     id="text53"
+     x="469.59003"
+     y="187.42882"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="469.59003"
+       y="187.42882"
+       id="tspan53"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">16.6%</tspan></text>
+  <text
+     class="cls-11"
+     id="text54"
+     x="469.59003"
+     y="131.9288"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="469.59003"
+       y="131.9288"
+       id="tspan54"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">6.3%</tspan></text>
+  <text
+     class="cls-11"
+     id="text55"
+     x="471.59003"
+     y="107.68881"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="471.59003"
+       y="107.68881"
+       id="tspan55"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">3.7%</tspan></text>
+  <text
+     class="cls-11"
+     id="text56"
+     x="332.60001"
+     y="526.29883"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="332.60001"
+       y="526.29883"
+       id="tspan56"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">28.1%</tspan></text>
+  <text
+     class="cls-11"
+     id="text57"
+     x="333.39999"
+     y="382.46881"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="333.39999"
+       y="382.46881"
+       id="tspan57"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">27.2%</tspan></text>
+  <text
+     class="cls-11"
+     id="text58"
+     x="333.39999"
+     y="291.56879"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="333.39999"
+       y="291.56879"
+       id="tspan58"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">10.8%</tspan></text>
+  <text
+     class="cls-11"
+     id="text59"
+     x="338.54001"
+     y="251.53882"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="338.54001"
+       y="251.53882"
+       id="tspan59"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">5.8%</tspan></text>
+  <text
+     class="cls-11"
+     id="text60"
+     x="333.39999"
+     y="187.58881"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="333.39999"
+       y="187.58881"
+       id="tspan60"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">18.7%</tspan></text>
+  <text
+     class="cls-11"
+     id="text61"
+     x="336.17999"
+     y="126.49881"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="336.17999"
+       y="126.49881"
+       id="tspan61"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">7.2%</tspan></text>
+  <text
+     class="cls-8"
+     id="text62"
+     x="339.12"
+     y="87.258812"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="339.12"
+       y="87.258812"
+       id="tspan62"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">2.2%</tspan></text>
+  <text
+     class="cls-11"
+     id="text63"
+     x="200.47"
+     y="529.33881"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="200.47"
+       y="529.33881"
+       id="tspan63"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">28.5%</tspan></text>
+  <text
+     class="cls-11"
+     id="text64"
+     x="201.26999"
+     y="385.5188"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="201.26999"
+       y="385.5188"
+       id="tspan64"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">27.4%</tspan></text>
+  <text
+     class="cls-11"
+     id="text65"
+     x="201.26999"
+     y="291.61884"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="201.26999"
+       y="291.61884"
+       id="tspan65"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">10.7%</tspan></text>
+  <text
+     class="cls-11"
+     id="text66"
+     x="206.41"
+     y="249.58881"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="206.41"
+       y="249.58881"
+       id="tspan66"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">5.9%</tspan></text>
+  <text
+     class="cls-11"
+     id="text67"
+     x="201.26999"
+     y="190.63881"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="201.26999"
+       y="190.63881"
+       id="tspan67"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">17.9%</tspan></text>
+  <text
+     class="cls-11"
+     id="text68"
+     x="204.04999"
+     y="129.53882"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="204.04999"
+       y="129.53882"
+       id="tspan68"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">7.2%</tspan></text>
+  <text
+     class="cls-8"
+     id="text69"
+     x="206.98001"
+     y="90.308815"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="206.98001"
+       y="90.308815"
+       id="tspan69"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">2.4%</tspan></text>
+  <text
+     class="cls-11"
+     id="text70"
+     x="66.349998"
+     y="529.33881"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="66.349998"
+       y="529.33881"
+       id="tspan70"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">21.3%</tspan></text>
+  <text
+     class="cls-11"
+     id="text71"
+     x="67.150002"
+     y="415.75879"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="67.150002"
+       y="415.75879"
+       id="tspan71"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">27.6%</tspan></text>
+  <text
+     class="cls-11"
+     id="text72"
+     x="70.309998"
+     y="316.19879"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="70.309998"
+       y="316.19879"
+       id="tspan72"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">13.3%</tspan></text>
+  <text
+     class="cls-11"
+     id="text73"
+     x="72.860001"
+     y="262.75879"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="72.860001"
+       y="262.75879"
+       id="tspan73"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">8.7%</tspan></text>
+  <text
+     class="cls-11"
+     id="text74"
+     x="67.150002"
+     y="194.42882"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="67.150002"
+       y="194.42882"
+       id="tspan74"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">18.5%</tspan></text>
+  <text
+     class="cls-11"
+     id="text75"
+     x="69.93"
+     y="129.53882"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="69.93"
+       y="129.53882"
+       id="tspan75"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">8.3%</tspan></text>
+  <text
+     class="cls-8"
+     id="text76"
+     x="72.860001"
+     y="90.308815"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="72.860001"
+       y="90.308815"
+       id="tspan76"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">2.4%</tspan></text>
+  <text
+     class="cls-10"
+     id="text77"
+     x="-1.796875"
+     y="30"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'slnt' 0, 'wght' 400;fill:#000000"><tspan
+       x="-1.796875"
+       y="30"
+       id="tspan77"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000">Changing storefronts in Kensington Market 2009 - 2025</tspan></text>
+  <line
+     class="cls-3"
+     x1="0"
+     y1="582.8988"
+     x2="576.56"
+     y2="582.8988"
+     id="line1" />
+</svg>
