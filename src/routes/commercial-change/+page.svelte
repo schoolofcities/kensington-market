@@ -53,6 +53,33 @@
 		"This project is the first output of Hemmasi's research project \"Keeping Kensington Market's Cultural Spaces\", funded by a <a href='https://schoolofcities.utoronto.ca/opportunities/urban-challenge-grant/urban-challenge-grants-4/' target='_blank'>2025-26 School of Cities Urban Challenge Grant</a> on the theme of inequality, data, and democracy. <br><br>This project is a collaboration with the <a href='https://kmclt.ca/' target='_blank'>Kensington Market Community Land Trust (KMCLT)</a>, a community initiative created to protect Kensington Market's social and economic diversity by collectively purchasing properties for affordable housing, the maintenance of historical eclectic mixed-use neighbourhood profile, and the sustenance of socio-economically and culturally diverse residents and businesses. <br><br>Our project supports the KMCLT's initiative to collect and publicly share land and property use data within Kensington Market to help the organization expand their mission of \"place-keeping.\"";
 </script>
 
+
+<svelte:head>
+
+	<title>Kensington Market | School of Cities</title>
+	%sveltekit.head%
+
+	<meta name="description" content="Mapping the changing commercial landscape of Kensington Market.">
+	<meta name="author" content="Farzaneh Hemmasi, Emily Herzman, Scott McCallum">
+
+	<meta property="og:title" content="Commercial Change in Kensington Market" />
+	<meta name="og:description" content="Mapping the changing commercial landscape of Kensington Market." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://schoolofcities.github.io/kmclt" />
+	<meta property="og:image" content="https://schoolofcities.github.io/kmclt/web-card.png" />
+	<meta property="og:locale" content="en_CA">
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="https://schoolofcities.github.io/kmclt/" />
+	<meta name="twitter:creator" content="@UofTCities" />
+	<meta name="twitter:title" content="Commercial Change in Kensington Market" />
+	<meta name="twitter:description" content="Mapping the changing commercial landscape of Kensington Market." />
+	<meta name="twitter:image" content="https://schoolofcities.github.io/kensington-market/archives_km_4.jpg" />
+
+
+</svelte:head>
+
+
 <main>
 	<TitleVideo
 		title="Charting Commercial Change in Kensington Market"

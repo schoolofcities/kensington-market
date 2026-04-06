@@ -20,7 +20,7 @@ const config = {
 		}),
 		paths: {
 		    // change below to your repo name
-		    base: dev ? "" : "/kmclt",
+		    base: dev ? "" : "/kensington-market",
 		}
 	}
 };
