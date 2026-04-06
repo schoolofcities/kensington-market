@@ -111,7 +111,7 @@
 	}
 
 	.logo-link {
-		filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.6))
+		filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.6))
 	}
 
 	.logo-link:hover {
@@ -161,6 +161,11 @@
 		font-size: 22px;
 		font-family: SourceSerifBold;
 		font-weight: normal;
+	}
+
+	.logo-top {
+		width: 200px;
+		height: auto;
 	}
 
 

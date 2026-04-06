@@ -8,6 +8,7 @@
 	export let writing = "";
 	export let date = "";
 	export let credits = [];
+	export let description = "";
 
 </script>
 
@@ -35,11 +36,28 @@
 				{#if i > 0}
 					<br>
 				{/if}
-				<span class="role">{credit.role}:</span> {credit.names}
+				<span class="role">{credit.role}:</span>
+				{#if credit.people}
+					{#each credit.people as person, j}
+						{#if j > 0}, {/if}
+						{#if person.url}
+							<a href={person.url} target="_blank">{person.name}</a>
+						{:else}
+							{person.name}
+						{/if}
+					{/each}
+				{:else}
+					{credit.names}
+				{/if}
 			{/each}
 		{/if}
 		<br>
 		<span id="date">~ {date}</span>
+		{#if description}
+			<div class="description">
+				{@html description}
+			</div>
+		{/if}
 	</p>
 
 </div>
@@ -94,6 +112,41 @@
 
 	.role {
 		font-weight: bold;
+	}
+
+	.author-date .description {
+		margin-top: 16px;
+		padding-top: 16px;
+		border-top: 1px solid var(--brandGray);
+		font-size: 12px;
+		line-height: 18px;
+		color: var(--brandGray80);
+	}
+
+	.author-date p a {
+		font-family: OpenSans !important;
+		color: var(--brandGray90);
+	}
+
+	.author-date .description a {
+		font-family: OpenSans !important;
+		color: var(--brandGray80);
+	}
+
+	:global(.author-date a) {
+		font-family: OpenSans !important;
+	}
+
+	:global(.author-date .description a) {
+		color: var(--brandGray80) !important;
+		font-family: OpenSans !important;
+	}
+
+	@media screen and (max-width: 600px) {
+		.author-date .description {
+			font-size: 11px;
+			line-height: 16px;
+		}
 	}
 
 </style>
