@@ -516,13 +516,10 @@
 			businesses, and 20 community organizations within its boundaries.
 		</p>
 
-		<ImageSingle
-			imageURL="./nested-donut.png"
-			altText="Nested donut chart of business types in Kensingtone Market, 2025"
-			maxWidth="1180px"
-			link="Yes"
-			caption=""
-			source=""
+		<GraphicSingle
+			svg1080="./nested-donut.svg"
+            svg720="./nested-donut.svg"
+            svg360="./nested-donut.svg"
 		/>
 
 		<p>
