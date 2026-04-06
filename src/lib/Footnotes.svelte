@@ -62,7 +62,7 @@
     }
 
     .footnotes h2 {
-        font-size: 30px;
+        font-size: 25px;
         font-family: TradeGothicBold, sans-serif;
         font-weight: normal;
         margin-bottom: 17px;

@@ -136,6 +136,7 @@ body {
 	background-color: var(--brandWhite);
 	min-width: calc(100% - 100dvw + 360px);
 	width: 100%;
+	overflow-x: hidden
 }
 
 main {
@@ -145,6 +146,7 @@ main {
 	min-width: calc(100% - 100dvw + 360px);
 	max-width: 100%;
 	position: relative;
+	overflow-x: hidden
 }
 
 .text {
@@ -214,8 +216,8 @@ p {
 
 @media screen and (max-width: 600px) {
 	.text p {
-		font-size: 17px;
-		line-height: 26px;
+		font-size: 16px;
+		line-height: 24px;
 	}
 }
 
@@ -281,9 +283,17 @@ li {
 
 .quote {
     font-family: SourceSerifItalic;
-    padding: 50px;
+    padding: 40px;
     border: solid 1px var(--brandGray);
+	color: #000000;
 }
+
+@media screen and (max-width: 600px) {
+	.quote {
+		padding: 20px;
+	}
+}
+
 
 .highlight {
     padding-left: 5px;

@@ -8,6 +8,7 @@ FONT_MAP = {
 	# Base fonts
 	"Open Sans": "OpenSans",
 	"OpenSans": "OpenSans",
+	"OpenSans-Semibold": "OpenSans",
 	
 	# Bold variants
 	"Open Sans Bold": "OpenSansBold",

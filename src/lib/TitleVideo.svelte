@@ -90,7 +90,7 @@
 	.title-container {
 		height: 100dvh;
 		width: 100%;
-		background-color: white;
+		background-color: rgb(0, 0, 0);
 		position: relative;
 		margin-bottom: 60px;
 		overflow: hidden;
@@ -111,11 +111,12 @@
 	}
 
 	.logo-link {
-		filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.6))
+		filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.32))
 	}
 
 	.logo-link:hover {
 		opacity: 0.8;
+		filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 1))
 	}
 
 	.title-text-container {
@@ -180,7 +181,7 @@
 	@media (max-width: 600px) {
 
 		.title-container {
-			height: calc(100dvh - 250px);
+			height: 100dvh;
 			margin-bottom: 5px;
 		}
 
@@ -201,8 +202,8 @@
 		}
 
 		.title-text-container h1 {
-			font-size: 45px;
-			line-height: 60px;
+			font-size: 42px;
+			line-height: 52px;
 		}
 
 		.title-text-container h2 {
