@@ -54,9 +54,9 @@
 		<br>
 		<span id="date">~ {date}</span>
 		{#if description}
-			<div class="description">
+			<span class="description">
 				{@html description}
-			</div>
+			</span>
 		{/if}
 	</p>
 

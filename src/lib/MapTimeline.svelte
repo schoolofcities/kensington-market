@@ -475,8 +475,10 @@
             });
         });
 
-        // Add global click listener to close dropdown
-        document.addEventListener("click", handleClickOutside);
+        // Add global click listener to close dropdown (only in browser)
+        if (typeof document !== "undefined") {
+            document.addEventListener("click", handleClickOutside);
+        }
     });
 
     onDestroy(() => {
@@ -490,8 +492,10 @@
         if (map) {
             map.remove();
         }
-        // Remove global click listener
-        document.removeEventListener("click", handleClickOutside);
+        // Remove global click listener (only in browser)
+        if (typeof document !== "undefined") {
+            document.removeEventListener("click", handleClickOutside);
+        }
     });
 </script>
 

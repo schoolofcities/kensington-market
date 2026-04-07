@@ -56,8 +56,7 @@
 
 <svelte:head>
 
-	<title>Kensington Market | School of Cities</title>
-	%sveltekit.head%
+	<title>Kensington Market Commercial Change | School of Cities</title>
 
 	<meta name="description" content="Mapping the changing commercial landscape of Kensington Market.">
 	<meta name="author" content="Farzaneh Hemmasi, Emily Herzman, Scott McCallum">
