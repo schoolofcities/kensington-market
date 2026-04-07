@@ -52,7 +52,8 @@
 			{/each}
 		{/if}
 		<br>
-		<span id="date">~ {date}</span>
+		<span id="date" style="width: 100%; margin-bottom: 20px;">~ {date}</span>
+		<br><br>
 		{#if description}
 			<span class="description">
 				{@html description}
@@ -117,7 +118,7 @@
 	.author-date .description {
 		margin-top: 16px;
 		padding-top: 16px;
-		border-top: 1px solid var(--brandGray);
+		/* border-top: 1px solid var(--brandGray); */
 		font-size: 12px;
 		line-height: 18px;
 		color: var(--brandGray80);

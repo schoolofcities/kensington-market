@@ -79,7 +79,7 @@
     }
 
     function performHighlight(address) {
-        console.log("Setting highlight for:", address);
+        // console.log("Setting highlight for:", address);
         if (!map || currentlyHighlighted === address) return;
 
         // Clear previous highlight first
@@ -319,18 +319,18 @@
         // Log initial map position
         map.on("load", () => {
             map.setZoom(15);
-            console.log("Map loaded:", {
-                center: map.getCenter(),
-                bearing: map.getBearing()
-            });
+            // console.log("Map loaded:", {
+            //     center: map.getCenter(),
+            //     bearing: map.getBearing()
+            // });
         });
 
         // Log map position on move
         map.on("moveend", () => {
-            console.log("Map moved:", {
-                center: map.getCenter(),
-                bearing: map.getBearing()
-            });
+            // console.log("Map moved:", {
+            //     center: map.getCenter(),
+            //     bearing: map.getBearing()
+            // });
         });
 
         // Define the Kensington Market bounds
