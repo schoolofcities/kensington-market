@@ -65,7 +65,7 @@
 	<meta name="og:description" content="Mapping the changing commercial landscape of Kensington Market." />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://schoolofcities.github.io/kmclt" />
-	<meta property="og:image" content="https://schoolofcities.github.io/kmclt/web-card.png" />
+	<meta property="og:image" content="https://schoolofcities.github.io/kensington-market/archives_km_4.jpg" />
 	<meta property="og:locale" content="en_CA">
 
 	<meta name="twitter:card" content="summary_large_image" />
