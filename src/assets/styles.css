@@ -282,15 +282,17 @@ li {
 }
 
 .quote {
-    font-family: SourceSerifItalic;
+    font-family: SourceSerif;
+	font-size: 19px;
     padding: 40px;
     border: solid 1px var(--brandGray);
-	color: #000000;
 }
 
 @media screen and (max-width: 600px) {
 	.quote {
 		padding: 20px;
+		font-size: 16px;
+		line-height: 24px;
 	}
 }
 

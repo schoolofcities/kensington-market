@@ -105,7 +105,8 @@
 
 	.logo-container {
 		position: absolute;
-		top: 75px;
+		/* top: 75px; */
+		bottom: 320px;
 		left: 75px;
 		z-index: 2;
 	}
@@ -165,7 +166,7 @@
 	}
 
 	.logo-top {
-		width: 200px;
+		width: 255px;
 		height: auto;
 	}
 
@@ -175,10 +176,27 @@
 			width: 200px;
 			height: auto;
 		}
+
+		.logo-container {
+			left: 75px;
+			bottom: 280px;
+		}
+
+		.title-text-container h1 {
+			font-size: 48px;
+		}
+	}
+
+	@media (max-width: 800px) {
+
+		.logo-container {
+			left: 75px;
+			bottom: 300px;
+		}
 	}
 	
 
-	@media (max-width: 600px) {
+	@media (max-width: 650px) {
 
 		.title-container {
 			height: 100dvh;
