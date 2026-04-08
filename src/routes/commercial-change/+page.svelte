@@ -160,7 +160,7 @@
 		<p>
 			Visiting Kensington Market today is a different, if no less	stimulating an experience. A tour of the central Market streets in 2026 shows more restaurants, cafés, specialty stores, and cannabis retailers than green grocers and butchers. From one perspective, this is nothing new or noteworthy. As long ago as 1978, the City of Toronto Planning Study for Kensington notes a “decline of grocery and food sellers as an overall proportion of businesses within the Market…from 67% in 1964 to 39% by 1977.”<Footnote
 				id={addFootnote(fns[0])}
-			/> Surveying historical photographs of the neighborhood	confirms that this decline of grocers has continued.
+			/> Surveying historical photographs of the neighbourhood confirms that this decline of grocers has continued.
 		</p>
 	</div>
 
