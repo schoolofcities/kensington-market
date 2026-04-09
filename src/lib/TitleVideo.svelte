@@ -205,7 +205,7 @@
 
 		.logo-container {
 			left: 20px;
-			top: 20px;
+			bottom: 150px;
 		}
 
 		.logo-top {
@@ -227,6 +227,22 @@
 		.title-text-container h2 {
 			font-size: 24px;
 		}
+	}
+
+	@media (max-width: 531px) {
+		.logo-container {
+			left: 20px;
+			bottom: 200px;
+		}
+
+	}
+
+	@media (max-width: 390px) {
+		.logo-container {
+			left: 20px;
+			bottom: 250px;
+		}
+
 	}
 
 </style>

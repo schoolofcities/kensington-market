@@ -138,7 +138,7 @@
 	<div class="text">
 		<h2>Constant Change in Kensington Market</h2>
 		<p>
-			The Kensington Market of the mid-twentieth century was full of fruit and vegetable stands, butchers, bakeries, and dry goods stores. Images from the past vividly illustrate how each wave of immigrants established shops in the neighbourhood, catering to the food staples and tastes of their respective cultures, whether Jewish, Portuguese, Latin American, Jamaican, Chinese, and more. Elderly former residents and shoppers remember when Kensington Market was the kind of market with live chickens in cages on the sidewalk, which were slaughtered and defeathered on the street or in an alley (such as at Augusta Kosher Poultry and Meat Market at 253 Augusta Ave.); where bagels were sold on wooden rod by itinerate
+			The Kensington Market of the mid-twentieth century was full of fruit and vegetable stands, butchers, bakeries, and dry goods stores. Images from the past vividly illustrate how each wave of immigrants established shops in the neighbourhood, catering to the food staples and tastes of their respective cultures, whether Jewish, Portuguese, Latin American, Jamaican, Chinese, and more. Elderly former residents and shoppers remember when Kensington Market was the kind of market with live chickens in cages on the sidewalk, which were slaughtered and defeathered on the street or in an alley (such as at Augusta Kosher Poultry and Meat Market at 253 Augusta Ave.); where bagels were sold on wooden rod by itinerant
 			Jewish bakers, and where one could find tropical fruits like those sold by Toronto’s first banana importer (<a
 				href="https://kmhs.ca/footnotes/2013/02/14/sancis-tropical-fruits/"
 				target="_blank">Sanci’s Tropical Fruits</a
@@ -276,7 +276,7 @@
 			/> The document lists Kensington Market as one of the small business districts the City’s measures are intended to protect.
 		</p>
 		<p>
-			The KMCLT has identified community-serving local  businesses as a priority area of research and advocacy. The organization’s original focus on residential affordability has extended to an interest in tracking how increasingly unaffordable commercial rents have changed the neighbourhood’s business make-up. As Kensington has become a less affordable place to live, it has also become a more expensive place to operate a business. The organization articulates this perspective in its <a
+			While many community land trusts focus on housing affordability, the KMCLT has prioritized commercial affordability since its very beginning. KMCLT’s Dominque Russell comments, "We're looking at tracking commercial change because protecting the fabric of the neighbourhood is part of [KMCLT's] mission. Even as that fabric evolves, we still need community-serving businesses.”<Footnote id={addFootnote("Personal communication")}/> Keeping Kensington Market affordable, livable, and diverse requires intervention and care on both residential and commercial levels. The organization articulates this perspective in its <a
 				href="https://kmclt.ca/Reports"
 				target="_blank">2025 report on “place-keeping”</a
 			>:
