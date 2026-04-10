@@ -50,7 +50,7 @@
 	];
 
 	const projectDescription =
-		"This project is the first output of Hemmasi's research project \"Keeping Kensington Market's Cultural Spaces\", funded by a <a href='https://schoolofcities.utoronto.ca/opportunities/urban-challenge-grant/urban-challenge-grants-4/' target='_blank'>2025-26 School of Cities Urban Challenge Grant</a> on the theme of inequality, data, and democracy. <br><br>This project is a collaboration with the <a href='https://kmclt.ca/' target='_blank'>Kensington Market Community Land Trust (KMCLT)</a>, a community initiative created to protect Kensington Market's social and economic diversity by collectively purchasing properties for affordable housing, the maintenance of historical eclectic mixed-use neighbourhood profile, and the sustenance of socio-economically and culturally diverse residents and businesses. <br><br>Our project supports the KMCLT's initiative to collect and publicly share land and property use data within Kensington Market to help the organization expand their mission of \"place-keeping.\"";
+		"This project is the first output of Hemmasi's research project \"Keeping Kensington Market's Cultural Spaces,\" funded by a <a href='https://schoolofcities.utoronto.ca/opportunities/urban-challenge-grant/urban-challenge-grants-4/' target='_blank'>2025-26 School of Cities Urban Challenge Grant</a> on the theme of inequality, data, and democracy. <br><br>This project is a collaboration with the <a href='https://kmclt.ca/' target='_blank'>Kensington Market Community Land Trust (KMCLT)</a>, a community initiative created to protect Kensington Market's social and economic diversity by collectively purchasing properties for affordable housing, the maintenance of historical eclectic mixed-use neighbourhood profile, and the sustenance of socio-economically and culturally diverse residents and businesses. <br><br>Our project supports the KMCLT's initiative to collect and publicly share land and property use data within Kensington Market to help the organization expand their mission of \"place-keeping.\"";
 </script>
 
 
@@ -136,7 +136,7 @@
 	/>
 
 	<div class="text">
-		<h2>Constant Change in Kensington Market</h2>
+		<h2>Constant change in Kensington Market</h2>
 		<p>
 			The Kensington Market of the mid-twentieth century was full of fruit and vegetable stands, butchers, bakeries, and dry goods stores. Images from the past vividly illustrate how each wave of immigrants established shops in the neighbourhood, catering to the food staples and tastes of their respective cultures, whether Jewish, Portuguese, Latin American, Jamaican, Chinese, and more. Elderly former residents and shoppers remember when Kensington Market was the kind of market with live chickens in cages on the sidewalk, which were slaughtered and defeathered on the street or in an alley (such as at Augusta Kosher Poultry and Meat Market at 253 Augusta Ave.); where bagels were sold on wooden rod by itinerant
 			Jewish bakers, and where one could find tropical fruits like those sold by Toronto’s first banana importer (<a
