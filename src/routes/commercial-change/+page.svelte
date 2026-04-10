@@ -276,7 +276,7 @@
 			/> The document lists Kensington Market as one of the small business districts the City’s measures are intended to protect.
 		</p>
 		<p>
-			While many community land trusts focus on housing affordability, the KMCLT has prioritized commercial affordability since its very beginning. KMCLT’s Dominque Russell comments, "We're looking at tracking commercial change because protecting the fabric of the neighbourhood is part of [KMCLT's] mission. Even as that fabric evolves, we still need community-serving businesses.”<Footnote id={addFootnote("Personal communication")}/> Keeping Kensington Market affordable, livable, and diverse requires intervention and care on both residential and commercial levels. The organization articulates this perspective in its <a
+			While many community land trusts focus on housing affordability, the KMCLT has prioritized commercial affordability since its very beginning. KMCLT’s Dominique Russell comments, "We're looking at tracking commercial change because protecting the fabric of the neighbourhood is part of [KMCLT's] mission. Even as that fabric evolves, we still need community-serving businesses.”<Footnote id={addFootnote("Personal communication")}/> Keeping Kensington Market affordable, livable, and diverse requires intervention and care on both residential and commercial levels. The organization articulates this perspective in its <a
 				href="https://kmclt.ca/Reports"
 				target="_blank">2025 report on “place-keeping”</a
 			>:
@@ -475,7 +475,7 @@
 			However, there is an increasing awareness that commercial affordability is another key factor in keeping a neighbourhood liveable over a sustained time. Kensington Market has long had an identity as a market, a source of food for multiple and constantly evolving communities, not only for local residents, but for many groups of people scattered throughout the city to find specialty foods or less common cultural food items. That is changing now, as primary produce vendors shifts to prepared food.
 		</p>
 		<p>
-			In the course of researching this blog post, a new grocer emerged: on New Year’s Eve of 2025, Kensington restaurateur Ravi Ramoutar opened Kensington Vegetables and Flowers, a new produce shop at 274 Augusta Ave. The small shop has been eagerly welcomed by KMCLT’s Dominque Russell:
+			In the course of researching this blog post, a new grocer emerged: on New Year’s Eve of 2025, Kensington restaurateur Ravi Ramoutar opened Kensington Vegetables and Flowers, a new produce shop at 274 Augusta Ave. The small shop has been eagerly welcomed by KMCLT’s Dominique Russell:
 		</p>
 		<p class="quote">
 			“The truth of it is Kensington is not going to have four green grocers or fruit stands on the corner again because shopping habits have changed…[b]ut any raw food seller that comes into the Market is a real win because it's not a vape shop, it's not a marijuana shop — it's something that really serves the neighbourhood.<Footnote
@@ -511,7 +511,7 @@
 		</h3>
 
 		<p>
-			We would like to acknowledge members of the Kensington Market Community Land Trust who have worked with us on this research, including Dominque Russell, Eugene Slonimerov, David Perlman, and many volunteers from the research committee. Serene Tan and Jeff Allen (School of Cities) provided suggestions and copy-edits to the text. Jeff Allen also supported web development for this project. 
+			We would like to acknowledge members of the Kensington Market Community Land Trust who have worked with us on this research, including Dominique Russell, Eugene Slonimerov, David Perlman, and many volunteers from the research committee. Serene Tan and Jeff Allen (School of Cities) provided suggestions and copy-edits to the text. Jeff Allen also supported web development for this project. 
 		</p>
 
 	</div>
